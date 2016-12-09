@@ -1,5 +1,5 @@
 {
-  "name": "dream_walker",
+  "name": "dream-walker",
   "version": "1.0.0",
   "description": "Online journal to record dreams",
   "main": "server.js",
