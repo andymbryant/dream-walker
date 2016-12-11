@@ -44,7 +44,7 @@ describe('The dashboard page', function() {
 
 // Test for /dreams
 describe('The dreams page', function() {
-  it('should show dream entries', function(done) {
+  it('should show dream entries on GET', function(done) {
     chai.request(server)
       .get('/dreams')
       .end(function(err, res) {
@@ -59,5 +59,21 @@ describe('The dreams page', function() {
         });
         done();
       });
-  });  
+  }); 
+
+  it('should delete an entry on DELETE', function(done) {
+    chai.request(server)
+      // first have to get so we have an `id` of item
+      // to delete
+      .get('/dreams')
+      .end(function(err, res) {
+        chai.request(server)
+          .delete(`/dreams/${res.body[0].id}`)
+          .end(function(err, res) {
+            res.should.have.status(204);
+          });
+          done();
+      });
+  });
+
 });
