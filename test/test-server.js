@@ -44,12 +44,19 @@ describe('The dashboard page', function() {
 
 // Test for /dreams
 describe('The dreams page', function() {
-  it('should show dream', function(done) {
+  it('should show dream entries', function(done) {
     chai.request(server)
       .get('/dreams')
       .end(function(err, res) {
         res.should.have.status(200);
-        res.should.be.html;
+        res.should.be.json;
+        res.body.should.be.a('array');
+        res.body.length.should.be.at.least(1);
+        const expectedKeys = ['id', 'title', 'entry', 'type', 'hoursSlept'];
+        res.body.forEach(function(item) {
+          item.should.be.a('object');
+          item.should.include.keys(expectedKeys);
+        });
         done();
       });
   });  
