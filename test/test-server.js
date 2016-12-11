@@ -24,7 +24,6 @@ describe('The root URL', function() {
       .end(function(err, res) {
         res.should.have.status(200);
         res.should.be.html;
-       // res.body.length.should.be.at.least(1);
         done();
       });
   }); 
@@ -45,7 +44,7 @@ describe('The dashboard page', function() {
 
 // Test for /dreams
 describe('The dreams page', function() {
-  it('should show HTML', function(done) {
+  it('should show dream', function(done) {
     chai.request(server)
       .get('/dreams')
       .end(function(err, res) {
