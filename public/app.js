@@ -62,6 +62,6 @@ function getAndDisplayDreamEntries() {
     getDreamEntries(displayDreamEntries);
 }
 
-$(function() {
+/*$(function() {
     getAndDisplayDreamEntries();
-})
+})*/
