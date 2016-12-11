@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan')
 const app = express();
+const dreamsRouter = require('./dreamsRouter');
 
 app.use(express.static('public'));
 app.use(morgan('common'));
@@ -16,8 +17,8 @@ app.get('/dashboard', (req, res) => {
   res.sendFile(__dirname + '/public/dashboard.html');
 });
 
-app.get('/dreams', (req, res) => {
-  res.sendFile(__dirname + '/public/dreams.html');
-});
+app.use('/dreams', dreamsRouter);
+
+app.use('/new-dream', dreamsRouter);
 
 module.exports = server;
