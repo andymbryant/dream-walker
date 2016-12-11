@@ -81,7 +81,7 @@ describe('The dreams page', function() {
       .get('/dreams')
       .end(function(err, res) {
         const updated = {
-          id: res.body[0].id
+          id: res.body[0].id,
           title: 'Updated Title',
           entry: 'Updated dream entry',
           type: 'lucid',
