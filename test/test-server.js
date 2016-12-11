@@ -75,5 +75,22 @@ describe('The dreams page', function() {
           done();
       });
   });
+});
 
+describe('The new dream page', function() {
+  it('should add an item on POST', function(done) {
+    const newItem = {title: 'Please Work', entry: 'I REALLY HOPE THIS WORKS', type: 'lucid', hoursSlept: 7};
+    chai.request(server)
+      .post('/new-dream')
+      .send(newItem)
+      .end(function(err, res) {
+        res.should.have.status(201);
+        res.should.be.json;
+        res.body.should.be.a('object');
+        res.body.should.include.keys('title', 'entry', 'type', 'hoursSlept');
+        res.body.id.should.not.be.null;
+        res.body.should.deep.equal(Object.assign(newItem, {id: res.body.id}));
+        done();
+      });
+  }); 
 });
