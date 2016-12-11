@@ -18,7 +18,7 @@ afterEach(function() {
 // Tests for root URL
 describe('The root URL', function() {
 
-  it('should show HTML', function(done) {
+  it('should show HTML on GET', function(done) {
     chai.request(server)
       .get('/')
       .end(function(err, res) {
@@ -30,7 +30,7 @@ describe('The root URL', function() {
 });
 
 // Test for /dashboard
-describe('The dashboard page', function() {
+describe('The dashboard page on GET', function() {
   it('should show HTML', function(done) {
     chai.request(server)
       .get('/dashboard')
