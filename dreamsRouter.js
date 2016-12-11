@@ -20,4 +20,18 @@ router.delete('/:id', (req, res) => {
   res.status(204).end();
 });
 
+router.post('/', jsonParser, (req, res) => {
+  const requiredFields = ['title', 'entry', 'type', 'hoursSlept'];
+  for (let i = 0; i < requiredFields.length; i++) {
+    const field = requiredFields[i];
+    if (!(field in req.body)) {
+      const message = `Missing \`${field}\` in request body`
+      console.error(message);
+      return res.status(400).send(message);
+    }
+  }
+  const item = dreams.create(req.body.title, req.body.entry, req.body.type, req.body.hoursSlept);
+  res.status(201).json(item);
+});
+
 module.exports = router;
