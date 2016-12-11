@@ -7,7 +7,8 @@ const MOCK_DREAM_ENTRIES = {
             "type": "lucid",
             "mood": "pleasant",
             "emotion": "joy",
-            "date": "12.01.16"
+            "date": "12.01.16",
+            "hoursSlept": 8
         },
         {
             "id": "2222222",
@@ -16,7 +17,8 @@ const MOCK_DREAM_ENTRIES = {
             "type": "lucid",
             "mood": "pleasant",
             "emotion": "joy",
-            "date": "12.02.16"
+            "date": "12.02.16",
+            "hoursSlept": 8
         },
         {
             "id": "333333",
@@ -25,7 +27,8 @@ const MOCK_DREAM_ENTRIES = {
             "type": "lucid",
             "mood": "pleasant",
             "emotion": "joy",
-            "date": "12.03.16"
+            "date": "12.03.16",
+            "hoursSlept": 8
         },
         {
             "id": "4444444",
@@ -34,7 +37,8 @@ const MOCK_DREAM_ENTRIES = {
             "type": "lucid",
             "mood": "pleasant",
             "emotion": "joy",
-            "date": "12.04.16"
+            "date": "12.04.16",
+            "hoursSlept": 8
         }
     ]
 };
