@@ -101,6 +101,7 @@ describe('The dreams page', function() {
   });
 });
 
+// test for adding a new entry into the /new-dream page
 describe('The new-dream page', function() {
   it('should add a dream entry on POST', function(done) {
     const newItem = {title: 'Please Work', entry: 'I REALLY HOPE THIS WORKS', type: 'lucid', hoursSlept: 7};
