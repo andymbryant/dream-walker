@@ -65,3 +65,33 @@ function getAndDisplayDreamEntries() {
 /*$(function() {
     getAndDisplayDreamEntries();
 })*/
+
+function itWorked() {
+    alert('IT WORKED')
+}
+
+function postDreamEntry(title, entry, type, hoursSlept, callback) {
+  const newEntry = {
+    url: 'localhost:8080/new-dream',
+    data: {
+      title: title,
+      entry: entry,
+      type: type,
+      hoursSlept: hoursSlept
+    },
+    dataType: 'json',
+    type: 'POST',
+    success: callback
+  };
+  $.ajax(newEntry);
+}
+
+$('#add-new-dream').click(function(event) {
+    event.preventDefault();
+    const title = $('#title').val();
+    const entry = $('#entry').val();
+    const type = $('#type').val();
+    const hoursSlept = $('#hoursSlept').val();
+    //console.log(title, entry, type, hoursSlept);
+    postDreamEntry(title, entry, type, hoursSlept, itWorked);
+});
