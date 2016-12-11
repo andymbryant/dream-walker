@@ -61,7 +61,7 @@ describe('The dreams page', function() {
       });
   }); 
 
-  it('should delete an entry on DELETE', function(done) {
+  it('should delete a dream entry on DELETE', function(done) {
     chai.request(server)
       // first have to get so we have an `id` of item
       // to delete
@@ -75,10 +75,34 @@ describe('The dreams page', function() {
           done();
       });
   });
+
+  it('should update a dream entry on PUT', function(done) {
+    chai.request(server)
+      .get('/dreams')
+      .end(function(err, res) {
+        const updated = {
+          id: res.body[0].id
+          title: 'Updated Title',
+          entry: 'Updated dream entry',
+          type: 'lucid',
+          hoursSlept: 8
+        };
+        chai.request(server)
+          .put(`/dreams/${res.body[0].id}`)
+          .send(updated)
+          .end(function(err, res) {
+            res.should.have.status(200);
+            res.should.be.json;
+            res.body.should.be.a('object');
+            res.body.should.deep.equal(updated);
+            done();
+          });
+      });
+  });
 });
 
-describe('The new dream page', function() {
-  it('should add an item on POST', function(done) {
+describe('The new-dream page', function() {
+  it('should add a dream entry on POST', function(done) {
     const newItem = {title: 'Please Work', entry: 'I REALLY HOPE THIS WORKS', type: 'lucid', hoursSlept: 7};
     chai.request(server)
       .post('/new-dream')
