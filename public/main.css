@@ -8,31 +8,69 @@ nav {
   top:0;
   left:0;
   right:0;
-  height: 70px;
+  height: 60px;
   background-color: rgba(255,255,255,.8);
   z-index: 1;
 }
 
-#nav-list {
+.navbar ul {
   position: relative;
-  bottom: 20px;
+  bottom: 25px;
 }
 
-#nav-list li {
+#nav-brand {
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.navbar li {
   display: inline-block;
   font-size: 20px;
-  margin-right: 15px;
+  margin-right: 20px;
+  position: relative;
 }
 
-#nav-list li a {
+.navbar li a {
   color:black;
   text-decoration: none;
 }
 
-#nav-logo {
-  font-size: 20px;
-  margin-right: 20px;
+.nav-right {
+  float:right;
+  margin-top: 27px;
 }
+
+.nav-center {
+  text-align: center;
+}
+
+#demo-button {
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: #82c4ff;
+  color:white;
+  border:none;
+}
+
+#demo-button:hover {
+  background-color: #2699ff;
+}
+
+header p {
+  color: #FFF;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+
+
+
+
+
+
 
 /*
 Copyright (c) 2016 by Ragoli (http://codepen.io/Glucio/pen/BoLWPo)
@@ -50,17 +88,13 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 */
 
 #title {
-  position: absolute;
-  top: 45%;
-  left: 0;
-  right: 0;
+  margin: 0 auto;
+  margin-top: 200px;
   color: #FFF;
   text-align: center;
   font-weight: 700;
   font-size: 70px;
   letter-spacing: 5px;
-  margin-top: -60px;
-  padding-left: 10px;
   background: -webkit-linear-gradient(white, #0072bf);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
