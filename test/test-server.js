@@ -15,17 +15,19 @@ afterEach(function() {
   server.close();
 });
 
-// Test for root URL
+// Tests for root URL
 describe('The root URL', function() {
+
   it('should show HTML', function(done) {
     chai.request(server)
       .get('/')
       .end(function(err, res) {
         res.should.have.status(200);
         res.should.be.html;
+       // res.body.length.should.be.at.least(1);
         done();
       });
-  });  
+  }); 
 });
 
 // Test for /dashboard
