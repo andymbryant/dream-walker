@@ -14,4 +14,10 @@ router.get('/', (req, res) => {
   res.json(dreams.get());
 });
 
+router.delete('/:id', (req, res) => {
+  dreams.delete(req.params.id);
+  console.log(`Deleted dream entry \`${req.params.id}\``);
+  res.status(204).end();
+});
+
 module.exports = router;
