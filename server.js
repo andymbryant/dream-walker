@@ -19,8 +19,6 @@ app.get('/dashboard', (req, res) => {
 
 app.use('/dreams', dreamsRouter);
 
-app.get('/new-dream', (req, res) => {
-  res.sendFile(__dirname + '/public/new-dream.html');
-});
+app.use('/new-dream', dreamsRouter);
 
 module.exports = server;
