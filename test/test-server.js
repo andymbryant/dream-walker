@@ -15,8 +15,8 @@ afterEach(function() {
   server.close();
 });
 
+// Test for root URL
 describe('The root URL', function() {
-
   it('should show HTML', function(done) {
     chai.request(server)
       .get('/')
@@ -25,6 +25,31 @@ describe('The root URL', function() {
         res.should.be.html;
         done();
       });
-  });
+  });  
+});
 
+// Test for /dashboard
+describe('The dashboard page', function() {
+  it('should show HTML', function(done) {
+    chai.request(server)
+      .get('/dashboard')
+      .end(function(err, res) {
+        res.should.have.status(200);
+        res.should.be.html;
+        done();
+      });
+  });  
+});
+
+// Test for /dreams
+describe('The dreams page', function() {
+  it('should show HTML', function(done) {
+    chai.request(server)
+      .get('/dreams')
+      .end(function(err, res) {
+        res.should.have.status(200);
+        res.should.be.html;
+        done();
+      });
+  });  
 });
