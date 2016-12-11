@@ -34,4 +34,31 @@ router.post('/', jsonParser, (req, res) => {
   res.status(201).json(item);
 });
 
+router.put('/:id', jsonParser, (req, res) => {
+  const requiredFields = ['id', 'title', 'entry', 'type', 'hoursSlept'];
+  for (let i = 0; i < requiredFields.length; i++) {
+    const field = requiredFields[i];
+    if (!(field in req.body)) {
+      const message = `Missing \`${field}\` in request body`
+      console.error(message);
+      return res.status(400).send(message);
+    }
+  }
+  if (req.params.id !== req.body.id) {
+    const message = (
+      `Request path id (${req.params.id}) and request body id (${req.body.id}) must match`);
+    console.error(message);
+    return res.status(400).send(message);
+  }
+  console.log(`Updating dream entry \`${req.params.id}\``);
+  const updatedItem = dreams.update({
+    id: req.params.id,
+    title: req.body.title,
+    entry: req.body.entry,
+    type: req.body.type,
+    hoursSlept: req.body.hoursSlept
+  });
+  res.json(updatedItem);
+})
+
 module.exports = router;
