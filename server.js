@@ -17,6 +17,10 @@ app.get('/dashboard', (req, res) => {
   res.sendFile(__dirname + '/public/dashboard.html');
 });
 
+app.get('/new-dream', (req, res) => {
+  res.sendFile(__dirname + '/public/new-dream.html');
+});
+
 app.use('/dreams', dreamsRouter);
 
 app.use('/new-dream', dreamsRouter);
