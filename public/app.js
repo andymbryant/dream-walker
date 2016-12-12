@@ -117,3 +117,7 @@ $("a").on('click', function(event) {
     });
   } 
 });
+
+$('.handle').on('click', function(event) {
+  $('nav ul').toggleClass('showing');
+})
