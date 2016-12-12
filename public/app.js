@@ -96,6 +96,7 @@ $('#add-new-dream').click(function(event) {
     postDreamEntry(title, entry, type, hoursSlept, itWorked);
 });
 
+// Smooth scroll to top
 $('#nav-brand').click(function(event) {
   event.preventDefault();
     $('body,html').animate({
@@ -103,9 +104,6 @@ $('#nav-brand').click(function(event) {
     }, 800
     );
 });
-
-
-
 
 // Add smooth scrolling to navbar links
 $("a").on('click', function(event) {
