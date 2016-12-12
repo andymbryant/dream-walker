@@ -40,6 +40,11 @@ nav {
   text-decoration: none;
 }
 
+.nav-left {
+  position: relative;
+  right:20px;
+}
+
 .nav-right {
   float:right;
   margin-top: 27px;
