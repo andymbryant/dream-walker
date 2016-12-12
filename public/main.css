@@ -22,12 +22,12 @@ a {
 }
 
 nav ul {
-  background-color: rgba(255,255,255,.9);
+  background-color: rgba(255,255,255,.95);
   overflow: hidden;
   text-align: center;
   margin: 0;
   padding:0;
-  color:black;
+  color:#666666;
   letter-spacing: .5px;
   -webkit-transition: max-height 0.4s;
   -ms-transition: max-height 0.4s;
@@ -40,6 +40,10 @@ nav ul li {
   display: inline-block;
   padding: 18px 15px;
   font-size: 17px;
+}
+
+nav ul .nav-hover:hover {
+  color:black;
 }
 
 .nav-brand {
@@ -64,12 +68,19 @@ section {
 
 .handle {
   width: 100%;
-  background: #dbdbdb;
+  background: #96ccff;
   text-align: left;
-  padding: 15px 10px;
+  padding: 12px 10px;
   cursor: pointer;
   display: none;
-  height:60px;
+  height:55.2px;
+}
+
+.handle-menu {
+  position: relative;
+  top:3px;
+  font-size: 20px;
+  color:white;
 }
 
 .fa-bars {
@@ -77,10 +88,11 @@ section {
   color: white;
 }
 
-/* Media Query for Navigation */
+/* == Media Query for Navigation == */
 @media screen and (max-width: 930px) {
   nav ul {
     max-height: 0;
+    background-color: rgba(255,255,255,.93);
   }
 
   .showing {
@@ -104,7 +116,7 @@ section {
     position: static;
   }
 }
-/* ------------------------------ */
+/* ================================ */
 
 #demo-button {
   font-family: 'Raleway', sans-serif;
