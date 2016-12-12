@@ -17,8 +17,7 @@ afterEach(function() {
 
 // Tests for root URL
 describe('The root URL', function() {
-
-  it('should show HTML on GET', function(done) {
+  it('should display HTML on GET', function(done) {
     chai.request(server)
       .get('/')
       .end(function(err, res) {
@@ -30,8 +29,8 @@ describe('The root URL', function() {
 });
 
 // Test for /dashboard
-describe('The dashboard page on GET', function() {
-  it('should show HTML', function(done) {
+describe('The dashboard page', function() {
+  it('should display HTML on GET', function(done) {
     chai.request(server)
       .get('/dashboard')
       .end(function(err, res) {
@@ -44,7 +43,7 @@ describe('The dashboard page on GET', function() {
 
 // Test for /dreams
 describe('The dreams page', function() {
-  it('should show HTML on GET', function(done) {
+  it('should display HTML on GET', function(done) {
     chai.request(server)
       .get('/dreams')
       .end(function(err, res) {
@@ -94,8 +93,19 @@ describe('The dreams page', function() {
   }); */
 });
 
-// test for adding a new entry into the /new-dream page
-/*describe('The new-dream page', function() {
+// test for /new-dream page
+describe('The new-dream page', function() {
+  it('should display HTML on GET', function(done) {
+    chai.request(server)
+      .get('/new-dream')
+      .end(function(err, res) {
+        res.should.have.status(200);
+        res.should.be.html;
+        done();
+      });
+  });
+
+  /*
   it('should add a dream entry on POST', function(done) {
     const newItem = {title: 'Please Work', entry: 'I REALLY HOPE THIS WORKS', type: 'lucid', hoursSlept: 7};
     chai.request(server)
@@ -110,5 +120,6 @@ describe('The dreams page', function() {
         res.body.should.deep.equal(Object.assign(newItem, {id: res.body.id}));
         done();
       });
-  }); 
-});*/
+  }); */
+
+});
