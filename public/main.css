@@ -13,8 +13,6 @@ nav {
   top:0;
   left:0;
   right:0;
-  height: 60px;
-  background-color: rgba(255,255,255,.8);
   z-index: 10;
 }
 
@@ -24,10 +22,13 @@ a {
 }
 
 nav ul {
+  background-color: rgba(255,255,255,.9);
   overflow: hidden;
   text-align: center;
   margin: 0;
+  padding:0;
   color:black;
+  letter-spacing: .5px;
   -webkit-transition: max-height 0.4s;
   -ms-transition: max-height 0.4s;
   -moz-transition: max-height 0.4s;
@@ -37,7 +38,23 @@ nav ul {
 
 nav ul li {
   display: inline-block;
-  padding: 20px;
+  padding: 18px 15px;
+  font-size: 17px;
+}
+
+.nav-brand {
+  color:#0072bf;
+  font-weight: bold;
+}
+
+.nav-left {
+  position: relative;
+  right: 90px;
+}
+
+.nav-right {
+  position: relative;
+  left: 90px;
 }
 
 section {
@@ -47,7 +64,7 @@ section {
 
 .handle {
   width: 100%;
-  background: grey;
+  background: #dbdbdb;
   text-align: left;
   padding: 15px 10px;
   cursor: pointer;
@@ -55,13 +72,19 @@ section {
   height:60px;
 }
 
-@media screen and (max-width: 840px) {
+.fa-bars {
+  float:right;
+  color: white;
+}
+
+/* Media Query for Navigation */
+@media screen and (max-width: 930px) {
   nav ul {
     max-height: 0;
   }
 
   .showing {
-    max-height: 20em;
+    max-height: 22em;
   }
 
   nav ul li {
@@ -72,7 +95,16 @@ section {
   .handle {
     display:block;
   }
+
+  .nav-left {
+    position: static;
+  }
+
+  .nav-right {
+    position: static;
+  }
 }
+/* ------------------------------ */
 
 #demo-button {
   font-family: 'Raleway', sans-serif;
