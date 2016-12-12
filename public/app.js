@@ -96,6 +96,14 @@ $('#add-new-dream').click(function(event) {
     postDreamEntry(title, entry, type, hoursSlept, itWorked);
 });
 
+$('#nav-brand').click(function(event) {
+  event.preventDefault();
+    $('body,html').animate({
+      scrollTop: 0
+    }, 800
+    );
+});
+
 
 
 
