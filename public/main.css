@@ -84,7 +84,23 @@ nav ul .nav-hover:hover {
   color: white;
 }
 
-/* ===================== MEDIA QUERY====================== */
+/* ===================== MEDIA QUERIES====================== */
+@media screen and (min-width: 930px) {
+  #demo-button {
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: #82c4ff;
+    color:white;
+    border:none;
+  }
+
+  #demo-button:hover {
+    background-color: #2699ff;
+  }
+}
+
 @media screen and (max-width: 930px) {
   nav ul {
     max-height: 0;
@@ -98,6 +114,10 @@ nav ul .nav-hover:hover {
   nav ul li {
     width: 100%;
     padding: 15px;
+  }
+
+  nav ul li:hover {
+    background-color: #e0e0e0;
   }
 
   .handle {
@@ -133,22 +153,9 @@ section {
   -webkit-text-fill-color: transparent;
 }
 
-#demo-button {
-  font-family: 'Raleway', sans-serif;
-  position: relative;
-  padding: 5px;
-  border-radius: 3px;
-  background-color: #82c4ff;
-  color:white;
-  border:none;
-}
-
-#demo-button:hover {
-  background-color: #2699ff;
-}
 
 #home {
-  padding-bottom: 200px;
+  padding-bottom: 150px;
   width: 100%;
   background: radial-gradient(ellipse at bottom, #002249 0%, #000 100%);
   text-align: center;
