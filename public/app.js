@@ -65,3 +65,64 @@ function getAndDisplayDreamEntries() {
 /*$(function() {
     getAndDisplayDreamEntries();
 })*/
+
+function itWorked() {
+    alert('IT WORKED')
+}
+
+function postDreamEntry(title, entry, type, hoursSlept, callback) {
+  const newEntry = {
+    url: 'localhost:8080/new-dream',
+    data: {
+      title: title,
+      entry: entry,
+      type: type,
+      hoursSlept: hoursSlept
+    },
+    dataType: 'json',
+    type: 'POST',
+    success: callback
+  };
+  $.ajax(newEntry);
+}
+
+$('#add-new-dream').click(function(event) {
+    event.preventDefault();
+    const title = $('#title').val();
+    const entry = $('#entry').val();
+    const type = $('#type').val();
+    const hoursSlept = $('#hoursSlept').val();
+    //console.log(title, entry, type, hoursSlept);
+    postDreamEntry(title, entry, type, hoursSlept, itWorked);
+});
+
+// Smooth scroll to top
+$('.nav-brand').click(function(event) {
+  event.preventDefault();
+    $('body,html').animate({
+      scrollTop: 0
+    }, 800
+    );
+});
+
+// Add smooth scrolling to navbar links
+$("a").on('click', function(event) {
+  if (this.hash !== "") {
+    event.preventDefault();
+    var hash = this.hash;
+    $('html, body').animate({
+        scrollTop: $(hash).offset().top-55
+    }, 800, 'swing', function(){
+      window.location.hash = hash;
+    });
+  } 
+});
+
+$('.handle').on('click', function(event) {
+  $('nav ul').toggleClass('showing');
+})
+
+$('nav ul a').on('click', function(event) {
+  $('nav ul').toggleClass('showing');
+})
+
