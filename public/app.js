@@ -97,7 +97,7 @@ $('#add-new-dream').click(function(event) {
 });
 
 // Smooth scroll to top
-$('#nav-brand').click(function(event) {
+$('.nav-brand').click(function(event) {
   event.preventDefault();
     $('body,html').animate({
       scrollTop: 0
@@ -111,7 +111,7 @@ $("a").on('click', function(event) {
     event.preventDefault();
     var hash = this.hash;
     $('html, body').animate({
-        scrollTop: $(hash).offset().top-60
+        scrollTop: $(hash).offset().top-55
     }, 800, 'swing', function(){
       window.location.hash = hash;
     });
@@ -121,3 +121,8 @@ $("a").on('click', function(event) {
 $('.handle').on('click', function(event) {
   $('nav ul').toggleClass('showing');
 })
+
+$('nav ul a').on('click', function(event) {
+  $('nav ul').toggleClass('showing');
+})
+
