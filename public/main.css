@@ -18,40 +18,59 @@ nav {
   z-index: 10;
 }
 
-.navbar ul {
-  position: relative;
-  bottom: 25px;
-}
-
-#nav-brand {
-  font-size: 20px;
-  margin-right: 20px;
-}
-
-.navbar li {
-  display: inline-block;
-  font-size: 20px;
-  margin-right: 20px;
-  position: relative;
-}
-
-.navbar li a {
-  color:black;
+a {
   text-decoration: none;
+  color:inherit;
 }
 
-.nav-left {
-  position: relative;
-  right:20px;
-}
-
-.nav-right {
-  float:right;
-  margin-top: 27px;
-}
-
-.nav-center {
+nav ul {
+  overflow: hidden;
   text-align: center;
+  margin: 0;
+  color:black;
+  -webkit-transition: max-height 0.4s;
+  -ms-transition: max-height 0.4s;
+  -moz-transition: max-height 0.4s;
+  -o-transition: max-height 0.4s;
+  transition: max-height 0.4s;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 20px;
+}
+
+section {
+  line-height: 1.5em;
+  margin: 0 auto;
+}
+
+.handle {
+  width: 100%;
+  background: grey;
+  text-align: left;
+  padding: 15px 10px;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 840px) {
+  nav ul {
+    max-height: 0;
+  }
+
+  .showing {
+    max-height: 20em;
+  }
+
+  nav ul li {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .handle {
+    display:block;
+  }
 }
 
 #demo-button {
