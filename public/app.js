@@ -95,3 +95,19 @@ $('#add-new-dream').click(function(event) {
     //console.log(title, entry, type, hoursSlept);
     postDreamEntry(title, entry, type, hoursSlept, itWorked);
 });
+
+
+
+
+// Add smooth scrolling to navbar links
+$("a").on('click', function(event) {
+  if (this.hash !== "") {
+    event.preventDefault();
+    var hash = this.hash;
+    $('html, body').animate({
+        scrollTop: $(hash).offset().top-60
+    }, 800, 'swing', function(){
+      window.location.hash = hash;
+    });
+  } 
+});
