@@ -72,9 +72,8 @@ header {
 #about {
   height:450px;
   width: 100%;
-  background: radial-gradient(ellipse at bottom, #0059a8 0%, #00305b 100%);
+  background: radial-gradient(ellipse at bottom, #0059a8 0%, #000e1e 100%);
   text-align: center;
-  z-index: 1;
 }
 
 #about h2 {
@@ -86,7 +85,7 @@ header {
 #journal {
   height:450px;
   width: 100%;
-  background-color: grey;
+  background: radial-gradient(ellipse at bottom, #6bb0ff 0%, #0059a8 100%);
   text-align: center;
 }
 
@@ -99,7 +98,7 @@ header {
 #analyze {
   height:450px;
   width: 100%;
-  background-color: #7cc2ff;
+  background: radial-gradient(ellipse at bottom, #bcdbff 0%, #6bb0ff 100%);
   text-align: center;
 }
 
@@ -112,7 +111,7 @@ header {
 #sign-up {
   height:450px;
   width: 100%;
-  background-color: #00284c;
+  background: radial-gradient(ellipse at bottom, #eff6ff 0%, #bcdbff 100%);
   text-align: center;
 }
 
@@ -153,7 +152,7 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 
 html {
   height: 100%;
-  background: radial-gradient(ellipse at bottom, #001333 0%, #000 100%);
+  background: radial-gradient(ellipse at bottom, #002249 0%, #000 100%);
 }
 
 #stars {
