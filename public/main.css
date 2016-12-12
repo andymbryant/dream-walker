@@ -3,6 +3,11 @@
   font-family: 'Raleway', sans-serif;
 }
 
+html {
+  height: 100%;
+  background: radial-gradient(ellipse at bottom, #002249 0%, #000 100%);
+}
+
 nav {
   position: fixed;
   top:0;
@@ -58,15 +63,18 @@ nav {
   background-color: #2699ff;
 }
 
-header p {
+#home {
+  height:500px;
+  width: 100%;
+  background: radial-gradient(ellipse at bottom, #002249 0%, #000 100%);
+  text-align: center;
+}
+
+#home p {
   color: #FFF;
   text-align: center;
   font-weight: 700;
   font-size: 20px;
-}
-
-header {
-  margin-bottom: 150px;
 }
 
 #about {
@@ -148,11 +156,6 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
   background: -webkit-linear-gradient(white, #0072bf);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-html {
-  height: 100%;
-  background: radial-gradient(ellipse at bottom, #002249 0%, #000 100%);
 }
 
 #stars {
