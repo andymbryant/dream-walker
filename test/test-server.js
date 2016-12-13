@@ -94,10 +94,10 @@ describe('The dreams page', function() {
 });
 
 // test for /new-dream page
-describe('The new-dream page', function() {
+describe('The /dreams/new page', function() {
   it('should display HTML on GET', function(done) {
     chai.request(server)
-      .get('/new-dream')
+      .get('/dreams/new')
       .end(function(err, res) {
         res.should.have.status(200);
         res.should.be.html;
