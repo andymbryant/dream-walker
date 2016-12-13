@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
 });
 // =========================================== //
 
-router.get('/:id', (req, res) => {
+router.get('/:id/dashboard', (req, res) => {
   res.sendFile(__dirname + '/public/users.html');
 });
 
