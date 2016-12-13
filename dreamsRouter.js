@@ -15,6 +15,10 @@ router.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/dreams.html');
 });
 
+router.get('/new', (req, res) => {
+  res.sendFile(__dirname + '/public/new.html');
+});
+
 router.put('/:id', jsonParser, (req, res) => {
   const requiredFields = ['id', 'title', 'entry', 'type', 'hoursSlept'];
   for (let i = 0; i < requiredFields.length; i++) {

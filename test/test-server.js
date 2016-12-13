@@ -28,17 +28,34 @@ describe('The root URL', function() {
   }); 
 });
 
-// Test for /dashboard
-describe('The dashboard page', function() {
+// Test for /users/:id
+describe('The /users/:id page', function() {
+
   it('should display HTML on GET', function(done) {
     chai.request(server)
-      .get('/dashboard')
+      .get('/users/:id')
       .end(function(err, res) {
         res.should.have.status(200);
         res.should.be.html;
         done();
       });
-  });  
+  }); 
+
+  it('should delete a user on DELETE', function(done) {
+    chai.request(server)
+      // first have to get so we have an `id` of item
+      // to delete
+      .get('/users')
+      .end(function(err, res) {
+        chai.request(server)
+          .delete(`/users/${res.body[0].id}`)
+          .end(function(err, res) {
+            res.should.have.status(204);
+          });
+          done();
+      });
+  });
+
 });
 
 // Test for /dreams
@@ -94,10 +111,10 @@ describe('The dreams page', function() {
 });
 
 // test for /new-dream page
-describe('The new-dream page', function() {
+describe('The /dreams/new page', function() {
   it('should display HTML on GET', function(done) {
     chai.request(server)
-      .get('/new-dream')
+      .get('/dreams/new')
       .end(function(err, res) {
         res.should.have.status(200);
         res.should.be.html;
