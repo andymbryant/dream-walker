@@ -3,7 +3,6 @@ const morgan = require('morgan')
 const app = express();
 const dreamsRouter = require('./dreamsRouter');
 const dashboardRouter = require('./dashboardRouter');
-const newDreamRouter = require('./newDreamRouter');
 
 app.use(express.static('public'));
 app.use(morgan('common'));
@@ -20,6 +19,5 @@ app.use('/dashboard', dashboardRouter);
 
 app.use('/dreams', dreamsRouter);
 
-app.use('/new-dream', newDreamRouter);
 
 module.exports = server;
