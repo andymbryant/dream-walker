@@ -28,17 +28,34 @@ describe('The root URL', function() {
   }); 
 });
 
-// Test for /users
-describe('The /users page', function() {
+// Test for /users/:id
+describe('The /users/:id page', function() {
+
   it('should display HTML on GET', function(done) {
     chai.request(server)
-      .get('/users')
+      .get('/users/:id')
       .end(function(err, res) {
         res.should.have.status(200);
         res.should.be.html;
         done();
       });
-  });  
+  }); 
+
+  it('should delete a user on DELETE', function(done) {
+    chai.request(server)
+      // first have to get so we have an `id` of item
+      // to delete
+      .get('/users')
+      .end(function(err, res) {
+        chai.request(server)
+          .delete(`/users/${res.body[0].id}`)
+          .end(function(err, res) {
+            res.should.have.status(204);
+          });
+          done();
+      });
+  });
+
 });
 
 // Test for /dreams
