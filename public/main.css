@@ -94,7 +94,7 @@ nav ul .nav-hover:hover {
   top:3px;
   font-size: 20px;
   font-weight: bold;
-  background: -webkit-linear-gradient(#0072bf, white);
+  background: -webkit-linear-gradient(white, #0072bf);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
