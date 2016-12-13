@@ -1,7 +1,6 @@
 const express = require('express');
 const morgan = require('morgan')
 const app = express();
-const indexRouter = require('./indexRouter');
 const dreamsRouter = require('./dreamsRouter');
 const dashboardRouter = require('./dashboardRouter');
 const newDreamRouter = require('./newDreamRouter');
@@ -13,7 +12,9 @@ const server = app.listen(process.env.PORT || 8080, () => {
   console.log(`Your app is listening on port ${process.env.PORT || 8080}`);
 });
 
-app.use('/', indexRouter);
+router.get('/', (req, res) => {
+  res.sendFile(__dirname + '/public/index.html');
+});
 
 app.use('/dashboard', dashboardRouter);
 
