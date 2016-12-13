@@ -23,33 +23,50 @@ nav a {
 }
 
 nav ul {
-  background-color: rgba(255,255,255,.95);
   overflow: hidden;
   text-align: center;
   margin: 0;
   padding:0;
-  color:#666666;
+  color:white;  
   letter-spacing: .5px;
   -webkit-transition: max-height 0.4s;
   -ms-transition: max-height 0.4s;
   -moz-transition: max-height 0.4s;
   -o-transition: max-height 0.4s;
   transition: max-height 0.4s;
+  transition: all 0.4s ease;
 }
 
 nav ul li {
   display: inline-block;
   padding: 18px 15px;
   font-size: 17px;
+  transition: 0.3s ease; 
 }
 
 nav ul .nav-hover:hover {
-  color:black;
+  color:#0098ff;
+}
+
+/* nav bar after scroll */
+.nav-ul-scroll {
+  background-color: rgba(255,255,255,.95);
+  color:#303030;
 }
 
 .nav-brand {
-  color:#0072bf;
   font-weight: bold;
+  transition: all 0.4s ease;
+  background: -webkit-linear-gradient(white, #0072bf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-brand-scroll {
+  font-weight: bold;
+  background: -webkit-linear-gradient(#0072bf, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .nav-left {
