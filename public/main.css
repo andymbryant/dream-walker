@@ -173,6 +173,8 @@ section {
   width: 100%;
   background: #F8F9FA;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 #about h2 {
@@ -186,6 +188,8 @@ section {
   width: 100%;
   background: #e0ecff;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 #journal h2 {
@@ -199,6 +203,8 @@ section {
   width: 100%;
   background: radial-gradient(ellipse at bottom, #bcdbff 0%, #6bb0ff 100%);
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 #analyze h2 {
@@ -212,6 +218,8 @@ section {
   width: 100%;
   background: radial-gradient(ellipse at bottom, #eff6ff 0%, #bcdbff 100%);
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 #sign-up h2 {
