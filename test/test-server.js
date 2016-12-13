@@ -28,11 +28,11 @@ describe('The root URL', function() {
   }); 
 });
 
-// Test for /dashboard
-describe('The dashboard page', function() {
+// Test for /users
+describe('The /users page', function() {
   it('should display HTML on GET', function(done) {
     chai.request(server)
-      .get('/dashboard')
+      .get('/users')
       .end(function(err, res) {
         res.should.have.status(200);
         res.should.be.html;

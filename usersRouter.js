@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
+
 router.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/dashboard.html');
+  res.sendFile(__dirname + '/public/users.html');
 });
 
 module.exports = router;
