@@ -217,7 +217,7 @@ section {
 #sign-up {
   padding-bottom: 150px;
   width: 100%;
-  background: radial-gradient(ellipse at bottom, #eff6ff 0%, #bcdbff 100%);
+  background: #ededed;
   text-align: center;
   position: relative;
   z-index: 1;
@@ -255,23 +255,17 @@ section {
   padding-left: 0px;
 }
 
-.register label {
-  display: block;
-  font-family: 'Raleway', sans-serif;
-  font-weight: bold;
-  margin-top: 15px;
-}
-
 .register input {
   font-family: 'Raleway', sans-serif;
   width: 320px;
-  height: 55px;
   border: 2px solid #d8d8d8;
   border-radius: 3px;
-  padding:15px;
+  border-left: none;
+  border-top: none;
+  border-right:none;
+  padding:2px 0;
   font-size: 20px;
-  font-weight:bold;
-  background-color: #f9f9f9;
+  background-color: #ededed;
   margin-bottom: 20px;
   margin-top: 15px;
 }
