@@ -29,11 +29,11 @@ describe('The root URL', function() {
 });
 
 // Test for /users/:id
-describe('The /users/:id page', function() {
+describe('The /users/:id/dashboard page', function() {
 
   it('should display HTML on GET', function(done) {
     chai.request(server)
-      .get('/users/:id')
+      .get('/users/:id/dashboard')
       .end(function(err, res) {
         res.should.have.status(200);
         res.should.be.html;
@@ -59,7 +59,7 @@ describe('The /users/:id page', function() {
 });
 
 // Test for /dreams
-describe('The dreams page', function() {
+describe('The /dreams page', function() {
   it('should display HTML on GET', function(done) {
     chai.request(server)
       .get('/dreams')
