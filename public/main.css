@@ -81,7 +81,7 @@ nav ul .nav-hover:hover {
 
 .handle {
   width: 100%;
-  background: #96ccff;
+  background: #001426;
   text-align: left;
   padding: 12px 10px;
   cursor: pointer;
@@ -93,7 +93,10 @@ nav ul .nav-hover:hover {
   position: relative;
   top:3px;
   font-size: 20px;
-  color:white;
+  font-weight: bold;
+  background: -webkit-linear-gradient(#0072bf, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .fa-bars {
@@ -123,6 +126,7 @@ nav ul .nav-hover:hover {
   nav ul {
     max-height: 0;
     background-color: rgba(255,255,255,.93);
+    color:black;
   }
 
   .showing {
@@ -148,6 +152,13 @@ nav ul .nav-hover:hover {
 
   .nav-right {
     position: static;
+  }
+
+  .nav-brand {
+    font-weight: bold;
+    background: -webkit-linear-gradient(#0072bf, white);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
   }
 }
 /* ========================================================== */
