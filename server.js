@@ -12,7 +12,7 @@ const server = app.listen(process.env.PORT || 8080, () => {
   console.log(`Your app is listening on port ${process.env.PORT || 8080}`);
 });
 
-router.get('/', (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });
 
