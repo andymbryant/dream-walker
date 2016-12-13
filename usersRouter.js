@@ -12,18 +12,18 @@ users.create('username2', 'password2');
 
 
 
-// Placeholder until I get real IDs
+// Testing with mock data //
 router.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/users.html');
+  res.json(users.get());
 });
+// =========================================== //
 
-// These are for when I have IDs in a database
 router.get('/:id', (req, res) => {
   res.sendFile(__dirname + '/public/users.html');
 });
 
 router.delete('/:id', (req, res) => {
-  dreams.delete(req.params.id);
+  users.delete(req.params.id);
   console.log(`Deleted user \`${req.params.id}\``);
   res.status(204).end();
 });
