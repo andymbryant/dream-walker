@@ -23,33 +23,50 @@ nav a {
 }
 
 nav ul {
-  background-color: rgba(255,255,255,.95);
   overflow: hidden;
   text-align: center;
   margin: 0;
   padding:0;
-  color:#666666;
+  color:white;  
   letter-spacing: .5px;
   -webkit-transition: max-height 0.4s;
   -ms-transition: max-height 0.4s;
   -moz-transition: max-height 0.4s;
   -o-transition: max-height 0.4s;
   transition: max-height 0.4s;
+  transition: all 0.4s ease;
 }
 
 nav ul li {
   display: inline-block;
   padding: 18px 15px;
   font-size: 17px;
+  transition: 0.3s ease; 
 }
 
 nav ul .nav-hover:hover {
-  color:black;
+  color:#0098ff;
+}
+
+/* nav bar after scroll */
+.nav-ul-scroll {
+  background-color: rgba(255,255,255,.95);
+  color:#303030;
 }
 
 .nav-brand {
-  color:#0072bf;
   font-weight: bold;
+  transition: all 0.4s ease;
+  background: -webkit-linear-gradient(white, #0072bf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-brand-scroll {
+  font-weight: bold;
+  background: -webkit-linear-gradient(#0072bf, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .nav-left {
@@ -94,6 +111,7 @@ nav ul .nav-hover:hover {
     background-color: #82c4ff;
     color:white;
     border:none;
+    transition-duration: 200ms;
   }
 
   #demo-button:hover {
@@ -173,6 +191,8 @@ section {
   width: 100%;
   background: #F8F9FA;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 #about h2 {
@@ -186,6 +206,8 @@ section {
   width: 100%;
   background: #e0ecff;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 #journal h2 {
@@ -199,6 +221,8 @@ section {
   width: 100%;
   background: radial-gradient(ellipse at bottom, #bcdbff 0%, #6bb0ff 100%);
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 #analyze h2 {
@@ -212,12 +236,81 @@ section {
   width: 100%;
   background: radial-gradient(ellipse at bottom, #eff6ff 0%, #bcdbff 100%);
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 #sign-up h2 {
   position:relative;
   top:15px;
   margin-bottom: 30px;
+}
+
+/* ======================== Sign Up Box ======================== */
+
+.sign-up-box {
+  width:400px;
+  height: 450px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+}
+
+.sign-up {
+  padding-top: 15px;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 35px;
+  color: #595959;
+}
+
+.register fieldset {
+  border: none;
+  margin-left:0px;
+  padding-left: 0px;
+}
+
+.register label {
+  display: block;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.register input {
+  font-family: 'Raleway', sans-serif;
+  width: 320px;
+  height: 55px;
+  border: 2px solid #d8d8d8;
+  border-radius: 3px;
+  padding:15px;
+  font-size: 20px;
+  font-weight:bold;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+  margin-top: 15px;
+}
+
+
+button {
+  width: 320px;
+  height: 55px;
+  padding:15px;
+  border:none;
+  border-radius: 3px;
+  background-color: #82c4ff;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  color:white;
+  font-size: 20px;
+  transition-duration: 200ms;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2699ff;
 }
 
 
