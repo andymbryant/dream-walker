@@ -38,6 +38,7 @@ const dreams = {
   }
 };
 
+/* Work in progress */
 const users = {
   create: function(username, password) {
     console.log('Creating a new user...');
@@ -82,6 +83,6 @@ function createUser() {
 }
 
 module.exports = {
-  dreams: createDreamEntry()
-  users: createUser();
+  dreams: createDreamEntry(),
+  users: createUser()
 }
