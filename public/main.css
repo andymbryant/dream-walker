@@ -240,25 +240,16 @@ h2 {
 
 .sign-up-box {
   width:400px;
-  height: 450px;
   padding-left: 40px;
   padding-right: 40px;
   margin: 0 auto;
   border-radius: 4px;
-}
-
-.sign-up {
-  padding-top: 15px;
   text-align: center;
-  font-family: 'Raleway', sans-serif;
-  font-size: 35px;
-  color: #82c4ff;
 }
 
 .register fieldset {
   border: none;
-  margin-left:0px;
-  padding-left: 0px;
+  padding: 0;
 }
 
 .register input {
@@ -282,7 +273,7 @@ h2 {
 }
 
 
-button {
+.sign-up-button {
   width: 320px;
   height: 55px;
   padding:15px;
@@ -298,6 +289,13 @@ button {
 
 button:hover {
   background-color: #2699ff;
+}
+
+@media screen and (max-width: 470px) {
+  .sign-up-box, .register fieldset, .register input, .sign-up-button {
+    width: 100%;
+    font-size: 100%;
+  }
 }
 
 /*
