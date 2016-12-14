@@ -126,3 +126,16 @@ $('nav ul a').on('click', function(event) {
   $('nav ul').toggleClass('showing');
 })
 
+// Toggle navigation class on scroll
+$(window).scroll(function(){ 
+    var a = 10;
+    var pos = $(window).scrollTop();
+    if(pos > a) {
+        $('nav ul').addClass('nav-ul-scroll');
+        $('.nav-brand').addClass('nav-brand-scroll');
+    }
+    else {
+        $('nav ul').removeClass('nav-ul-scroll');
+        $('.nav-brand').removeClass('nav-brand-scroll');
+    }
+});
