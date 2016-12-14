@@ -294,6 +294,7 @@ button:hover {
 @media screen and (max-width: 470px) {
   .sign-up-box, .register fieldset, .register input, .sign-up-button {
     width: 100%;
+    height: auto;
     font-size: 100%;
   }
 }
