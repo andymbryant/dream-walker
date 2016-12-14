@@ -113,11 +113,11 @@ nav ul .nav-hover:hover {
   padding: 20px;
   border-radius: 5px;
 
-  -webkit-transform: translate(-50%, -200%);
-  -ms-transform: translate(-50%, -200%);
-  -moz-transform: translate(-50%, -200%);
-  -o-transform: translate(-50%, -200%);
-  transform: translate(-50%, -200%);
+  -webkit-transform: translate(-50%, -170%);
+  -ms-transform: translate(-50%, -170%);
+  -moz-transform: translate(-50%, -170%);
+  -o-transform: translate(-50%, -170%);
+  transform: translate(-50%, -170%);
 
   -webkit-transition: -webkit-transform 200ms ease-out;
   -ms-transition: -ms-transform 200ms ease-out;
@@ -152,10 +152,6 @@ nav ul .nav-hover:hover {
   -moz-transform: translate(-50%, 0);
   -o-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
-}
-
-#modal-close {
-
 }
 
 /* ===================== MEDIA QUERIES====================== */
@@ -213,6 +209,14 @@ nav ul .nav-hover:hover {
     background: -webkit-linear-gradient(#0072bf, white);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+  }
+
+  .modal-container {
+    -webkit-transform: translate(300%, 0);
+    -ms-transform: translate(300%, 0);
+    -moz-transform: translate(300%, 0);
+    -o-transform: translate(300%, 0);
+    transform: translate(300%, 0);
   }
 }
 /* ========================================================== */
