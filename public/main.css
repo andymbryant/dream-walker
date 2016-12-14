@@ -154,6 +154,20 @@ nav ul .nav-hover:hover {
   transform: translate(-50%, 0);
 }
 
+.modal-close {
+  -webkit-transform: translate(100%, -100%);
+  -ms-transform: translate(100%, -100%);
+  -moz-transform: translate(100%, -100%);
+  -o-transform: translate(100%, -100%);
+  transform: translate(100%, -100%);
+
+  -webkit-transition: -webkit-transform 200ms ease-out;
+  -ms-transition: -ms-transform 200ms ease-out;
+  -moz-transition: -moz-transform 200ms ease-out;
+  -o-transition: -o-transform 200ms ease-out;
+  transition: transform 200ms ease-out;
+}
+
 /* ===================== MEDIA QUERIES====================== */
 @media screen and (min-width: 945px) {
   #demo-button {
