@@ -124,7 +124,7 @@ $('.modal-close').on('click', function(event) {
 
 $('.log-in').on('click', function(event) {
   event.preventDefault();
-  $('.modal').removeClass('modal-close')
+  $('.modal').removeClass('modal-close');
 });
 
 $('.handle').on('click', function(event) {
