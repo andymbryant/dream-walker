@@ -227,7 +227,6 @@ h2 {
 }
 
 #sign-up {
-  padding-bottom: 150px;
   width: 100%;
   background: #ededed;
   text-align: center;
@@ -242,8 +241,7 @@ h2 {
   height: 450px;
   padding-left: 40px;
   padding-right: 40px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   border-radius: 4px;
 }
 
@@ -299,7 +297,6 @@ button {
 button:hover {
   background-color: #2699ff;
 }
-
 
 /*
 Copyright (c) 2016 by Ragoli (http://codepen.io/Glucio/pen/BoLWPo)
