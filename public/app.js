@@ -118,13 +118,22 @@ $("a").on('click', function(event) {
   } 
 });
 
+$('.modal-close').on('click', function(event) {
+  $('.modal').addClass('modal-close');
+});
+
+$('.log-in').on('click', function(event) {
+  event.preventDefault();
+  $('.modal').removeClass('modal-close');
+});
+
 $('.handle').on('click', function(event) {
   $('nav ul').toggleClass('showing');
-})
+});
 
 $('nav ul a').on('click', function(event) {
   $('nav ul').toggleClass('showing');
-})
+});
 
 // Toggle navigation class on scroll
 $(window).scroll(function(){ 
