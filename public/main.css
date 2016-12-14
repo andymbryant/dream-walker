@@ -202,7 +202,7 @@ h2 {
 #about {
   padding-bottom: 150px;
   width: 100%;
-  background: #F8F9FA;
+  background: #99D3DF;
   text-align: center;
   position: relative;
   z-index: 1;
@@ -211,7 +211,7 @@ h2 {
 #journal {
   padding-bottom: 150px;
   width: 100%;
-  background: #e0ecff;
+  background: #88bbd6;
   text-align: center;
   position: relative;
   z-index: 1;
@@ -220,7 +220,7 @@ h2 {
 #analyze {
   padding-bottom: 150px;
   width: 100%;
-  background: radial-gradient(ellipse at bottom, #bcdbff 0%, #6bb0ff 100%);
+  background: #cdcdcd;
   text-align: center;
   position: relative;
   z-index: 1;
@@ -229,7 +229,7 @@ h2 {
 #sign-up {
   width: 100%;
   height: 400px;
-  background: #ededed;
+  background: #E9E9E9;
   text-align: center;
   position: relative;
   overflow: hidden;
