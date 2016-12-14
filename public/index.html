@@ -25,10 +25,17 @@
 
 		<div class="modal" id="log-in">
 			<div class="modal-container">
-				<p>test test test</p>
-				<button type="button" class="modal-close">Close</button>
-
-		<!--		<a href="#">Close</a> -->
+				<div class="log-in-box">
+					<form class="login-form" action="/some-server-endpoint" method="post" autocomplete="off">
+						<fieldset name="login-info">
+							<input type="text" name="username" id="username" placeholder="Username" required/>
+							<input type="password" name="password" id="password" placeholder="Password" required/>
+						</fieldset>
+						<button type='submit' class="log-in-button">Log In</button>
+					</form>
+				</div>
+				<i class="fa fa-times fa-lg modal-close" aria-hidden="true"></i>
+		<!--		<button type="button" class="modal-close">X</button> -->
 			</div>
 		</div>
 
