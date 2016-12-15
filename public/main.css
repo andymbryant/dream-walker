@@ -216,6 +216,11 @@ nav ul .nav-hover:hover {
   bottom: 185px;
   float:right;
   cursor: pointer;
+  color: #a8a8a8;
+}
+
+.fa-times:hover {
+  color:black;
 }
 
 .red {
