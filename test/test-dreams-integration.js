@@ -113,25 +113,25 @@ describe('Dream Walker API resource', function() {
   // on proving something small
   describe('GET endpoint', function() {
 
-    it('should return all existing posts', function() {
+    it('should return all existing dreams', function() {
       // strategy:
-      //    1. get back all posts returned by by GET request to `/posts`
+      //    1. get back all dreams returned by GET request to `/dreams`
       //    2. prove res has right status, data type
-      //    3. prove the number of posts we got back is equal to number
+      //    3. prove the number of dreams we got back is equal to number
       //       in db.
       //
       // need to have access to mutate and access `res` across
       // `.then()` calls below, so declare it here so can modify in place
       let res;
       return chai.request(app)
-        .get('/posts')
+        .get('/dreams')
         .then(function(_res) {
           // so subsequent .then blocks can access resp obj.
           res = _res;
           res.should.have.status(200);
           // otherwise our db seeding didn't work
           res.body.should.have.length.of.at.least(1);
-          return BlogPost.count();
+          return Dream.count();
         })
         .then(function(count) {
           res.body.should.have.length.of(count);
@@ -139,33 +139,34 @@ describe('Dream Walker API resource', function() {
     });
 
 
-    it('should return posts with right fields', function() {
-      // Strategy: Get back all posts, and ensure they have expected keys
+    it('should return dreams with right fields', function() {
+      // Strategy: Get back all dreams, and ensure they have expected keys
 
-      let resBlogPost;
+      let resDream;
       return chai.request(app)
-        .get('/posts')
+        .get('/dreams')
         .then(function(res) {
           res.should.have.status(200);
           res.should.be.json;
           res.body.should.be.a('array');
           res.body.should.have.length.of.at.least(1);
 
-          res.body.forEach(function(post) {
-            post.should.be.a('object');
-            post.should.include.keys(
-              'id', 'author', 'content', 'title', 'created');
+          res.body.forEach(function(dream) {
+            dream.should.be.a('object');
+            dream.should.include.keys(
+              'id', 'title', 'entry', 'type', 'hoursSlept', 'date');
           });
-          resBlogPost = res.body[0];
-          return BlogPost.findById(resBlogPost.id);
+          resDream = res.body[0];
+          return Dream.findById(resDream.id);
         })
-        .then(function(post) {
+        .then(function(dream) {
 
-          resBlogPost.id.should.equal(post.id);
-          resBlogPost.author.should.contain(post.author.firstName);
-          resBlogPost.author.should.contain(post.author.lastName);
-          resBlogPost.content.should.equal(post.content);
-          resBlogPost.title.should.equal(post.title)
+          resDream.id.should.equal(dream.id);
+          resDream.title.should.equal(dream.title);
+          resDream.entry.should.equal(dream.entry);
+          resDream.type.should.equal(dream.type);
+          resDream.hoursSlept.should.equal(dream.hoursSlept);
+          resDream.date.should.equal(dream.date);
         });
     });
   });
