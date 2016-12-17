@@ -8,7 +8,19 @@ const dreamSchema = mongoose.Schema({
   created: {type: Date, default: Date.now}
 });
 
+dreamSchema.methods.apiRepr = function() {
+  return {
+    id: this._id,
+    title: this.title,
+    entry: this.entry,
+    type: this.type,
+    created: this.created
+  };
+}
 
+const Dream = mongoose.model('Dream', dreamSchema);
+
+module.exports = {Dream};
 
 
 
