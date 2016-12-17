@@ -9,7 +9,7 @@ const { Dream } = require('./models');
 const app = express();
 
 app.use(morgan('common'));
-app.use(express.static('public'));
+//app.use(express.static('public'));
 app.use(bodyParser.json());
 
 mongoose.Promise = global.Promise;
