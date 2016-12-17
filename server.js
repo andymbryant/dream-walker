@@ -14,6 +14,23 @@ app.use(bodyParser.json());
 
 mongoose.Promise = global.Promise;
 
+app.get('/dreams', (req, res) => {
+  Dream
+    .find()
+    .exec()
+    .then(dreams => {
+      res.json(dreams.map(dream => dream.apiRepr()));
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({error: 'something went terribly wrong'});
+    });
+});
+
+
+
+
+/*
 const dreamsRouter = require('./dreamsRouter');
 const usersRouter = require('./usersRouter');
 
@@ -79,3 +96,4 @@ if (require.main === module) {
 };
 
 module.exports = {app, runServer, closeServer};
+*/

@@ -7,9 +7,10 @@ const jsonParser = bodyParser.json();
 const {users} = require('./models');
 
 // Mock Data For Testing //
+/*
 users.create('username1', 'password1');
 users.create('username2', 'password2');
-
+*/
 
 
 // Testing with mock data //

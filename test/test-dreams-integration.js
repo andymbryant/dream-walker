@@ -57,7 +57,7 @@ function generateDate() {
 // generate an object representing a dream.
 // can be used to generate seed data for db
 // or request.body data
-function generateBlogPostData() {
+function generateDreamData() {
   return {
     title: generateDreamTitle(),
     entry: generateDreamEntry(),

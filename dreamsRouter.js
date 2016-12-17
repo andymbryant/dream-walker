@@ -1,16 +1,40 @@
 const express = require('express');
 const router = express.Router();
-
+const mongoose = require('mongoose');
+const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
 
-const {dreams} = require('./models');
+const { Dream } = require('./models');
+
+const app = express();
+app.use(morgan('common'));
+app.use(bodyParser.json());
+
+mongoose.Promise = global.Promise;
+
+app.get('/', (req, res) => {
+  Dream
+    .find()
+    .exec()
+    .then(dreams => {
+      res.json(dreams.map(dream => dream.apiRepr()));
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({error: 'something went terribly wrong'});
+    });
+});
+
+
 
 // Mock Data For Testing //
+/*
 dreams.create('test title 1', 'lorem ipsum', 'lucid', 8);
 dreams.create('test title 2', 'morem jpsum', 'lucid', 8);
 dreams.create('test title 3', 'norem kpsum', 'lucid', 8);
-
+*/
+/*
 router.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/dreams.html');
 });
