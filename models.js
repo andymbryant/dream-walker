@@ -14,6 +14,7 @@ dreamSchema.methods.apiRepr = function() {
     title: this.title,
     entry: this.entry,
     type: this.type,
+    hoursSlept: this.hoursSlept,
     date: this.date
   };
 }
