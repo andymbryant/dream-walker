@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 // this module
 const should = chai.should();
 
-const { Dream } = require('../models');
+const {Dream} = require('../models');
 const {app, runServer, closeServer} = require('../server');
 
 chai.use(chaiHttp);
@@ -46,7 +46,7 @@ function generateDreamType() {
 
 function generateHoursSlept() {
   const hours = [Math.floor(Math.random() * 10)];
-  return hours
+  return hours;
 }
 
 function generateDate() {
@@ -106,7 +106,7 @@ describe('Dream Walker API resource', function() {
 
   after(function() {
     return closeServer();
-  })
+  });
 
   // note the use of nested `describe` blocks.
   // this allows us to make clearer, more discrete tests that focus
