@@ -1,4 +1,18 @@
-const uuid = require('uuid');
+const mongoose = require('mongoose');
+
+const dreamSchema = mongoose.Schema({
+  title: {type: String, required: true},
+  entry: {type: String, required: true},
+  type: {type: String, required: true},
+  hoursSlept: {type: Number, required: true},
+  created: {type: Date, default: Date.now}
+});
+
+
+
+
+
+/*const uuid = require('uuid');
 
 function StorageException(message) {
   this.message = message;
@@ -37,8 +51,9 @@ const dreams = {
     return updatedItem;
   }
 };
-
+*/
 /* Work in progress */
+/*
 const users = {
   create: function(username, password) {
     console.log('Creating a new user...');
@@ -86,3 +101,4 @@ module.exports = {
   dreams: createDreamEntry(),
   users: createUser()
 }
+*/
