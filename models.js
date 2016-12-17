@@ -5,7 +5,7 @@ const dreamSchema = mongoose.Schema({
   entry: {type: String, required: true},
   type: {type: String, required: true},
   hoursSlept: {type: Number, required: true},
-  created: {type: Date, default: Date.now}
+  date: {type: Date, default: Date.now}
 });
 
 dreamSchema.methods.apiRepr = function() {
@@ -14,7 +14,7 @@ dreamSchema.methods.apiRepr = function() {
     title: this.title,
     entry: this.entry,
     type: this.type,
-    created: this.created
+    date: this.date
   };
 }
 
