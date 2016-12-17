@@ -62,7 +62,8 @@ function generateBlogPostData() {
     title: generateDreamTitle(),
     entry: generateDreamEntry(),
     type: generateDreamType(),
-    hoursSlept: generatePostContent(),
+    hoursSlept: generateHoursSlept(),
+    date: generateDate()
   }
 }
 
@@ -85,7 +86,7 @@ function tearDownDb() {
   });
 }
 
-describe('Blog post API resource', function() {
+describe('Dream Walker API resource', function() {
 
   // we need each of these hook functions to return a promise
   // otherwise we'd need to call a `done` callback. `runServer`,
@@ -96,7 +97,7 @@ describe('Blog post API resource', function() {
   });
 
   beforeEach(function() {
-    return seedBlogPostData();
+    return seedDreamData();
   });
 
   afterEach(function() {
@@ -168,7 +169,7 @@ describe('Blog post API resource', function() {
         });
     });
   });
-
+/*
   describe('POST endpoint', function() {
     // strategy: make a POST request with data,
     // then prove that the blog post we get back has
@@ -270,7 +271,7 @@ describe('Blog post API resource', function() {
           should.not.exist(_post);
         });
     });
-  });
+  }); */
 });
 
 
