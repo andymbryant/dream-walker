@@ -154,35 +154,35 @@ describe('Dream Walker API resource', function() {
 /*
   describe('POST endpoint', function() {
     // strategy: make a POST request with data,
-    // then prove that the blog post we get back has
+    // then prove that the dream we get back has
     // right keys, and that `id` is there (which means
     // the data was inserted into db)
-    it('should add a new blog post', function() {
+    it('should add a new dream entry', function() {
 
-      const newPost = generateBlogPostData();
+      const newDream = generateDreamData();
 
       return chai.request(app)
-        .post('/posts')
-        .send(newPost)
+        .post('/dreams/new')
+        .send(newDream)
         .then(function(res) {
           res.should.have.status(201);
           res.should.be.json;
           res.body.should.be.a('object');
-          res.body.should.include.keys('id', 'author', 'content', 'title', 'created');
+          res.body.should.include.keys('id', 'title', 'entry', 'type', 'hoursSlept');
           // cause Mongo should have created id on insertion
           res.body.id.should.not.be.null;
-          res.body.author.should.equal(`${newPost.author.firstName} ${newPost.author.lastName}`);
-          res.body.content.should.equal(newPost.content);
-          res.body.title.should.equal(newPost.title);
-          res.body.created.should.not.be.null;
+          res.body.title.should.equal(newDream.title);
+          res.body.entry.should.equal(newDream.entry);
+          res.body.type.should.equal(newDream.type);
+          res.body.hoursSlept.should.equal(newDream.hoursSlept);
 
-          return BlogPost.findById(res.body.id);
+          return Dream.findById(res.body.id);
         })
-        .then(function(post) {
-          post.content.should.equal(newPost.content);
-          post.title.should.equal(newPost.title);
-          post.author.firstName.should.equal(newPost.author.firstName);
-          post.author.lastName.should.equal(newPost.author.lastName);
+        .then(function(dream) {
+          dream.title.should.equal(newDream.title);
+          dream.entry.should.equal(newDream.entry);
+          dream.type.should.equal(newDream.type);
+          dream.hoursSlept.should.equal(newDream.hoursSlept);
         });
     });
   });
