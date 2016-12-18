@@ -61,9 +61,9 @@ app.post('/dreams/new', (req, res) => {
 
 });
 
-/*
-app.delete('/posts/:id', (req, res) => {
-  BlogPost
+
+app.delete('/dreams/:id', (req, res) => {
+  Dream
     .findByIdAndRemove(req.params.id)
     .exec()
     .then(() => {
@@ -75,7 +75,7 @@ app.delete('/posts/:id', (req, res) => {
     });
 });
 
-
+/*
 app.put('/posts/:id', (req, res) => {
   if (!(req.params.id && req.body.id && req.params.id === req.body.id)) {
     res.status(400).json({
