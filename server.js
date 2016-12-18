@@ -61,21 +61,6 @@ app.post('/dreams/new', (req, res) => {
 
 });
 
-
-app.delete('/dreams/:id', (req, res) => {
-  Dream
-    .findByIdAndRemove(req.params.id)
-    .exec()
-    .then(() => {
-      res.status(204).json({message: 'success'});
-    })
-    .catch(err => {
-      console.error(err);
-      res.status(500).json({error: 'something went terribly wrong'});
-    });
-});
-
-
 app.put('/dreams/:id', (req, res) => {
   if (!(req.params.id && req.body.id && req.params.id === req.body.id)) {
     res.status(400).json({
@@ -100,12 +85,15 @@ app.put('/dreams/:id', (req, res) => {
 
 
 app.delete('/dreams/:id', (req, res) => {
-  BlogPosts
+  Dream
     .findByIdAndRemove(req.params.id)
     .exec()
     .then(() => {
-      console.log(`Deleted blog post with id \`${req.params.ID}\``);
-      res.status(204).end();
+      res.status(204).json({message: 'success'});
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({error: 'something went terribly wrong'});
     });
 });
 
