@@ -33,6 +33,10 @@ function generateDreamType() {
   return type[Math.floor(Math.random() * type.length)];
 }
 
+function generateHoursSlept() {
+  return Math.floor(Math.random() * 10);
+}
+
 // generate an object represnting a restaurant.
 // can be used to generate seed data for db
 // or request.body data
@@ -40,8 +44,8 @@ function generateDreamData() {
   return {
     title: faker.lorem.sentence(),
     entry: faker.lorem.paragraph(),
-    type: 'Normal',
-    hoursSlept: 8
+    type: generateDreamType(),
+    hoursSlept: generateHoursSlept()
   }
 }
 
