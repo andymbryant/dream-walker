@@ -151,7 +151,7 @@ describe('Dream Walker API resource', function() {
         });
     });
   });
-/*
+
   describe('POST endpoint', function() {
     // strategy: make a POST request with data,
     // then prove that the dream we get back has
@@ -175,6 +175,7 @@ describe('Dream Walker API resource', function() {
           res.body.entry.should.equal(newDream.entry);
           res.body.type.should.equal(newDream.type);
           res.body.hoursSlept.should.equal(newDream.hoursSlept);
+          res.body.created.should.not.be.null;
 
           return Dream.findById(res.body.id);
         })
@@ -186,7 +187,7 @@ describe('Dream Walker API resource', function() {
         });
     });
   });
-
+/*
   describe('PUT endpoint', function() {
 
     // strategy:
