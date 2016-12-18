@@ -2,10 +2,10 @@ const mongoose = require('mongoose');
 
 const dreamSchema = mongoose.Schema({
   title: {type: String, required: true},
-  entry: {type: String},
-  type: {type: String},
-  hoursSlept: {type: Number},
-  created: {type: Date, default: Date.now}
+  entry: {type: String, required: true},
+  type: {type: String, required: true},
+  hoursSlept: {type: Number, required: true},
+  created: {type: Date}
 });
 
 dreamSchema.methods.apiRepr = function() {
@@ -14,6 +14,7 @@ dreamSchema.methods.apiRepr = function() {
     title: this.title,
     entry: this.entry,
     type: this.type,
+    hoursSlept: this.hoursSlept,
     created: this.created
   };
 }
