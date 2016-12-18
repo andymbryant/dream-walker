@@ -37,22 +37,23 @@ app.get('/dreams/:id', (req, res) => {
       res.status(500).json({error: 'something went horribly awry'});
     });
 });
-/*
-app.post('/posts', (req, res) => {
-  const requiredFields = ['title', 'content', 'author'];
+
+app.post('/dreams/new', (req, res) => {
+  const requiredFields = ['title', 'entry', 'type', 'hoursSlept'];
   requiredFields.forEach(field => {
     if (!(field in req.body)) {
       res.status(400).json(
         {error: `Missing "${field}" in request body`});
     }});
 
-  BlogPost
+  Dream
     .create({
       title: req.body.title,
-      content: req.body.content,
-      author: req.body.author
+      entry: req.body.entry,
+      type: req.body.type,
+      hoursSlept: req.body.hoursSlept
     })
-    .then(blogPost => res.status(201).json(blogPost.apiRepr()))
+    .then(dreamEntry => res.status(201).json(dreamEntry.apiRepr()))
     .catch(err => {
         console.error(err);
         res.status(500).json({error: 'Something went wrong'});
@@ -60,7 +61,7 @@ app.post('/posts', (req, res) => {
 
 });
 
-
+/*
 app.delete('/posts/:id', (req, res) => {
   BlogPost
     .findByIdAndRemove(req.params.id)
