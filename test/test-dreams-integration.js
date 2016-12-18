@@ -223,36 +223,36 @@ describe('Dream Walker API resource', function() {
           post.content.should.equal(updateData.content);
         });
       });
-  });
+  }); */
 
   describe('DELETE endpoint', function() {
     // strategy:
-    //  1. get a post
-    //  2. make a DELETE request for that post's id
+    //  1. get a dream
+    //  2. make a DELETE request for that dream's id
     //  3. assert that response has right status code
-    //  4. prove that post with the id doesn't exist in db anymore
-    it('delete a post by id', function() {
+    //  4. prove that dream with the id doesn't exist in db anymore
+    it('delete a dream by id', function() {
 
-      let post;
+      let dream;
 
-      return BlogPost
+      return Dream
         .findOne()
         .exec()
-        .then(function(_post) {
-          post = _post;
-          return chai.request(app).delete(`/posts/${post.id}`);
+        .then(function(_dream) {
+          dream = _dream;
+          return chai.request(app).delete(`/dreams/${dream.id}`);
         })
         .then(function(res) {
           res.should.have.status(204);
-          return BlogPost.findById(post.id).exec();
+          return Dream.findById(dream.id).exec();
         })
-        .then(function(_post) {
+        .then(function(_dream) {
           // when a variable's value is null, chaining `should`
-          // doesn't work. so `_post.should.be.null` would raise
-          // an error. `should.be.null(_post)` is how we can
+          // doesn't work. so `_dream.should.be.null` would raise
+          // an error. `should.be.null(_dream)` is how we can
           // make assertions about a null value.
-          should.not.exist(_post);
+          should.not.exist(_dream);
         });
     });
-  }); */
+  }); 
 });
