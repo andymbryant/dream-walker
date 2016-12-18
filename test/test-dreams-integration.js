@@ -187,43 +187,43 @@ describe('Dream Walker API resource', function() {
         });
     });
   });
-/*
+
   describe('PUT endpoint', function() {
 
     // strategy:
-    //  1. Get an existing post from db
-    //  2. Make a PUT request to update that post
-    //  3. Prove post returned by request contains data we sent
-    //  4. Prove post in db is correctly updated
+    //  1. Get an existing dream from db
+    //  2. Make a PUT request to update that dreamt
+    //  3. Prove dream returned by request contains data we sent
+    //  4. Prove dream in db is correctly updated
     it('should update fields you send over', function() {
       const updateData = {
         title: 'Sparkling Coffee',
-        content: 'Gibberish, jibberish, jibber-jabber and gobbledygook'
+        entry: 'Gibberish, jibberish, jibber-jabber and gobbledygook'
       };
 
-      return BlogPost 
+      return Dream 
         .findOne()
         .exec()
-        .then(function(post) {
-          updateData.id = post.id;
+        .then(function(dream) {
+          updateData.id = dream.id;
 
           // make request then inspect it to make sure it reflects
           // data we sent
           return chai.request(app)
-            .put(`/posts/${post.id}`)
+            .put(`/dreams/${dream.id}`)
             .send(updateData);
         })
         .then(function(res) {
           res.should.have.status(204);
 
-          return BlogPost.findById(updateData.id).exec();
+          return Dream.findById(updateData.id).exec();
         })
-        .then(function(post) {
-          post.title.should.equal(updateData.title);
-          post.content.should.equal(updateData.content);
+        .then(function(dream) {
+          dream.title.should.equal(updateData.title);
+          dream.entry.should.equal(updateData.entry);
         });
       });
-  }); */
+  }); 
 
   describe('DELETE endpoint', function() {
     // strategy:
