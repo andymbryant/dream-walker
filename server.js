@@ -26,18 +26,18 @@ app.get('/dreams', (req, res) => {
       res.status(500).json({error: 'something went terribly wrong'});
     });
 });
-/*
-app.get('/posts/:id', (req, res) => {
-  BlogPost
+
+app.get('/dreams/:id', (req, res) => {
+  Dream
     .findById(req.params.id)
     .exec()
-    .then(post => res.json(post.apiRepr()))
+    .then(dream => res.json(dream.apiRepr()))
     .catch(err => {
       console.error(err);
       res.status(500).json({error: 'something went horribly awry'});
     });
 });
-
+/*
 app.post('/posts', (req, res) => {
   const requiredFields = ['title', 'content', 'author'];
   requiredFields.forEach(field => {
