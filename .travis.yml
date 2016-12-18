@@ -1,6 +1,8 @@
 language: node_js
 node_js: node
 deploy:
+services:
+- mongodb
   app: dream-walker
   provider: heroku
   api_key:
