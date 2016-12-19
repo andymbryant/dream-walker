@@ -54,7 +54,7 @@ function displayDreamEntries(data) {
 
     for (index in data.dreamEntries) {
        accordion.append(
-        '<dt>' + data.dreamEntries[index].title + '</dt>' + 
+        '<dt>' + data.dreamEntries[index].date + " - " + data.dreamEntries[index].title + '<a href="#"><i class="fa fa-pencil edit-icon" aria-hidden="true">Edit</i></a></dt>' + 
         '<dd><p>' + data.dreamEntries[index].entry + '</p></dd>' 
         );
     }
@@ -63,6 +63,10 @@ function displayDreamEntries(data) {
     accordion.find('dt').on('click', function(event) {
         $(this).toggleClass('open').next('dd').slideToggle().siblings('dd:visible').slideUp().prev('dt').removeClass('open');
     });
+
+    $('.edit-icon').on('click', function(event) {
+    alert('hi');
+});
 }
 
 // this function can stay the same even when we
