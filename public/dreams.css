@@ -1,0 +1,25 @@
+* {
+	box-sizing: border-box;
+}
+
+nav {
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	height: 50px;
+	background-color: #cecece;
+	text-align: center;
+}
+
+nav h1 {
+	position: relative;
+	bottom: 15px;
+}
+
+.main-container {
+	background-color: #cecece;
+	width: 100%;
+	height: 450px;
+	margin-top: 100px;
+}
