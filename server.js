@@ -3,7 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 
-//const dreamsRouter = require('./dreamsRouter');
+const dreamsRouter = require('./dreamsRouter');
 
 const {DATABASE_URL, PORT} = require('./config');
 const {Dream} = require('./models');
@@ -20,8 +20,9 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });
 
-//app.use('/dreams', dreamsRouter);
+app.use('/dreams', dreamsRouter);
 
+/*
 app.get('/dreams', (req, res) => {
   Dream
     .find()
@@ -103,6 +104,7 @@ app.delete('/dreams/:id', (req, res) => {
       res.status(500).json({error: 'something went terribly wrong'});
     });
 });
+*/
 
 app.use('*', function(req, res) {
   res.status(404).json({message: 'Not Found'});
