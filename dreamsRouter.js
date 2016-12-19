@@ -1,18 +1,10 @@
-/*const express = require('express');
+const express = require('express');
 const router = express.Router();
-const morgan = require('morgan');
-const mongoose = require('mongoose');
+
 const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
 
-const {DATABASE_URL, PORT} = require('./config');
 const {Dream} = require('./models');
-
-const app = express();
-app.use(morgan('common'));
-app.use(bodyParser.json());
-
-mongoose.Promise = global.Promise;
 
 router.get('/', (req, res) => {
   Dream
@@ -96,6 +88,4 @@ router.delete('/:id', (req, res) => {
     });
 });
 
-
 module.exports = router;
-*/
