@@ -17,9 +17,56 @@ nav h1 {
 	bottom: 15px;
 }
 
+/* ============================== STYLING FOR DREAMS PAGE ========================== */
+
 .main-container {
-	background-color: #cecece;
+/*	background-color: #cecece; */
 	width: 100%;
-	height: 450px;
+	height: auto;
 	margin-top: 100px;
+	margin-bottom: 50px;
+}
+
+.accordion,
+.accordion dt,
+.accordion dd {
+	margin: 0 auto;
+	padding: 0;
+}
+
+.accordion dt {
+	background: DeepSkyBlue;
+	border-bottom: 1px solid DodgerBlue;
+	border-radius: 7px;
+	color: white;
+	font-size: 22px;
+	margin-top: 5px;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+
+.accordion dt:before {
+	content: '+';
+	margin-right: 7px;
+}
+
+.accordion dt.open {
+	background-color: grey;
+	border-bottom-color: black;
+	border-radius: 7px 7px 0 0;
+}
+
+.accordion dt.open:before {
+	content: '\2013'; 
+}
+
+.accordion dd {
+	border: 1px solid DeepSkyBlue;
+	border-top: none;
+	border-radius: 0 0 7px 7px;
+	padding: 5px;
+}
+
+.test {
+	background-color: red;
 }
