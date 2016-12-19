@@ -27,7 +27,10 @@ app.get('/dreams', (req, res) => {
     .find()
     .exec()
     .then(dreams => {
-      res.json(dreams.map(dream => dream.apiRepr()));
+      res.json({
+        dreams: dreams.map(
+          (dream) => dream.apiRepr())
+      });
     })
     .catch(err => {
       console.error(err);
