@@ -69,6 +69,7 @@ nav h1 {
 	padding: 5px;
 }
 
-.test {
-	background-color: red;
+.edit-icon {
+	float:right;
+	margin-top: 3px;
 }
