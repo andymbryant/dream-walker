@@ -5,7 +5,15 @@ const dreamSchema = mongoose.Schema({
   entry: {type: String, required: true},
   type: {type: String, required: true},
   hoursSlept: {type: Number, required: true},
-  created: {type: Date, default: Date.now}
+  created: {
+    month: Number,
+    day: Number,
+    year: Number
+  }
+});
+
+dreamSchema.virtual('dateFormat').get(function() {
+  return `${this.created.month}/${this.created.day}/${this.created.year}`.trim();
 });
 
 dreamSchema.methods.apiRepr = function() {
@@ -15,7 +23,7 @@ dreamSchema.methods.apiRepr = function() {
     entry: this.entry,
     type: this.type,
     hoursSlept: this.hoursSlept,
-    created: this.created
+    created: this.dateFormat
   };
 }
 
