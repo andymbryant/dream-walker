@@ -1,3 +1,4 @@
+const https - require("https");
 const MOCK_DREAM_ENTRIES = {
     "dreamEntries": [
         {
@@ -44,7 +45,25 @@ const MOCK_DREAM_ENTRIES = {
 };
 
 function getDreamEntries(callbackFn) {
-    setTimeout(function(){ callbackFn(MOCK_DREAM_ENTRIES)}, 100);
+    //setTimeout(function(){ callbackFn(MOCK_DREAM_ENTRIES)}, 100);
+
+    $.ajax({
+        url: "/dreams/demo",
+        type: 'GET',
+        dataType: 'json',
+
+        success: function(data) {
+          if(data) {
+            var results = data;
+            console.log(results);
+    //        callbackFn(results);
+          }
+        },
+        error: function() {
+            console.log('something went wrong');
+        }
+    });
+
 }
 
 // this function stays the same when we connect
@@ -54,8 +73,8 @@ function displayDreamEntries(data) {
 
     for (index in data.dreamEntries) {
        accordion.append(
-        '<dt>' + data.dreamEntries[index].date + " - " + data.dreamEntries[index].title + '<a href="#"><i class="fa fa-pencil edit-icon" aria-hidden="true">Edit</i></a></dt>' + 
-        '<dd><p>' + data.dreamEntries[index].entry + '</p></dd>' 
+        '<dt>' + data.dreamEntries[index].date + " - " + data.dreamEntries[index].title + '<a href="#"><i class="fa fa-pencil edit-icon" aria-hidden="true">Edit</i></a></dt>' +
+        '<dd><p>' + data.dreamEntries[index].entry + '</p></dd>'
         );
     }
 
@@ -77,5 +96,6 @@ function getAndDisplayDreamEntries() {
 
 
 $(function() {
-    getAndDisplayDreamEntries();
+   // getAndDisplayDreamEntries();
+    getDreamEntries();
 });
