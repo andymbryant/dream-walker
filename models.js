@@ -13,7 +13,7 @@ const dreamSchema = mongoose.Schema({
 });
 
 dreamSchema.virtual('dateFormat').get(function() {
-  return `${this.created.month}/${this.created.day}/${this.created.year}`.trim();
+  return `${this.created.month}.${this.created.day}.${this.created.year}`.trim();
 });
 
 dreamSchema.methods.apiRepr = function() {

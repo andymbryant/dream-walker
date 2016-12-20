@@ -73,8 +73,9 @@ function displayDreamEntries(data) {
 
     for (index in data) {
        accordion.append(
-        '<dt>' + data[index].created + " - " + data[index].title + '<a href="#"><i class="fa fa-pencil edit-icon" aria-hidden="true">Edit</i></a></dt>' +
-        '<dd><p>' + data[index].entry + '</p></dd>'
+        '<dt>' + data[index].title + '<span class="dream-date">' + data[index].created + '</span></dt>' +
+        '<dd><blockquote>' + data[index].entry + '</blockquote>' +
+        '<a href="#"><i class="fa fa-pencil edit-icon" aria-hidden="true">Edit</i></a></dd>'
         );
     }
 
