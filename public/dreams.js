@@ -1,4 +1,4 @@
-const https - require("https");
+//const https - require("https");
 const MOCK_DREAM_ENTRIES = {
     "dreamEntries": [
         {
@@ -56,7 +56,7 @@ function getDreamEntries(callbackFn) {
           if(data) {
             var results = data;
             console.log(results);
-    //        callbackFn(results);
+            callbackFn(results);
           }
         },
         error: function() {
@@ -71,10 +71,10 @@ function getDreamEntries(callbackFn) {
 function displayDreamEntries(data) {
     const accordion = $('.accordion');
 
-    for (index in data.dreamEntries) {
+    for (index in data) {
        accordion.append(
-        '<dt>' + data.dreamEntries[index].date + " - " + data.dreamEntries[index].title + '<a href="#"><i class="fa fa-pencil edit-icon" aria-hidden="true">Edit</i></a></dt>' +
-        '<dd><p>' + data.dreamEntries[index].entry + '</p></dd>'
+        '<dt>' + data[index].created + " - " + data[index].title + '<a href="#"><i class="fa fa-pencil edit-icon" aria-hidden="true">Edit</i></a></dt>' +
+        '<dd><p>' + data[index].entry + '</p></dd>'
         );
     }
 
@@ -96,6 +96,6 @@ function getAndDisplayDreamEntries() {
 
 
 $(function() {
-   // getAndDisplayDreamEntries();
-    getDreamEntries();
+    getAndDisplayDreamEntries();
+  //  getDreamEntries();
 });
