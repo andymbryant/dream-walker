@@ -24,9 +24,9 @@ nav h1 {
 }
 
 .title {
-  margin-top: 90px;
-  margin-left: 65px;
-  margin-bottom: 5px;
+  margin-top: 70px;
+  text-align: center;
+  margin-bottom: 25px;
   font-weight: normal;
 }
 
@@ -176,3 +176,22 @@ textarea {
   top: 10px;
 }
 
+@media only screen and (max-width: 850px) {
+  fieldset {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .dream-attributes {
+    width: 100%;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .dream-type-box {
+    width: 222px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
