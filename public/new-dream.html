@@ -18,12 +18,12 @@
     <div class="main-container">
       <form class="demo-form" action="/some-server-endpoint" method="post">
 
-        <h1>But how do you really feel?</h1>
+        <h1>Add New Dream</h1>
 
         <fieldset name="new-dream-input">
 
           <label for="dream-title"></label>
-            <input placeholder="Dream Title" type="text" name="dream-title" id="dream-title" required/>
+            <input placeholder="Dream Title" type="text" name="dream-title" id="dream-title" autocomplete="off" required />
 
           <label for="dream-entry"></label>
             <textarea rows="15" class="dream-entry"></textarea>
@@ -33,7 +33,7 @@
         <section class="dream-attributes">
           <div class="hours-slept">
             <label class="hours-slept" for="hours-slept">Hours Slept: </label>
-              <input type="text" pattern='[0-9]*' name="hours-slept" id="hours-slept-input" title="Please enter a number" required/>
+              <input type="text" pattern='[0-9]*' name="hours-slept" id="hours-slept-input" title="Please enter a number" autocomplete="off" required />
           </div>
 
           <div class="dream-type">

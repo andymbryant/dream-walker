@@ -3,19 +3,35 @@
   font-family: 'Raleway', sans-serif;
 }
 
+body {
+  background-color:#f1f1f1;
+}
+
 fieldset {
   width: 60%;
   display: inline-block;
   margin-right: 25px;
+  margin-left: 50px;
+  border: none;
 }
 
 #dream-title {
   width: 100%;
   margin-bottom: 15px;
+  padding: 5px 8px;
+  font-size: 25px;
+  font-family: 'Raleway', sans-serif;
+  border: solid 1px #c4c4c4;
+  border-radius: 2px;
 }
 
-.dream-entry {
+textarea {
   width: 100%;
+  resize: none;
+  padding: 8px 10px;
+  font-family: 'Raleway', sans-serif;
+  border-radius: 2px;
+  border: solid 1px #c4c4c4;
 }
 
 .dream-attributes {
@@ -26,7 +42,20 @@ fieldset {
 }
 
 #hours-slept-input {
-  width:50px;
+  width:35px;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  border: solid 1px #c4c4c4;
+  border-radius: 2px;
+  padding-top: 3px;
+}
+
+#date {
+  font-family: 'Raleway', sans-serif;
+  border: solid 1px #c4c4c4;
+  border-radius: 2px;
+  width: 170px;
+  padding-left: 7px;
 }
 
 option[value=""][disabled] {
