@@ -7,7 +7,24 @@ body {
   background-color:#f1f1f1;
 }
 
-h1 {
+nav {
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  height: 50px;
+  background-color: #cecece;
+  text-align: center;
+  z-index: 5;
+}
+
+nav h1 {
+  position: relative;
+  bottom: 15px;
+}
+
+.title {
+  margin-top: 90px;
   margin-left: 65px;
   margin-bottom: 5px;
   font-weight: normal;
