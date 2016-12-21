@@ -19,6 +19,19 @@ router.get('/', (req, res) => {
     });
 });
 
+router.get('/demo', (req, res) => {
+  Dream
+    .find()
+    .exec()
+    .then(dreams => {
+      res.json(dreams.map(dream => dream.apiRepr()));
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({error: 'something went terribly wrong'});
+    });
+});
+
 router.get('/:id', (req, res) => {
   Dream
     .findById(req.params.id)
