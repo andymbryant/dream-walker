@@ -38,7 +38,11 @@ textarea {
   display: inline-block;
   width: 30%;
   position: relative;
-  bottom: 100px;
+  bottom: 40px;
+}
+
+.hours-slept {
+  font-size: 25px;
 }
 
 #hours-slept-input {
@@ -47,7 +51,25 @@ textarea {
   font-family: 'Raleway', sans-serif;
   border: solid 1px #c4c4c4;
   border-radius: 2px;
-  padding-top: 3px;
+}
+
+.dream-type-header {
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.dream-type {
+  line-height: 25px;
+  margin-bottom: 20px;
+}
+
+.dream-type-select {
+  cursor: pointer;
+}
+
+.dream-date-header {
+  font-size: 25px;
+  padding-bottom: 10px;
 }
 
 #date {
@@ -62,6 +84,11 @@ option[value=""][disabled] {
   display: none;
 }
 
-.submit {
+.submit-reset {
   display: inline-block;
+  width: 80%;
+}
+
+.publish {
+  width: 100%;
 }

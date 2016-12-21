@@ -32,27 +32,36 @@
 
         <section class="dream-attributes">
           <div class="hours-slept">
-            <label class="hours-slept" for="hours-slept">Hours Slept: </label>
+            <label class="hours-slept" for="hours-slept-input">Hours Slept: </label>
               <input type="text" pattern='[0-9]*' name="hours-slept" id="hours-slept-input" title="Please enter a number" autocomplete="off" required />
           </div>
 
           <div class="dream-type">
-            <p>Dream Type</p>
-            <input type="radio" name="feelings-2" id="ans-great-1" value="0" checked><label for="ans-great-1">Normal Dream</label><br />
-            <input type="radio" name="feelings-2" id="ans-great-2" value="1"><label for="ans-great-2">Lucid Dream</label><br />
-            <input type="radio" name="feelings-2" id="ans-great-3" value="2"><label for="ans-great-3">Nightmare</label><br />
-            <input type="radio" name="feelings-2" id="ans-great-4" value="3"><label for="ans-great-3">Recurring Dream</label><br />
-            <input type="radio" name="feelings-2" id="ans-great-5" value="4"><label for="ans-great-3">False Awakening</label>
+            <p class="dream-type-header">Select Dream Type</p>
+            <input type="radio" name="type-of-dream" id="normal-dream" value="0" checked>
+            <label for="normal-dream" class="dream-type-select">Normal Dream</label><br />
+
+            <input type="radio" name="type-of-dream" id="lucid-dream" value="1">
+            <label for="lucid-dream" class="dream-type-select">Lucid Dream</label><br />
+
+            <input type="radio" name="type-of-dream" id="nightmare" value="2">
+            <label for="nightmare" class="dream-type-select">Nightmare</label><br />
+
+            <input type="radio" name="type-of-dream" id="recurring-dream" value="3">
+            <label for="recurring-dream" class="dream-type-select">Recurring Dream</label><br />
+
+            <input type="radio" name="type-of-dream" id="false-awakening" value="4">
+            <label for="false-awakening" class="dream-type-select">False Awakening</label>
           </div>
 
           <div class="dream-date">
-            <label for="dream-date">Date</label><br />
+            <label for="dream-date" class="dream-date-header">Date of Dream</label><br />
             <input type="date" name="dream-date" id="date" required />
           </div>
 
-          <div class="submit">
-            <button type='submit'>Submit</button>
-            <button type='reset'>Reset</button>
+          <div class="submit-reset">
+            <button type="submit" class="publish">Publish</button>
+            <button type="reset">Reset</button>
           </div>
 
 
