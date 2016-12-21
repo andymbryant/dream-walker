@@ -76,9 +76,9 @@
               <option value="11">12</option>
             </select> .
 
-            <input type="text" pattern='[0-9]*' name="date-day" class="date-day" title="Please enter a day number" autocomplete="off" placeholder="01" required /> .
+            <input type="number" name="date-day" class="date-day" title="Please enter a day number" autocomplete="off" placeholder="01" min="1" max="31" required /> .
 
-            <input type="text" pattern='[0-9]*' name="date-year" class="date-year" title="Please enter a year" autocomplete="off" placeholder="2017" required />
+            <input type="number" name="date-year" class="date-year" title="Please enter a year" autocomplete="off" placeholder="2017" min="1999" max="2020" required />
 
           </div>
 

@@ -113,6 +113,7 @@ textarea {
 
 .date-month {
   height: 21.5px;
+  width: 45px;
   border: solid 1px #c4c4c4;
   border-radius: 2px;
   font-family: 'Raleway', sans-serif;
@@ -121,7 +122,7 @@ textarea {
 }
 
 .date-day {
-  width: 30px;
+  width: 45px;
   text-align: center;
   border: solid 1px #c4c4c4;
   border-radius: 2px;
@@ -129,7 +130,7 @@ textarea {
 }
 
 .date-year {
-  width: 50px;
+  width: 60px;
   text-align: center;
   border: solid 1px #c4c4c4;
   border-radius: 2px;
@@ -174,3 +175,4 @@ textarea {
   position: relative;
   top: 10px;
 }
+
