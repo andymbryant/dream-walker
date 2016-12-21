@@ -61,7 +61,7 @@ textarea {
   display: inline-block;
   width: 30%;
   position: relative;
-  bottom:20px;
+  bottom:17px;
 }
 
 .hours-slept-box {
@@ -112,17 +112,28 @@ textarea {
 }
 
 .date-month {
-  height: 23.5px;
+  height: 21.5px;
+  border: solid 1px #c4c4c4;
+  border-radius: 2px;
+  font-family: 'Raleway', sans-serif;
+  position:relative;
+  top: 1px;
 }
 
 .date-day {
   width: 30px;
   text-align: center;
+  border: solid 1px #c4c4c4;
+  border-radius: 2px;
+  font-family: 'Raleway', sans-serif;
 }
 
 .date-year {
   width: 50px;
   text-align: center;
+  border: solid 1px #c4c4c4;
+  border-radius: 2px;
+  font-family: 'Raleway', sans-serif;
 }
 
 #date {
@@ -141,6 +152,16 @@ textarea {
 
 .publish {
   width: 100%;
+  padding: 5px;
+  border: none;
+  border-radius: 2px;
+  background-color: #3097ff;
+  color:white;
+}
+
+.publish:hover {
+  background-color: #5eaeff;
+  cursor: pointer;
 }
 
 .reset {
