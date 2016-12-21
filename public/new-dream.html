@@ -4,14 +4,66 @@
   <meta charset="UTF-8">
   <title></title>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="new-dream.css">
   <link rel="stylesheet" type="text/css" href="grid.css">
-  <link rel="stylesheet" type="text/css" href="dreams.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
+<div class="row">
+  <div class="col-12">
+    <div class="main-container">
+      <form class="demo-form" action="/some-server-endpoint" method="post">
+
+        <h1>But how do you really feel?</h1>
+
+        <fieldset name="new-dream-input">
+
+          <label for="dream-title"></label>
+            <input placeholder="Dream Title" type="text" name="dream-title" id="dream-title" required/>
+
+          <label for="dream-entry"></label>
+            <textarea rows="15" class="dream-entry"></textarea>
+
+        </fieldset>
+
+        <section class="dream-attributes">
+          <div class="hours-slept">
+            <label class="hours-slept" for="hours-slept">Hours Slept: </label>
+              <input type="text" pattern='[0-9]*' name="hours-slept" id="hours-slept-input" title="Please enter a number" required/>
+          </div>
+
+          <div class="dream-type">
+            <p>Dream Type</p>
+            <input type="radio" name="feelings-2" id="ans-great-1" value="0" checked><label for="ans-great-1">Normal Dream</label><br />
+            <input type="radio" name="feelings-2" id="ans-great-2" value="1"><label for="ans-great-2">Lucid Dream</label><br />
+            <input type="radio" name="feelings-2" id="ans-great-3" value="2"><label for="ans-great-3">Nightmare</label><br />
+            <input type="radio" name="feelings-2" id="ans-great-4" value="3"><label for="ans-great-3">Recurring Dream</label><br />
+            <input type="radio" name="feelings-2" id="ans-great-5" value="4"><label for="ans-great-3">False Awakening</label>
+          </div>
+
+          <div class="dream-date">
+            <label for="dream-date">Date</label><br />
+            <input type="date" name="dream-date" id="date" required />
+          </div>
+
+
+        </section>
+
+        <div class="submit">
+          <button type='submit'>Submit</button>
+          <button type='reset'>Reset</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="dreams.js"></script>
 </body>
 </html>

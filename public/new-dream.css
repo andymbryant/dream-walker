@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+fieldset {
+  width: 60%;
+  display: inline-block;
+}
+
+#dream-title {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.dream-entry {
+  width: 100%;
+}
+
+.dream-attributes {
+  display: inline-block;
+  width: 30%;
+  position: relative;
+  bottom: 100px;
+}
+
+#hours-slept-input {
+  width:50px;
+}
+
+option[value=""][disabled] {
+  display: none;
+}
+
+.submit {
+  display: inline-block;
+}
