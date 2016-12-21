@@ -77,8 +77,8 @@ textarea {
   margin-bottom: 0;
 }
 
-#hours-slept-input {
-  width:40px;
+.hours-slept-input {
+  width:50px;
   text-align: center;
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
