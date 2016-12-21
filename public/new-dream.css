@@ -6,6 +6,7 @@
 fieldset {
   width: 60%;
   display: inline-block;
+  margin-right: 25px;
 }
 
 #dream-title {
