@@ -176,6 +176,215 @@ textarea {
   top: 10px;
 }
 
+.normal-tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted #3097ff;
+  line-height: 20px;
+}
+
+.normal-tooltip .normal-tooltiptext {
+  font-size: 15px;
+  line-height: 18px;
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 125%;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.normal-tooltip .normal-tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 8.5%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+
+
+.normal-tooltip:hover .normal-tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.lucid-tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted #3097ff;
+  line-height: 20px;
+}
+
+.lucid-tooltip .lucid-tooltiptext {
+  font-size: 15px;
+  line-height: 18px;
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 130%;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.lucid-tooltip .lucid-tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 6%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+
+.lucid-tooltip:hover .lucid-tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.nightmare-tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted #3097ff;
+  line-height: 20px;
+}
+
+.nightmare-tooltip .nightmare-tooltiptext {
+  font-size: 15px;
+  line-height: 18px;
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 120%;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.nightmare-tooltip .nightmare-tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 7%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+
+
+.nightmare-tooltip:hover .nightmare-tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.recurring-tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted #3097ff;
+  line-height: 20px;
+}
+
+.recurring-tooltip .recurring-tooltiptext {
+  font-size: 15px;
+  line-height: 18px;
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 120%;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.recurring-tooltip .recurring-tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 17%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+
+
+.recurring-tooltip:hover .recurring-tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.double-tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted #3097ff;
+  line-height: 20px;
+}
+
+.double-tooltip .double-tooltiptext {
+  font-size: 15px;
+  line-height: 18px;
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 125%;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.double-tooltip .double-tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 7.5%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+
+
+.double-tooltip:hover .double-tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
 @media only screen and (max-width: 850px) {
   fieldset {
     width: 100%;
