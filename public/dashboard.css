@@ -2,3 +2,8 @@
   box-sizing: border-box;
   font-family: 'Raleway', sans-serif;
 }
+
+.doughnutChartBox {
+  width: 80%;
+}
+
