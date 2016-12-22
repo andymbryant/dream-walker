@@ -196,7 +196,7 @@ textarea {
   position: absolute;
   z-index: 1;
   top: -5px;
-  left: 110%;
+  left: 125%;
   opacity: 0;
   transition: opacity 0.5s;
 }
@@ -238,7 +238,7 @@ textarea {
   position: absolute;
   z-index: 1;
   top: -5px;
-  left: 110%;
+  left: 130%;
   opacity: 0;
   transition: opacity 0.5s;
 }
@@ -279,7 +279,7 @@ textarea {
   position: absolute;
   z-index: 1;
   top: -5px;
-  left: 110%;
+  left: 120%;
   opacity: 0;
   transition: opacity 0.5s;
 }
@@ -321,7 +321,7 @@ textarea {
   position: absolute;
   z-index: 1;
   top: -5px;
-  left: 110%;
+  left: 120%;
   opacity: 0;
   transition: opacity 0.5s;
 }
@@ -343,14 +343,14 @@ textarea {
   opacity: 1;
 }
 
-.false-tooltip {
+.double-tooltip {
   position: relative;
   display: inline-block;
   border-bottom: 1px dotted #3097ff;
   line-height: 20px;
 }
 
-.false-tooltip .false-tooltiptext {
+.double-tooltip .double-tooltiptext {
   font-size: 15px;
   line-height: 18px;
   visibility: hidden;
@@ -363,12 +363,12 @@ textarea {
   position: absolute;
   z-index: 1;
   top: -5px;
-  left: 110%;
+  left: 125%;
   opacity: 0;
   transition: opacity 0.5s;
 }
 
-.false-tooltip .false-tooltiptext::after {
+.double-tooltip .double-tooltiptext::after {
   content: "";
   position: absolute;
   top: 7.5%;
@@ -380,7 +380,7 @@ textarea {
 }
 
 
-.false-tooltip:hover .false-tooltiptext {
+.double-tooltip:hover .double-tooltiptext {
   visibility: visible;
   opacity: 1;
 }
