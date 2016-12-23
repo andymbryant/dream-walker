@@ -16,13 +16,27 @@ nav {
 }
 
 .lineChartBox {
-  margin-top: 80px;
+  margin-top: 50px;
 }
 
 .doughnutChartBox {
-  margin-top: 80px;
+  margin-bottom: 25px;
 }
 
 .stat-title {
   margin-bottom: 0;
+}
+
+.userStatsBox {
+  margin-top: 50px;
+}
+
+.test {
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.tracked-dreams-footer, .lucid-dream-footer, .total-hours-footer, .avg-sleep-footer {
+  margin-top: 0;
 }

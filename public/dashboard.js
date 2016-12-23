@@ -1,7 +1,7 @@
 const LINE_CHART = $("#lineChart");
 const DOUGHNUT_CHART = $("#doughnutChart");
 
-Chart.defaults.global.animation.duration = 2500;
+Chart.defaults.global.animation.duration = 3000;
 
 function getDreamEntries(callbackFn) {
   $.ajax({
@@ -97,7 +97,9 @@ console.log(dateArray)
         }
       });
 
-      const dreamChart = new Chart(DOUGHNUT_CHART, {
+      $(window).on('scroll',function() {
+    if (checkVisible($('#doughnutChart'))) {
+        const dreamChart = new Chart(DOUGHNUT_CHART, {
         type: 'doughnut',
         data: {
           labels: ['Normal', 'Lucid', 'Nightmare', 'Recurring', 'Double'],
@@ -108,8 +110,29 @@ console.log(dateArray)
               data: dreamTypeArray
             }
           ]
+        },
+        options:{
+          animation: {
+            animateScale: true
+          }
         }
       });
+        $(window).off('scroll');
+    } else {
+        // do nothing
+    }
+});
+
+function checkVisible( elm, eval ) {
+    eval = eval || "object visible";
+    var viewportHeight = $(window).height(), // Viewport Height
+        scrolltop = $(window).scrollTop(), // Scroll Top
+        y = $(elm).offset().top,
+        elementHeight = $(elm).height();
+
+    if (eval == "object visible") return ((y < (viewportHeight + scrolltop)) && (y > (scrolltop - elementHeight)));
+    if (eval == "above") return ((y < (viewportHeight + scrolltop)));
+}
 
       } // if statement close
     }, //success function close
