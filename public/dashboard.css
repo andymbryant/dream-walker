@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+nav {
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  height: 50px;
+  background-color: #cecece;
+  text-align: center;
+  z-index: 5;
+}
+
+.lineChartBox {
+  margin-top: 50px;
+}
+
+.doughnutChartBox {
+  margin-bottom: 25px;
+}
+
+.stat-title {
+  margin-bottom: 0;
+}
+
+.userStatsBox {
+  margin-top: 20px;
+}
+
+.stat {
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.tracked-dreams-footer, .lucid-dream-footer, .total-hours-footer, .avg-sleep-footer {
+  margin-top: 0;
+  margin-bottom: 35px;
+}

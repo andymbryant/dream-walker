@@ -371,7 +371,7 @@ textarea {
 .double-tooltip .double-tooltiptext::after {
   content: "";
   position: absolute;
-  top: 7.5%;
+  top: 6.5%;
   right: 100%;
   margin-top: -5px;
   border-width: 5px;

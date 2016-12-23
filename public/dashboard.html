@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+  <link rel="stylesheet" type="text/css" href="dashboard.css">
+  <link rel="stylesheet" type="text/css" href="grid.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <title></title>
+</head>
+<body>
+
+  <nav></nav>
+
+
+  <div class="row">
+
+    <div class="col-12">
+      <div class="lineChartBox">
+        <h2 class="stat-title">Sleep Pattern</h2>
+        <canvas id="lineChart"></canvas>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-6">
+      <div class="userStatsBox">
+        <h2>Statistics</h2>
+        <div class="tracked-dreams"></div>
+        <h3 class="tracked-dreams-footer">Dreams Recorded</h3>
+
+        <div class="lucid-dream-pct"></div>
+        <h3 class="lucid-dream-footer">Lucid Dreams</h3>
+
+        <div class="avg-sleep"></div>
+        <h3 class="avg-sleep-footer">Average Hours of Sleep</h3>
+
+        <div class="total-hours"></div>
+        <h3 class="total-hours-footer">Total Hours Tracked</h3>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div class="doughnutChartBox">
+        <h2 class="stat-title">Dream Types</h2>
+        <canvas id="doughnutChart"></canvas>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="dashboard.js"></script>
+</body>
+</html>

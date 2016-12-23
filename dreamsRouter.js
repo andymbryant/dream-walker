@@ -9,6 +9,7 @@ const {Dream} = require('./models');
 router.get('/', (req, res) => {
   Dream
     .find()
+    .sort({created: -1})
     .exec()
     .then(dreams => {
       res.json(dreams.map(dream => dream.apiRepr()));
@@ -22,6 +23,7 @@ router.get('/', (req, res) => {
 router.get('/demo', (req, res) => {
   Dream
     .find()
+    .sort({created: -1})
     .exec()
     .then(dreams => {
       res.json(dreams.map(dream => dream.apiRepr()));
