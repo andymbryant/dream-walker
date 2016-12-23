@@ -28,7 +28,7 @@ nav {
 }
 
 .userStatsBox {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .test {
@@ -39,4 +39,5 @@ nav {
 
 .tracked-dreams-footer, .lucid-dream-footer, .total-hours-footer, .avg-sleep-footer {
   margin-top: 0;
+  margin-bottom: 50px;
 }
