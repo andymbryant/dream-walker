@@ -27,6 +27,11 @@ function getDreamEntries(callbackFn) {
           dateArray.unshift(data[i].created);
           hoursArray.unshift(data[i].hoursSlept);
 
+          if (data.length > 30) {
+            dateArray = dateArray.slice(-30);
+            hoursArray = hoursArray.slice(-30);
+          }
+
           if (data[i].type === 'Normal') {
             normalCounter++;
           }
@@ -43,6 +48,8 @@ function getDreamEntries(callbackFn) {
             doubleCounter++;
           }
         }
+
+console.log(dateArray)
 
         dreamTypeArray.push(normalCounter);
         dreamTypeArray.push(lucidCounter);
