@@ -23,6 +23,11 @@ nav h1 {
 	bottom: 15px;
 }
 
+.no-results {
+  text-align: center;
+  font-weight: normal;
+}
+
 .main-container {
 /*	background-color: #cecece; */
 	width: 100%;

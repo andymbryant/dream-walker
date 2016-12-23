@@ -23,7 +23,11 @@ function getDreamEntries(callbackFn) {
 function displayDreamEntries(data) {
   const accordion = $('.accordion');
 
-  for (index in data) {
+  if (data.length === 0) {
+    accordion.html('<h2 class="no-results">You haven\'t recorded any dreams! Click "New Dream" in the menu to get started.</h2>');
+  }
+  else {
+    for (index in data) {
       accordion.append(
         '<dt><p class="dream-title">' + data[index].title + '</p>' +
         '<p class="dream-date">' + data[index].created + '</p></dt>' +
@@ -34,16 +38,17 @@ function displayDreamEntries(data) {
         '<p class="dream-info"><a href="#" class="edit-icon"><i class="fa fa-eraser fa-lg" aria-hidden="true"></i> Delete</a></p>' +
         '</dd>'
         );
+    }
+
+    accordion.find('dd').hide();
+    accordion.find('dt').on('click', function(event) {
+      $(this).toggleClass('open').next('dd').slideToggle().siblings('dd:visible').slideUp().prev('dt').removeClass('open');
+    });
+
+    $('.edit-icon').on('click', function(event) {
+      alert('hi');
+    });
   }
-
-  accordion.find('dd').hide();
-  accordion.find('dt').on('click', function(event) {
-    $(this).toggleClass('open').next('dd').slideToggle().siblings('dd:visible').slideUp().prev('dt').removeClass('open');
-  });
-
-  $('.edit-icon').on('click', function(event) {
-    alert('hi');
-  });
 }
 
 // this function can stay the same even when we
