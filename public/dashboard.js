@@ -1,3 +1,8 @@
+const LINE_CHART = $("#lineChart");
+const DOUGHNUT_CHART = $("#doughnutChart");
+
+Chart.defaults.global.animation.duration = 2500;
+
 function getDreamEntries(callbackFn) {
   $.ajax({
     url: "/dreams/demo",
@@ -6,16 +11,44 @@ function getDreamEntries(callbackFn) {
     dataType: 'json',
 
     success: function(data) {
+      console.log(data);
       dateArray = [];
       hoursArray = [];
+      dreamTypeArray = [];
+
+      let normalCounter = 0;
+      let lucidCounter = 0;
+      let nightmareCounter = 0;
+      let recurringCounter = 0;
+      let doubleCounter = 0;
+
       if(data) {
-        for (var i = 0; i < data.length; i++) {
+        for (let i = 0; i < data.length; i++) {
           dateArray.unshift(data[i].created);
           hoursArray.unshift(data[i].hoursSlept);
+
+          if (data[i].type === 'Normal') {
+            normalCounter++;
+          }
+          else if (data[i].type === 'Lucid') {
+            lucidCounter++;
+          }
+          else if (data[i].type === 'Nightmare') {
+            nightmareCounter++;
+          }
+          else if (data[i].type === 'Recurring') {
+            recurringCounter++;
+          }
+          else if (data[i].type === 'Double') {
+            doubleCounter++;
+          }
         }
 
-        console.log(dateArray);
-    //    callbackFn(data);
+        dreamTypeArray.push(normalCounter);
+        dreamTypeArray.push(lucidCounter);
+        dreamTypeArray.push(nightmareCounter);
+        dreamTypeArray.push(recurringCounter);
+        dreamTypeArray.push(doubleCounter);
 
       const sleepChart = new Chart(LINE_CHART, {
         type: 'line',
@@ -57,8 +90,22 @@ function getDreamEntries(callbackFn) {
         }
       });
 
-      }
-    },
+      const dreamChart = new Chart(DOUGHNUT_CHART, {
+        type: 'doughnut',
+        data: {
+          labels: ['Normal', 'Lucid', 'Nightmare', 'Recurring', 'Double'],
+          datasets:[
+            {
+              label: 'Points',
+              backgroundColor: ['#54c6ff', '#ff7ae0', '#bc7aff', '#fffc7a', '#7afffc'],
+              data: dreamTypeArray
+            }
+          ]
+        }
+      });
+
+      } // if statement close
+    }, //success function close
 
     error: function() {
       console.log('something went wrong');
@@ -66,37 +113,6 @@ function getDreamEntries(callbackFn) {
   });
 }
 
-
-
-// function getDreamDates(data) {
-// //  let dateArray = [];
-//   for (var i = 0; i < data.length; i++) {
-//     dateArray.unshift(data[i].created);
-//     //sleepChart.config.data.labels.unshift(data[i].created);
-//   }
-// //  console.log(dateArray);
-// //  return dateArray;
-// }
-
-const LINE_CHART = $("#lineChart");
-const DOUGHNUT_CHART = $("#doughnutChart");
-
-Chart.defaults.global.animation.duration = 2500;
-
-
-const dreamChart = new Chart(DOUGHNUT_CHART, {
-  type: 'doughnut',
-  data: {
-    labels: ['Normal', 'Lucid', 'Nightmare', 'Recurring', 'Double'],
-    datasets:[
-      {
-        label: 'Points',
-        backgroundColor: ['#54c6ff', '#ff7ae0', '#bc7aff', '#fffc7a', '#7afffc'],
-        data:[10, 20, 55, 30, 10]
-      }
-    ]
-  }
-});
 
 $(function() {
   getDreamEntries();
