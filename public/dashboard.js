@@ -95,42 +95,62 @@ function getDreamEntries(callbackFn) {
           }
         });
 
-        function checkVisible( elm, eval ) {
-          eval = eval || "object visible";
-          var viewportHeight = $(window).height(), // Viewport Height
+        if ($("body").height() > $(window).height()) {
+          function checkVisible( elm, eval ) {
+            eval = eval || "object visible";
+            var viewportHeight = $(window).height(), // Viewport Height
             scrolltop = $(window).scrollTop(), // Scroll Top
             y = $(elm).offset().top,
             elementHeight = $(elm).height();
 
           if (eval == "object visible") return ((y < (viewportHeight + scrolltop)) && (y > (scrolltop - elementHeight)));
           if (eval == "above") return ((y < (viewportHeight + scrolltop)));
-        }
-
-        $(window).on('scroll',function() {
-          if (checkVisible($('#doughnutChart'))) {
-            const dreamChart = new Chart(DOUGHNUT_CHART, {
-              type: 'doughnut',
-              data: {
-                labels: ['Normal', 'Lucid', 'Nightmare', 'Recurring', 'Double'],
-                datasets:[
-                  {
-                    label: 'Points',
-                    backgroundColor: ['#54c6ff', '#ff7ae0', '#bc7aff', '#fffc7a', '#7afffc'],
-                    data: dreamTypeArray
-                  }
-                ]
-              },
-              options:{
-                animation: {
-                  animateScale: true
-                }
-              }
-            });
-            $(window).off('scroll');
           }
-        });
 
-
+          $(window).on('scroll',function() {
+            if (checkVisible($('#doughnutChart'))) {
+              let dreamChart = new Chart(DOUGHNUT_CHART, {
+                type: 'doughnut',
+                data: {
+                  labels: ['Normal', 'Lucid', 'Nightmare', 'Recurring', 'Double'],
+                  datasets:[
+                    {
+                      label: 'Points',
+                      backgroundColor: ['#54c6ff', '#ff7ae0', '#bc7aff', '#fffc7a', '#7afffc'],
+                      data: dreamTypeArray
+                    }
+                  ]
+                },
+                options:{
+                  animation: {
+                    animateScale: true
+                  }
+                }
+              });
+              $(window).off('scroll');
+            }
+          });
+        }
+        else {
+          let dreamChart = new Chart(DOUGHNUT_CHART, {
+            type: 'doughnut',
+            data: {
+              labels: ['Normal', 'Lucid', 'Nightmare', 'Recurring', 'Double'],
+              datasets:[
+                {
+                  label: 'Points',
+                  backgroundColor: ['#54c6ff', '#ff7ae0', '#bc7aff', '#fffc7a', '#7afffc'],
+                  data: dreamTypeArray
+                }
+              ]
+            },
+            options:{
+              animation: {
+                animateScale: true
+              }
+            }
+          });
+        }
 
         callbackFn(data)
 
