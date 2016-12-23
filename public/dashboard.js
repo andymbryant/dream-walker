@@ -95,7 +95,7 @@ function getDreamEntries(callbackFn) {
           }
         });
 
-        if ($("body").height() > $(window).height()) {
+        if ($("body").height() > $(window).height()) { //http://stackoverflow.com/questions/2146874/detect-if-a-page-has-a-vertical-scrollbar
           function checkVisible( elm, eval ) {
             eval = eval || "object visible";
             var viewportHeight = $(window).height(), // Viewport Height
@@ -107,7 +107,7 @@ function getDreamEntries(callbackFn) {
           if (eval == "above") return ((y < (viewportHeight + scrolltop)));
           }
 
-          $(window).on('scroll',function() {
+          $(window).on('scroll',function() { //http://stackoverflow.com/questions/32134451/call-function-on-scroll-only-once
             if (checkVisible($('#doughnutChart'))) {
               let dreamChart = new Chart(DOUGHNUT_CHART, {
                 type: 'doughnut',
