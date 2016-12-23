@@ -112,13 +112,12 @@ textarea {
 }
 
 .date-month {
-  height: 21.5px;
   width: 45px;
+  text-align: center;
   border: solid 1px #c4c4c4;
   border-radius: 2px;
   font-family: 'Raleway', sans-serif;
   position:relative;
-  top: 1px;
 }
 
 .date-day {
