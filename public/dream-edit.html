@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+  <link rel="stylesheet" type="text/css" href="new-dream.css">
+  <link rel="stylesheet" type="text/css" href="grid.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<nav>
+  <h1>Navigation</h1>
+</nav>
+
+<div class="row">
+  <div class="col-12">
+    <div class="main-container">
+      <form class="new-dream-form" action="/dreams/new" method="post">
+
+        <h1 class="title">Add New Dream</h1>
+
+        <fieldset name="new-dream-input">
+
+          <label for="dream-title"></label>
+            <input placeholder="Dream Title" type="text" name="dream-title" id="dream-title" autocomplete="off" required />
+
+          <label for="dream-entry"></label>
+            <textarea rows="15" class="dream-entry"></textarea>
+
+        </fieldset>
+
+        <section class="dream-attributes">
+
+          <div class="hours-slept-box">
+              <p>Hours Slept: </p>
+              <input type="number" name="hours-slept" class="hours-slept-input" title="Please enter a number" placeholder="8" autocomplete="off" min="0" max="12" required />
+          </div>
+
+          <div class="dream-type-box">
+            <p class="dream-type-header">Select Dream Type</p>
+            <input type="radio" name="type-of-dream" id="normal-dream" value="0" checked>
+            <label for="normal-dream" class="dream-type-select"><div class="normal-tooltip">Normal<span class="normal-tooltiptext">These are standard dreams where you have no idea you're dreaming until you wake up. You accept your dream reality as it is.</span></div></label><br />
+
+            <input type="radio" name="type-of-dream" id="lucid-dream" value="1">
+            <label for="lucid-dream" class="dream-type-select"><div class="lucid-tooltip">Lucid<span class="lucid-tooltiptext">A dream during which the dreamer is aware of dreaming. The dreamer may be able to exert some degree of control over the dream characters, narrative, and environment.</span></div></label><br />
+
+            <input type="radio" name="type-of-dream" id="nightmare" value="2">
+            <label for="nightmare" class="dream-type-select"><div class="nightmare-tooltip">Nightmare<span class="nightmare-tooltiptext">An unpleasant dream that can cause a strong emotional response from the mind, typically fear but also despair, anxiety and great sadness.</span></div></label><br />
+
+            <input type="radio" name="type-of-dream" id="recurring-dream" value="3">
+            <label for="recurring-dream" class="dream-type-select"><div class="recurring-tooltip">Recurring<span class="recurring-tooltiptext">A dream which is experienced repeatedly over a long period.</span></div></label><br />
+
+            <input type="radio" name="type-of-dream" id="false-awakening" value="4">
+            <label for="false-awakening" class="dream-type-select"><div class="double-tooltip">Double<span class="double-tooltiptext">Also known as a false awakening, a double dream is a vivid and convincing dream about awakening from sleep, while the dreamer in reality continues to sleep.</span></div></label>
+          </div>
+
+          <div class="dream-date-box">
+            <p class="dream-date-header">Date of Dream</p>
+            <select name="date-month" class='date-month' title="Please select a month" required>
+              <option value="0">01</option>
+              <option value="1">02</option>
+              <option value="2">03</option>
+              <option value="3">04</option>
+              <option value="4">05</option>
+              <option value="5">06</option>
+              <option value="6">07</option>
+              <option value="7">08</option>
+              <option value="8">09</option>
+              <option value="9">10</option>
+              <option value="10">11</option>
+              <option value="11">12</option>
+            </select> .
+
+            <input type="number" name="date-day" class="date-day" title="Please enter a day number" autocomplete="off" placeholder="01" min="1" max="31" required /> .
+
+            <input type="number" name="date-year" class="date-year" title="Please enter a year" autocomplete="off" placeholder="2017" min="1999" max="2030" required />
+
+          </div>
+
+          <div class="submit-reset">
+            <button type="submit" class="publish">Publish</button>
+            <button type="reset" class="reset">Reset</button>
+          </div>
+
+
+        </section>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="new-dream.js"></script>
+</body>
+</html>
