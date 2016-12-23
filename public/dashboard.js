@@ -130,6 +130,8 @@ function getDreamEntries(callbackFn) {
           }
         });
 
+
+
         callbackFn(data)
 
       } // if statement close
@@ -142,8 +144,25 @@ function getDreamEntries(callbackFn) {
 }
 
 function displayUserStats(data) {
-  let element = '';
-  let dreamsRecorded = data.length;
+  let lucidDreamPct = (dreamTypeArray[1] / dreamTypeArray.reduce((a, b) => {
+    return a + b;
+  }, 0)).toFixed(2) * 100 + '%';
+
+  let sleepTotal = hoursArray.reduce((a, b) => {
+    return a + b;
+  }, 0);
+
+  let sleepAvg = (sleepTotal / data.length).toFixed(2);
+
+  let dreamsRecordedDisplay = '<p class="stat">'+ data.length +'</p>';
+  let lucidDreamDisplay = '<p class="stat">' + lucidDreamPct + '</p>';
+  let sleepAvgDisplay = '<p class="stat">' + sleepAvg + '</p>';
+  let totalHoursDisplay = '<p class="stat">' + sleepTotal + '</p>';
+
+  $('.tracked-dreams').html(dreamsRecordedDisplay);
+  $('.lucid-dream-pct').html(lucidDreamDisplay)
+  $('.avg-sleep').html(sleepAvgDisplay);
+  $('.total-hours').html(totalHoursDisplay)
 }
 
 
