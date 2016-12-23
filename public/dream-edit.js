@@ -17,9 +17,30 @@ function getDreamEntries(callbackFn) {
   });
 }
 
+$('.date-day').change(function(event) {
+  if(parseInt(this.value) < 10) {
+    this.value ='0'+ this.value;
+  };
+});
+
+$('.date-month').change(function(event) {
+  if(parseInt(this.value) < 10) {
+    this.value ='0'+ this.value;
+  };
+});
+
+
 function displayDream(data) {
-  //add html values here
+  console.log(data);
+
+  $('#dream-title').val(data.title);
+  $('.dream-entry').val(data.entry);
+  $('.hours-slept-input').val(data.hoursSlept);
+  $('.date-month').val(data.created.split('.')[0]);
+  $('.date-day').val(data.created.split('.')[1]);
+  $('.date-year').val(data.created.split('.')[2]);
 }
+
 
 $(function() {
   getDreamEntries(displayDream);
