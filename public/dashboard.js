@@ -62,7 +62,7 @@ function getDreamEntries(callbackFn) {
             datasets:[
               {
                 label: 'Points',
-                backgroundColor: ['#54c6ff', '#ff7ae0', '#bc7aff', '#fffc7a', '#7afffc'],
+                backgroundColor: ['#82d1ff', '#ff7aa4', '#c1ea70', '#fffc7a', '#c18eff'],
                 data: dreamTypeArray
               }
             ]
