@@ -11,7 +11,7 @@ function getDreamEntries(callbackFn) {
     dataType: 'json',
 
     success: function(data) {
-  //    console.log(data);
+      console.log(data);
       dateArray = [];
       hoursArray = [];
       dreamTypeArray = [];
@@ -185,15 +185,27 @@ function getDreamEntries(callbackFn) {
 }
 
 function displayUserStats(data) {
-  let lucidDreamPct = (dreamTypeArray[1] / dreamTypeArray.reduce((a, b) => {
-    return a + b;
-  }, 0)).toFixed(2) * 100 + '%';
+  let lucidDreamPct;
+  if (data.length === 0) {
+    lucidDreamPct = 0 + '%';
+  }
+  else {
+    lucidDreamPct = (dreamTypeArray[1] / dreamTypeArray.reduce((a, b) => {
+      return a + b;
+    }, 0)).toFixed(2) * 100 + '%';
+  }
 
   let sleepTotal = hoursArray.reduce((a, b) => {
     return a + b;
   }, 0);
 
-  let sleepAvg = (sleepTotal / data.length).toFixed(2);
+  let sleepAvg;
+  if (sleepTotal === 0) {
+    sleepAvg = 0;
+  }
+  else {
+    sleepAvg = (sleepTotal / data.length).toFixed(2);
+  }
 
   let dreamsRecordedDisplay = '<p class="stat">'+ data.length +'</p>';
   let lucidDreamDisplay = '<p class="stat">' + lucidDreamPct + '</p>';
