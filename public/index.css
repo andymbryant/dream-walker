@@ -323,16 +323,38 @@ h2 {
 #home p {
   color: #FFF;
   text-align: center;
-  font-size: 20px;
+  font-size: 23px;
 }
 
 #about {
   padding-bottom: 150px;
   width: 100%;
   background: #99D3DF;
-  text-align: center;
+  text-align: left;
   position: relative;
   z-index: 1;
+}
+
+.about-text {
+  display: inline-block;
+  width: 45%;
+  position: relative;
+}
+
+.about-text h2 {
+  font-size: 40px;
+  margin-bottom: 0;
+}
+
+.about-text p {
+  font-size: 20px;
+  line-height:35px;
+}
+
+.about-img {
+  display: inline-block;
+  width: 45%;
+  float: right;
 }
 
 #journal {
