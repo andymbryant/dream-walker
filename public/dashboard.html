@@ -6,6 +6,7 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
   <link rel="stylesheet" type="text/css" href="dashboard.css">
   <link rel="stylesheet" type="text/css" href="grid.css">
+  <link rel="stylesheet" type="text/css" href="animate.css">
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <title></title>
@@ -14,23 +15,23 @@
 
   <nav>
     <ul>
-      <a href="#"><li>Dashboard</li></a>
-      <a href="#"><li>Dreams</li></a>
-      <a href="#"><li>Add New Dream</li></a>
+      <a href="dashboard.html"><li>Dashboard</li></a>
+      <a href="dreams.html"><li>Dreams</li></a>
+      <a href="new-dream.html"><li>Add New Dream</li></a>
     </ul>
     <div class="handle"><span class="handle-menu">DREAM WALKER</span><i class="fa fa-bars fa-2x" aria-hidden="true"></i></div>
   </nav>
 
   <div class="row">
     <div class="col-6">
-      <div class="doughnutChartBox">
+      <div class="doughnutChartBox animated fadeIn">
         <h2 class="stat-title">Dream Types</h2>
         <canvas id="doughnutChart"></canvas>
       </div>
     </div>
 
     <div class="col-6">
-      <div class="userStatsBox">
+      <div class="userStatsBox animated fadeIn">
         <h2>Statistics</h2>
         <div class="tracked-dreams"></div>
         <h3 class="tracked-dreams-footer">Dreams Recorded</h3>
@@ -49,7 +50,7 @@
 
   <div class="row">
     <div class="col-12">
-      <div class="lineChartBox">
+      <div class="lineChartBox animated fadeIn">
         <h2 class="stat-title">Sleep Pattern</h2>
         <canvas id="lineChart"></canvas>
       </div>
