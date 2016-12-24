@@ -89,6 +89,7 @@ nav ul li:hover {
 
 .doughnutChartBox {
   margin-top: 90px;
+  letter-spacing: 1px;
 }
 
 .stat-title {
@@ -97,6 +98,7 @@ nav ul li:hover {
 
 .userStatsBox {
   margin-top: 95px;
+  letter-spacing: 1px;
 }
 
 .userStatsBox h2 {
@@ -117,6 +119,7 @@ nav ul li:hover {
 
 .lineChartBox {
   margin-bottom: 50px;
+  letter-spacing: 1px;
 }
 
 @media only screen and (max-width: 640px) {
