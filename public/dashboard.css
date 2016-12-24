@@ -112,6 +112,10 @@ nav ul li:hover {
   margin-top: 20px;
 }
 
+.userStatsBox h2 {
+  margin-bottom: 0;
+}
+
 .stat {
   font-size: 40px;
   margin-top: 0;
