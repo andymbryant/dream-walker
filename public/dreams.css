@@ -101,7 +101,7 @@ nav ul li:hover {
 }
 
 .page-title {
-  margin-top: 100px;
+  margin-top: 90px;
   text-align: center;
   font-weight: normal;
 }
@@ -138,6 +138,7 @@ nav ul li:hover {
 	font-size: 40px;
 	position: relative;
 	top: 9px;
+  color: #82d1ff;
 }
 
 /* Title Color Change */
@@ -151,11 +152,11 @@ nav ul li:hover {
 	font-family: FontAwesome;
 	margin-right: 15px;
 	font-size: 40px;
+  color: #333333;
 }
 
 .accordion dd {
-	background-color: white;
-	/*border: 1px solid grey;*/
+	background-color: transparent;
 	border-top: none;
   line-height: 1.5em;
 	padding: 5px;
@@ -176,6 +177,7 @@ nav ul li:hover {
 
 blockquote {
     font-family: 'Raleway', sans-serif;
+    color: #333333;
     position: relative;
     margin: 0.5em;
     padding: 0.5em 2em 0.5em 3em;
