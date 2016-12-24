@@ -1,7 +1,7 @@
 const LINE_CHART = $("#lineChart");
 const DOUGHNUT_CHART = $("#doughnutChart");
 
-Chart.defaults.global.animation.duration = 3000;
+Chart.defaults.global.animation.duration = 2500;
 
 function getDreamEntries(callbackFn) {
   $.ajax({
