@@ -226,17 +226,26 @@ blockquote cite:before {
 	border-radius: 4px;
 }
 
-.edit-icon {
-	color: black;
+.edit-button, .delete-button {
 	text-decoration: none;
-/*	background-color: #2699ff;
-	border: 2px solid black;
-	padding: 5px;
-	border-radius: 4px;*/
+  background-color: #cecece;
+	padding: 3px 10px;
+	border-radius: 3px;
+  -webkit-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
 }
 
-.edit-icon:hover {
-	color: #2699ff;
+.edit-button:hover {
+	background-color: #2699ff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.delete-button:hover {
+  background-color: #ff7aa4;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .stats {
