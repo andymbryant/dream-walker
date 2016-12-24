@@ -210,3 +210,7 @@ function displayUserStats(data) {
 $(function() {
   getDreamEntries(displayUserStats);
 });
+
+$('.handle').on('click', function(event) {
+  $('nav ul').toggleClass('showing');
+});

@@ -24,7 +24,7 @@ function displayDreamEntries(data) {
   const accordion = $('.accordion');
 
   if (data.length === 0) {
-    accordion.html('<h2 class="no-results">You haven\'t recorded any dreams! Click "New Dream" in the menu to get started.</h2>');
+    accordion.html('<h2 class="no-results">You haven\'t recorded any dreams! Click "Add New Dream" in the menu to get started.</h2>');
   }
   else {
     for (index in data) {
@@ -61,4 +61,8 @@ function getAndDisplayDreamEntries() {
 $(function() {
   getAndDisplayDreamEntries();
   //  getDreamEntries();
+});
+
+$('.handle').on('click', function(event) {
+  $('nav ul').toggleClass('showing');
 });
