@@ -223,12 +223,12 @@ textarea {
   padding: 5px;
   border: none;
   border-radius: 2px;
-  background-color: #3097ff;
+  background-color: #2699ff;
   color:white;
 }
 
 .publish:hover {
-  background-color: #5eaeff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   cursor: pointer;
 }
 
@@ -238,15 +238,19 @@ textarea {
   text-decoration: underline;
   cursor: pointer;
   font-size: 12px;
-  color: red;
+  color: #ff7aa4;
   position: relative;
   top: 10px;
+}
+
+.reset:hover {
+  color: red;
 }
 
 .normal-tooltip {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted #3097ff;
+  border-bottom: 1px dotted #2699ff;
   line-height: 20px;
 }
 
