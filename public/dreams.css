@@ -7,21 +7,30 @@ body {
 	background-color: #e8e8e8;
 }
 
+/*=============================== NAV BAR ============================= */
+
 nav {
 	position: fixed;
 	top:0;
 	left:0;
 	right:0;
-	height: 50px;
-	background-color: #cecece;
 	text-align: center;
 	z-index: 5;
 }
 
-nav h1 {
-	position: relative;
-	bottom: 15px;
+nav ul {
+  background-color: #82d1ff;
+  overflow: hidden;
+  color: #e8e8e8;
+  padding: 0;
+  text-align: center;
 }
+
+nav ul li {
+
+}
+
+/*=============================== NAV BAR ============================= */
 
 .no-results {
   text-align: center;
