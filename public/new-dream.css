@@ -28,17 +28,66 @@ nav ul {
   padding: 0;
   text-align: center;
   margin: 0;
+  -webkit-transition: max-height 1s ease;
+  -ms-transition: max-height 1s ease;
+  -moz-transition: max-height 1s ease;
+  -o-transition: max-height 1s ease;
+  transition: max-height 1s ease;
 }
 
 nav ul li {
   display: inline-block;
   padding: 20px;
-  transition: all .5s ease;
+  transition: background-color .5s ease;
   font-size: 24px;
 }
 
 nav ul li:hover {
   background-color: #707070;
+}
+
+.handle {
+  width: 100%;
+  background: #001426;
+  text-align: left;
+  padding: 18px 12px;
+  cursor: pointer;
+  display: none;
+  color: white;
+}
+
+.handle-menu {
+  font-size: 20px;
+  font-weight: bold;
+  background: -webkit-linear-gradient(white, #0072bf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fa-bars {
+  position: relative;
+  bottom: 5px;
+  float:right;
+  color: white;
+}
+
+@media only screen and (max-width: 540px) {
+  nav ul {
+    max-height: 0;
+  }
+
+  .showing {
+    max-height: 20em;
+  }
+
+  nav ul li {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .handle {
+    display: block;
+  }
 }
 
 .title {

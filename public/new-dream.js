@@ -3,3 +3,7 @@ $('.date-day').change(function(event) {
     this.value ='0'+ this.value;
   };
 });
+
+$('.handle').on('click', function(event) {
+  $('nav ul').toggleClass('showing');
+});
