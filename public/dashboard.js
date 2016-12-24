@@ -97,7 +97,7 @@ function getDreamEntries(callbackFn) {
                       label: "Hours Slept",
                       fill: true,
                       lineTension: 0,
-                      backgroundColor: "rgba(75,192,192,0.4)",
+                      backgroundColor: "rgba(130,209,255,0.4)",
                       borderColor: "rgba(75,192,192,1)",
                       borderCapStyle: 'butt',
                       borderDash: [],
