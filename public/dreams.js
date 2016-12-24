@@ -62,3 +62,7 @@ $(function() {
   getAndDisplayDreamEntries();
   //  getDreamEntries();
 });
+
+$('.handle').on('click', function(event) {
+  $('nav ul').toggleClass('showing');
+});
