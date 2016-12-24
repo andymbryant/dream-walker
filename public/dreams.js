@@ -34,7 +34,7 @@ function displayDreamEntries(data) {
         '<dd><blockquote>' + data[index].entry + '</blockquote>' +
         '<p class="dream-info">Hours Slept: ' + '<span class="stats">' + data[index].hoursSlept + '</span></p>' +
         '<p class="dream-info">Dream Type: ' + '<span class="stats">' + data[index].type + '</span></p>' +
-        '<p class="dream-info"><a href="dreams/'+ data[index].id +'" class="edit-button">Edit</a></p>' +
+        '<p class="dream-info"><a href="dream-edit.html" class="edit-button">Edit</a></p>' +
         '<p class="dream-info"><a href="#" class="delete-button">Delete</a></p>' +
         '</dd>'
         );
