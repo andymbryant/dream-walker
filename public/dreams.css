@@ -239,3 +239,26 @@ blockquote cite:before {
 .stats {
 	color: #2699ff;
 }
+
+@media only screen and (max-width: 965px) {
+  .dream-date {
+    width: 100%;
+    text-align: center;
+  }
+
+  .dream-title {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    margin-top: 5px;
+  }
+
+  .accordion dt:before {
+    font-size: 30px;
+  }
+
+  .accordion dt.open:before {
+    font-size: 30px;
+  }
+
+}
