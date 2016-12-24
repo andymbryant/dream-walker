@@ -4,6 +4,10 @@
   text-align: center;
 }
 
+body {
+  background-color: #f2f2f2;
+}
+
 nav {
   position: fixed;
   top:0;
@@ -68,6 +72,12 @@ nav ul li:hover {
   color: white;
 }
 
+.activity-summary-heading {
+  margin-top: 90px;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+}
+
 @media only screen and (max-width: 540px) {
   nav ul {
     max-height: 0;
@@ -88,7 +98,6 @@ nav ul li:hover {
 }
 
 .doughnutChartBox {
-  margin-top: 90px;
   letter-spacing: 1px;
 }
 
@@ -97,14 +106,8 @@ nav ul li:hover {
 }
 
 .userStatsBox {
-  margin-top: 95px;
   letter-spacing: 1px;
 }
-
-.userStatsBox h2 {
-  margin-top: 30px;
-}
-
 
 .stat {
   font-size: 40px;

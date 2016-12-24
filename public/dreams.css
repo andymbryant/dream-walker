@@ -4,7 +4,7 @@
 }
 
 body {
-	background-color: #e8e8e8;
+	background-color: #f2f2f2;
 }
 
 /*=============================== NAV BAR ============================= */
@@ -260,5 +260,17 @@ blockquote cite:before {
   .accordion dt.open:before {
     font-size: 30px;
   }
+}
 
+@media only screen and (max-width: 875px) {
+  .dream-info {
+    width: 50%;
+    margin: 9px 0;
+  }
+}
+
+@media only screen and (max-width: 475px) {
+  .dream-info {
+    width: 100%;
+  }
 }
