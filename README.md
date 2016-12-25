@@ -1,0 +1,1 @@
+Dream Walker is a tool to help users become lucid dreamers. Users can document their dreams and view statistics on their progress.
