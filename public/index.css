@@ -330,10 +330,11 @@ h2 {
   padding-top: 35px;
   padding-bottom: 60px;
   width: 100%;
-  background: #dddddd;
+  background: #f2f2f2;
   text-align: left;
   position: relative;
   z-index: 1;
+  color: #333333;
 }
 
 .about-text {
@@ -367,10 +368,11 @@ h2 {
   padding-top: 70px;
   padding-bottom: 110px;
   width: 100%;
-  background: #dddddd;
+  background: #f2f2f2;
   text-align: left;
   position: relative;
   z-index: 1;
+  color: #333333;
 }
 
 .journal-text {
@@ -404,12 +406,13 @@ h2 {
 
 #analyze {
   padding-top: 35px;
-  padding-bottom: 100px;
+  padding-bottom: 80px;
   width: 100%;
-  background: #dddddd;
+  background: #f2f2f2;
   text-align: left;
   position: relative;
   z-index: 1;
+  color: #333333;
 }
 
 .analyze-text {
@@ -441,18 +444,20 @@ h2 {
 }
 
 .sleep-img {
+  text-align: center;
   position: relative;
   top: 25px;
 }
 
 .sleep-example {
-  width: 100%;
+  width: 90%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #sign-up {
   width: 100%;
-  height: 400px;
+  height: 550px;
+  padding-top: 50px;
   background: #E9E9E9;
   text-align: center;
   position: relative;
@@ -469,6 +474,11 @@ h2 {
   margin: 0 auto;
   border-radius: 4px;
   text-align: center;
+}
+
+.sign-up-title {
+  margin-bottom: 50px;
+  font-size: 30px;
 }
 
 .register fieldset {
@@ -508,10 +518,36 @@ h2 {
   font-size: 20px;
   transition-duration: 200ms;
   cursor: pointer;
+  margin-top: 30px;
 }
 
 button:hover {
   background-color: #2699ff;
+}
+
+footer {
+  height: 50px;
+  width: 100%;
+  background-color: #f2f2f2;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+}
+
+footer p {
+  color: #333333;
+  font-size: 17px;
+  position: relative;
+  bottom: 3px;
+}
+
+.fa-github {
+  color: black;
+  cursor: pointer;
+}
+
+.fa-github:hover {
+  color: #ff7aa4;
 }
 
 @media screen and (max-width: 470px) {
