@@ -53,23 +53,37 @@ $(window).scroll(function(){
     }
 });
 
+//This function is breaking all of the event handlers on my page for some reason
+function addUser(firstName, lastName, username, password, callback) {
+  $.ajax({
+    url: "/users",
+    contentType: 'application/json',
+    type: 'POST',
+    dataType: 'json',
+    data: JSON.stringify(
+      {
+      firstName: firstName,
+      lastName: lastName,
+      username: username,
+      password: password
+      }
+    ),
+    success: function(data) {
+      console.log('hi');
+    },
+    error: function() {
+      console.log("didn't work");
+    }
+  });
+}
 
 // Test to make sure I've selected correctly
 $('.sign-up-button').on('click', function(event) {
-  alert('hi');
+  event.preventDefault();
+  let firstName = $('.register').find('#firstName').val();
+  let lastName = $('.register').find('#lastName').val();
+  let username = $('.register').find('#username').val();
+  let password = $('.register').find('#password').val();
+  console.log(`${firstName} ${lastName} ${username} ${password}`);
+  addUser(firstName, lastName, username, password);
 });
-
-//This function is breaking all of the event handlers on my page for some reason
-// function addUser() {
-//   $.ajax({
-//     url: "/users",
-//     type: 'POST',
-//     dataType: 'jsonp',
-//     data: {
-
-//     },
-
-//     success: function(data) {
-//       console.log(hi);
-//     }
-// }

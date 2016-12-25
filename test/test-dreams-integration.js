@@ -8,6 +8,7 @@ const mongoose = require('mongoose');
 const should = chai.should();
 
 const {Dream} = require('../models');
+const {User} = require('../users/models')
 const {app, runServer, closeServer} = require('../server');
 
 chai.use(chaiHttp);
@@ -37,7 +38,7 @@ function generateHoursSlept() {
   return Math.floor(Math.random() * 10);
 }
 
-// generate an object represnting a restaurant.
+// generate an object represnting a dream.
 // can be used to generate seed data for db
 // or request.body data
 function generateDreamData() {
@@ -46,6 +47,15 @@ function generateDreamData() {
     entry: faker.lorem.paragraph(),
     type: generateDreamType(),
     hoursSlept: generateHoursSlept()
+  }
+}
+
+function generateUser() {
+  return {
+    firstName: faker.name.firstName(),
+    lastName: faker.name.lastName(),
+    username: faker.random.word(),
+    password: faker.random.alphaNumeric()
   }
 }
 
@@ -186,6 +196,34 @@ describe('Dream Walker API resource', function() {
           dream.hoursSlept.should.equal(newDream.hoursSlept);
         });
     });
+
+    it('should add a new user', function() {
+
+      const newUser = generateUser();
+
+      return chai.request(app)
+        .post('/users')
+        .send(newUser)
+        .then(function(res) {
+          res.should.have.status(201);
+          res.should.be.json;
+          res.body.should.be.a('object');
+          res.body.should.include.keys('firstName', 'lastName', 'username');
+          // cause Mongo should have created id on insertion
+          res.body.id.should.not.be.null;
+          res.body.firstName.should.equal(newUser.firstName);
+          res.body.lastName.should.equal(newUser.lastName);
+          res.body.username.should.equal(newUser.username);
+
+          return User.findById(res.body.id);
+        })
+        .then(function(user) {
+          user.firstName.should.equal(newUser.firstName);
+          user.lastName.should.equal(newUser.lastName);
+          user.username.should.equal(newUser.username);
+        });
+    });
+
   });
 
   describe('PUT endpoint', function() {
@@ -201,7 +239,7 @@ describe('Dream Walker API resource', function() {
         entry: 'Gibberish, jibberish, jibber-jabber and gobbledygook'
       };
 
-      return Dream 
+      return Dream
         .findOne()
         .exec()
         .then(function(dream) {
@@ -223,7 +261,7 @@ describe('Dream Walker API resource', function() {
           dream.entry.should.equal(updateData.entry);
         });
       });
-  }); 
+  });
 
   describe('DELETE endpoint', function() {
     // strategy:
@@ -254,5 +292,5 @@ describe('Dream Walker API resource', function() {
           should.not.exist(_dream);
         });
     });
-  }); 
+  });
 });
