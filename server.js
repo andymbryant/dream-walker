@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const morgan = require('morgan');
 
 const dreamsRouter = require('./dreamsRouter');
+const {router: usersRouter} = require('./users');
 
 const {DATABASE_URL, PORT} = require('./config');
 const {Dream} = require('./models');
@@ -19,6 +20,8 @@ mongoose.Promise = global.Promise;
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });
+
+app.use('/users/', usersRouter);
 
 app.use('/dreams', dreamsRouter);
 
