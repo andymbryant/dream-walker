@@ -330,7 +330,7 @@ h2 {
   padding-top: 35px;
   padding-bottom: 60px;
   width: 100%;
-  background: #99D3DF;
+  background: #dddddd;
   text-align: left;
   position: relative;
   z-index: 1;
@@ -365,9 +365,9 @@ h2 {
 
 #journal {
   padding-top: 70px;
-  padding-bottom: 150px;
+  padding-bottom: 110px;
   width: 100%;
-  background: #88bbd6;
+  background: #dddddd;
   text-align: left;
   position: relative;
   z-index: 1;
@@ -403,12 +403,51 @@ h2 {
 }
 
 #analyze {
-  padding-bottom: 150px;
+  padding-top: 35px;
+  padding-bottom: 100px;
   width: 100%;
-  background: #cdcdcd;
-  text-align: center;
+  background: #dddddd;
+  text-align: left;
   position: relative;
   z-index: 1;
+}
+
+.analyze-text {
+  display: inline-block;
+  width: 40%;
+  position: relative;
+}
+
+.analyze-text h2 {
+  line-height: 45px;
+  font-size: 40px;
+  margin: 0;
+}
+
+.analyze-text p {
+  font-size: 20px;
+  line-height:35px;
+}
+
+.analyze-img {
+  display: inline-block;
+  width: 55%;
+  float: right;
+}
+
+.statistics-example {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sleep-img {
+  position: relative;
+  top: 25px;
+}
+
+.sleep-example {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #sign-up {
