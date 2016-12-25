@@ -314,7 +314,7 @@ h2 {
 }
 
 #home {
-  padding-bottom: 150px;
+  padding-bottom: 170px;
   width: 100%;
   background: radial-gradient(ellipse at bottom, #002249 0%, #000 100%);
   text-align: center;
@@ -327,7 +327,8 @@ h2 {
 }
 
 #about {
-  padding-bottom: 150px;
+  padding-top: 35px;
+  padding-bottom: 60px;
   width: 100%;
   background: #99D3DF;
   text-align: left;
@@ -342,6 +343,7 @@ h2 {
 }
 
 .about-text h2 {
+  line-height: 45px;
   font-size: 40px;
   margin-bottom: 0;
 }
@@ -357,13 +359,47 @@ h2 {
   float: right;
 }
 
+.astronaut {
+  width: 100%;
+}
+
 #journal {
+  padding-top: 70px;
   padding-bottom: 150px;
   width: 100%;
   background: #88bbd6;
-  text-align: center;
+  text-align: left;
   position: relative;
   z-index: 1;
+}
+
+.journal-text {
+  display: inline-block;
+  width: 35%;
+  position: relative;
+}
+
+.journal-img {
+  display: inline-block;
+  width: 60%;
+  float: left;
+  padding-right: 50px;
+}
+
+.journal-text h2 {
+  line-height: 45px;
+  font-size: 40px;
+  margin: 0;
+}
+
+.journal-text p {
+  font-size: 20px;
+  line-height:35px;
+}
+
+.dreams-example {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #analyze {
