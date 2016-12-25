@@ -1,30 +1,4 @@
-/*
-function postDreamEntry(title, entry, type, hoursSlept, callback) {
-  const newEntry = {
-    url: 'localhost:8080/new-dream',
-    data: {
-      title: title,
-      entry: entry,
-      type: type,
-      hoursSlept: hoursSlept
-    },
-    dataType: 'json',
-    type: 'POST',
-    success: callback
-  };
-  $.ajax(newEntry);
-}
-*/
 
-$('#add-new-dream').click(function(event) {
-    event.preventDefault();
-    const title = $('#title').val();
-    const entry = $('#entry').val();
-    const type = $('#type').val();
-    const hoursSlept = $('#hoursSlept').val();
-    //console.log(title, entry, type, hoursSlept);
-    postDreamEntry(title, entry, type, hoursSlept, itWorked);
-});
 
 // Smooth scroll to top
 $('.nav-brand').click(function(event) {
@@ -45,7 +19,7 @@ $("a").on('click', function(event) {
     }, 800, 'swing', function(){
       window.location.hash = hash;
     });
-  } 
+  }
 });
 
 $('.modal-close').on('click', function(event) {
@@ -66,7 +40,7 @@ $('nav ul a').on('click', function(event) {
 });
 
 // Toggle navigation class on scroll
-$(window).scroll(function(){ 
+$(window).scroll(function(){
     var a = 10;
     var pos = $(window).scrollTop();
     if(pos > a) {
@@ -78,3 +52,24 @@ $(window).scroll(function(){
         $('.nav-brand').removeClass('nav-brand-scroll');
     }
 });
+
+
+// Test to make sure I've selected correctly
+$('.sign-up-button').on('click', function(event) {
+  alert('hi');
+});
+
+//This function is breaking all of the event handlers on my page for some reason
+// function addUser() {
+//   $.ajax({
+//     url: "/users",
+//     type: 'POST',
+//     dataType: 'jsonp',
+//     data: {
+
+//     },
+
+//     success: function(data) {
+//       console.log(hi);
+//     }
+// }
