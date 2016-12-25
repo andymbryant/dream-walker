@@ -358,6 +358,7 @@ h2 {
   display: inline-block;
   width: 45%;
   float: right;
+  margin-top: 40px;
 }
 
 .astronaut {
@@ -402,6 +403,25 @@ h2 {
 .dreams-example {
   width: 100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media only screen and (max-width: 768px) {
+  #about {
+    padding: 0;
+  }
+
+  .about-text {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+  }
+
+  .about-img {
+    display: none;
+  }
+
 }
 
 #analyze {
