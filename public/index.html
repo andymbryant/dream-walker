@@ -63,6 +63,9 @@
 					<div class="col-12">
 						<div class="about-text">
 							<h2>Experience lucid dreaming</h2>
+							<div class="about-img-mobile">
+								<img src="images/dream-walker-astronaut.png" alt="dreaming-astronaut" class="astronaut">
+							</div>
 							<p>Dream Walker helps you become aware that you’re dreaming and gain the ability to control your dreams. You can transform your inner dream world into a playground of infinite possibility.</p>
 						</div>
 						<div class="about-img">
@@ -123,8 +126,10 @@
 						<div class="sign-up-box">
 							<form class="register" action="/some-server-endpoint" method="post" autocomplete="off">
 								<fieldset name="register-info">
+									<input type="text" name="name" id="name" placeholder="Full Name" required/>
 									<input type="text" name="username" id="username" placeholder="Username" required/>
 									<input type="password" name="password" id="password" placeholder="Password" required/>
+									<input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm Password" required/>
 								</fieldset>
 								<button type='submit' class="sign-up-button">Sign Up</button>
 							</form>

@@ -170,8 +170,6 @@ nav ul .nav-hover:hover {
   transition: transform 200ms ease-out;
 }
 
-
-
 .login-form fieldset {
   border: none;
   padding: 0;
@@ -314,7 +312,7 @@ h2 {
 }
 
 #home {
-  padding-bottom: 170px;
+  padding-bottom: 270px;
   width: 100%;
   background: radial-gradient(ellipse at bottom, #002249 0%, #000 100%);
   text-align: center;
@@ -359,6 +357,10 @@ h2 {
   width: 45%;
   float: right;
   margin-top: 40px;
+}
+
+.about-img-mobile {
+  display: none;
 }
 
 .astronaut {
@@ -465,7 +467,7 @@ h2 {
 
 #sign-up {
   width: 100%;
-  height: 550px;
+  height: 600px;
   padding-top: 50px;
   background: #E9E9E9;
   text-align: center;
@@ -487,12 +489,17 @@ h2 {
     padding: 0;
   }
 
-  .about-img {
+  .about-img-mobile {
     display: block;
     width: 70%;
     margin: 0 auto;
+    margin-top: 15px;
     padding: 0;
     float: none;
+  }
+
+  .about-img {
+    display: none;
   }
 
   .journal-text {
@@ -511,7 +518,7 @@ h2 {
     display: block;
     width: 100%;
     margin: 0 auto;
-    margin-top: 15px;
+    margin-top: 20px;
     padding: 0;
   }
 
@@ -531,7 +538,7 @@ h2 {
     display: block;
     width: 100%;
     margin: 0 auto;
-    margin-top: 15px;
+    margin-top: 20px;
     padding: 0;
     float: none;
   }
@@ -571,6 +578,7 @@ h2 {
 }
 
 .sign-up-title {
+  margin-top: 0;
   margin-bottom: 50px;
   font-size: 30px;
 }
@@ -592,6 +600,7 @@ h2 {
   background-color: transparent;
   margin-bottom: 20px;
   margin-top: 15px;
+  text-align: center;
 }
 
 .register input:focus {
