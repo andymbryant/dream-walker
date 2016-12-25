@@ -69,13 +69,16 @@ function addUser(firstName, lastName, username, password, callback) {
       }
     ),
     success: function(data) {
-      console.log('hi');
+      console.log(`User ${username} successfully created`);
+      callback();
     },
     error: function() {
-      console.log("didn't work");
+      console.log("SOMETHING WENT WRONG!!!");
     }
   });
 }
+
+
 
 // Test to make sure I've selected correctly
 $('.sign-up-button').on('click', function(event) {
