@@ -170,8 +170,6 @@ nav ul .nav-hover:hover {
   transition: transform 200ms ease-out;
 }
 
-
-
 .login-form fieldset {
   border: none;
   padding: 0;
@@ -314,7 +312,7 @@ h2 {
 }
 
 #home {
-  padding-bottom: 170px;
+  padding-bottom: 270px;
   width: 100%;
   background: radial-gradient(ellipse at bottom, #002249 0%, #000 100%);
   text-align: center;
@@ -330,10 +328,11 @@ h2 {
   padding-top: 35px;
   padding-bottom: 60px;
   width: 100%;
-  background: #dddddd;
+  background: #f2f2f2;
   text-align: left;
   position: relative;
   z-index: 1;
+  color: #333333;
 }
 
 .about-text {
@@ -357,6 +356,11 @@ h2 {
   display: inline-block;
   width: 45%;
   float: right;
+  margin-top: 40px;
+}
+
+.about-img-mobile {
+  display: none;
 }
 
 .astronaut {
@@ -367,16 +371,21 @@ h2 {
   padding-top: 70px;
   padding-bottom: 110px;
   width: 100%;
-  background: #dddddd;
+  background: #f2f2f2;
   text-align: left;
   position: relative;
   z-index: 1;
+  color: #333333;
 }
 
 .journal-text {
   display: inline-block;
   width: 35%;
   position: relative;
+}
+
+.journal-img-mobile {
+  display: none;
 }
 
 .journal-img {
@@ -404,12 +413,13 @@ h2 {
 
 #analyze {
   padding-top: 35px;
-  padding-bottom: 100px;
+  padding-bottom: 80px;
   width: 100%;
-  background: #dddddd;
+  background: #f2f2f2;
   text-align: left;
   position: relative;
   z-index: 1;
+  color: #333333;
 }
 
 .analyze-text {
@@ -440,24 +450,120 @@ h2 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.statistics-example-mobile {
+  display: none;
+}
+
 .sleep-img {
+  text-align: center;
   position: relative;
   top: 25px;
 }
 
 .sleep-example {
-  width: 100%;
+  width: 90%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #sign-up {
   width: 100%;
-  height: 400px;
+  height: 600px;
+  padding-top: 50px;
   background: #E9E9E9;
   text-align: center;
   position: relative;
   overflow: hidden;
   z-index: 1;
+}
+
+@media only screen and (max-width: 768px) {
+  #about {
+    padding: 0;
+  }
+
+  .about-text {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+  }
+
+  .about-img-mobile {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 0;
+    float: none;
+  }
+
+  .about-img {
+    display: none;
+  }
+
+  .journal-text {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+  }
+
+  .journal-img {
+    display: none;
+  }
+
+  .journal-img-mobile {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 0;
+  }
+
+  .analyze-text {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+  }
+
+  .analyze-img {
+    display: none;
+  }
+
+  .analyze-img-mobile {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 0;
+    float: none;
+  }
+
+  .statistics-example {
+    display: none;
+  }
+
+  .statistics-example-mobile {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 0;
+    float: none;
+  }
+
+  .sleep-example {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    bottom: 20px;
+  }
+
 }
 
 /* ======================== Sign Up Box ======================== */
@@ -469,6 +575,12 @@ h2 {
   margin: 0 auto;
   border-radius: 4px;
   text-align: center;
+}
+
+.sign-up-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 30px;
 }
 
 .register fieldset {
@@ -488,6 +600,7 @@ h2 {
   background-color: transparent;
   margin-bottom: 20px;
   margin-top: 15px;
+  text-align: center;
 }
 
 .register input:focus {
@@ -508,10 +621,36 @@ h2 {
   font-size: 20px;
   transition-duration: 200ms;
   cursor: pointer;
+  margin-top: 30px;
 }
 
 button:hover {
   background-color: #2699ff;
+}
+
+footer {
+  height: 50px;
+  width: 100%;
+  background-color: #f2f2f2;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+}
+
+footer p {
+  color: #333333;
+  font-size: 17px;
+  position: relative;
+  bottom: 3px;
+}
+
+.fa-github {
+  color: black;
+  cursor: pointer;
+}
+
+.fa-github:hover {
+  color: #ff7aa4;
 }
 
 @media screen and (max-width: 470px) {
