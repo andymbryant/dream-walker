@@ -250,7 +250,7 @@ describe('Dream Walker API resource', function() {
           // make request then inspect it to make sure it reflects
           // data we sent
           return chai.request(app)
-            .put(`/dreams/${dream.id}`)
+            .put(`/dreams/${dream.id}/json`)
             .send(updateData);
         })
         .then(function(res) {

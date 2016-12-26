@@ -74,6 +74,32 @@ $(function() {
   getDreamEntries(displayDream);
 });
 
+function editDetails(title, entry, type, hoursSlept) {
+  const fullPathName = window.location.pathname;
+  const dreamId = fullPathName.slice(8);
+
+  $.ajax({
+    url: `/dreams/${dreamId}/json`,
+    contentType: 'application/json',
+    type: 'PUT',
+    dataType: 'json',
+    data: JSON.stringify(
+      {
+      title: title,
+      entry: entry,
+      type: type,
+      hoursSlept: hoursSlept
+      }
+    ),
+    success: function(data) {
+      console.log('SUCCESS');
+    },
+    error: function() {
+      console.log("SOMETHING WENT WRONG!!!");
+    }
+  });
+}
+
 function editDream(callback) {
   const dreamTitle = $('#dream-title').val();
   const dreamEntry = $('.dream-entry').val();
@@ -83,8 +109,6 @@ function editDream(callback) {
   const dreamMonth = $('.date-month').val();
   const dreamDay =  $('.date-day').val();
   const dreamYear = $('.date-year').val();
-
-  console.log(dreamMonth, dreamDay, dreamYear)
 
   if (dreamTypeSelect === '0') {
     dreamTypeChoice = 'Normal';
@@ -102,35 +126,9 @@ function editDream(callback) {
     dreamTypeChoice = 'Double';
   }
 
-  const fullPathName = window.location.pathname;
-  const dreamId = fullPathName.slice(8);
+  editDetails(dreamTitle, dreamEntry, dreamTypeChoice, hoursSlept);
 
-  $.ajax({
-    url: `/dreams/${dreamId}/json`,
-    type: 'PUT',
-    dataType: 'json',
-    data: JSON.stringify(
-      {
-        title: `${dreamTitle}`,
-        entry: `${dreamEntry}`,
-        hoursSlept: `${hoursSlept}`,
-        type: `${dreamTypeChoice}`,
-        // created: {
-        //   month: `${dreamMonth}`,
-        //   day: `${dreamDay}`,
-        //   year: `${dreamYear}`
-        // }
-      }
-    ),
 
-    success: function(data) {
-      console.log('success');
-    },
-
-    error: function() {
-      console.log('something went wrong');
-    }
-  });
 }
 
 $('form').submit(function(event) {

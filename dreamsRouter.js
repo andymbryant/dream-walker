@@ -82,7 +82,7 @@ router.put('/:id/json', (req, res) => {
   }
 
   const updated = {};
-  const updateableFields = ['title', 'entry', 'type', 'hoursSlept'];
+  const updateableFields = ['title', 'entry', 'type', 'hoursSlept', 'created'];
   updateableFields.forEach(field => {
     if (field in req.body) {
       updated[field] = req.body[field];
