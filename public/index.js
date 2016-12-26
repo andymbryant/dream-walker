@@ -1,6 +1,5 @@
+/* ================================== SMOOTH SCROLL TOP ================================== */
 
-
-// Smooth scroll to top
 $('.nav-brand').click(function(event) {
   event.preventDefault();
     $('body,html').animate({
@@ -9,7 +8,8 @@ $('.nav-brand').click(function(event) {
     );
 });
 
-// Add smooth scrolling to navbar links
+/* ================================== SMOOTH SCROLL ON NAV LINKS ================================== */
+
 $("a").on('click', function(event) {
   if (this.hash !== "") {
     event.preventDefault();
@@ -21,6 +21,8 @@ $("a").on('click', function(event) {
     });
   }
 });
+
+/* ================================== MODAL EVENTS ================================== */
 
 $('.modal-close').on('click', function(event) {
   $('.modal').addClass('modal-close');
@@ -39,7 +41,8 @@ $('nav ul a').on('click', function(event) {
   $('nav ul').toggleClass('showing');
 });
 
-// Toggle navigation class on scroll
+/* ================================== NAVIGATION STYLING ON SCROLL ================================== */
+
 $(window).scroll(function(){
     var a = 10;
     var pos = $(window).scrollTop();
@@ -53,7 +56,8 @@ $(window).scroll(function(){
     }
 });
 
-//This function is breaking all of the event handlers on my page for some reason
+/* =============================== POST TO /USERS FOR USER CREATION =============================== */
+
 function addUser(firstName, lastName, username, password, callback) {
   $.ajax({
     url: "/users",
@@ -78,13 +82,16 @@ function addUser(firstName, lastName, username, password, callback) {
   });
 }
 
+/* ================================== REPLACE SIGN UP WITH LOGIN ================================== */
+
 function replaceSignUp() {
   $('.sign-up-title').html('Thank you for signing up!');
   $('.sign-up-box').html('<p>Please click below to log in.</p>' +
     '<a href="#log-in" class="login2"><p class="log-in-button2">Log in</p></a>');
 }
 
-// Test to make sure I've selected correctly
+/* ================================== NEW USER SIGN UP ================================== */
+
 $('.sign-up-button').on('click', function(event) {
   let firstName = $('.register').find('#firstName').val();
   let lastName = $('.register').find('#lastName').val();
