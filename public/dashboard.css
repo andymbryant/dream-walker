@@ -1,3 +1,5 @@
+/* ================================= UNIVERSAL =================================*/
+
 * {
   box-sizing: border-box;
   font-family: 'Raleway', sans-serif;
@@ -8,6 +10,8 @@
 body {
   background-color: #f2f2f2;
 }
+
+/* ================================= NAVIGATION =================================*/
 
 nav {
   position: fixed;
@@ -80,6 +84,8 @@ nav ul li:hover {
   letter-spacing: 1px;
 }
 
+/* ================================= MEDIA QUERY: NAVIGATION =================================*/
+
 @media only screen and (max-width: 540px) {
   nav ul {
     max-height: 0;
@@ -99,9 +105,13 @@ nav ul li:hover {
   }
 }
 
+/* ================================= DOUGHNUT CHART DIV =================================*/
+
 .doughnutChartBox {
   letter-spacing: 1px;
 }
+
+/* ================================= USER STATS DIV =================================*/
 
 .stat-title {
   margin-bottom: 0;
@@ -127,10 +137,14 @@ nav ul li:hover {
   margin-bottom: 35px;
 }
 
+/* ================================= SLEEP CHART =================================*/
+
 .lineChartBox {
   margin-bottom: 50px;
   letter-spacing: 1px;
 }
+
+/* ================================= MEDIA QUERY: USER STATS =================================*/
 
 @media only screen and (max-width: 640px) {
   .userStatsBox {
@@ -140,6 +154,8 @@ nav ul li:hover {
     border-width: 80%;
   }
 }
+
+/* ================================= MEDIA QUERY: DOUGHNUT CHART =================================*/
 
 @media only screen and (min-width: 640px) {
   .doughnutChartBox {

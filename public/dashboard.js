@@ -3,6 +3,7 @@ const DOUGHNUT_CHART = $("#doughnutChart");
 
 Chart.defaults.global.animation.duration = 2500;
 
+/* =========================== GET REQUEST FOR DREAMS + GRAPH DISPLAY ===========================*/
 function getDreamEntries(callbackFn) {
   $.ajax({
     url: "/dreams/demo",
@@ -74,6 +75,8 @@ function getDreamEntries(callbackFn) {
           }
         });
 
+/* ========================= SCROLLBAR DETECTION FOR GRAPH ANIMATION TIMING ===========================*/
+
         if ($("body").height() > $(window).height()) { //http://stackoverflow.com/questions/2146874/detect-if-a-page-has-a-vertical-scrollbar
           function checkVisible( elm, eval ) {
             eval = eval || "object visible";
@@ -85,6 +88,8 @@ function getDreamEntries(callbackFn) {
           if (eval == "object visible") return ((y < (viewportHeight + scrolltop)) && (y > (scrolltop - elementHeight)));
           if (eval == "above") return ((y < (viewportHeight + scrolltop)));
           }
+
+/* ================================= LIMIT ANIMATION TO ONCE =================================*/
 
           $(window).on('scroll',function() { //http://stackoverflow.com/questions/32134451/call-function-on-scroll-only-once
             if (checkVisible($('#lineChart'))) {
@@ -176,13 +181,15 @@ function getDreamEntries(callbackFn) {
         callbackFn(data)
 
       } // if statement close
-    }, //success function close
+    }, // success function close
 
     error: function() {
       console.log('something went wrong');
     }
   });
 }
+
+/* ================================= USER STATS LOGIC AND DISPLAY =================================*/
 
 function displayUserStats(data) {
   let lucidDreamPct;
@@ -218,10 +225,13 @@ function displayUserStats(data) {
   $('.total-hours').html(totalHoursDisplay)
 }
 
+/* ================================= IIFE FOR PAGE =================================*/
 
 $(function() {
   getDreamEntries(displayUserStats);
 });
+
+/* ================================= RESPONSIVE NAVIGATION =================================*/
 
 $('.handle').on('click', function(event) {
   $('nav ul').toggleClass('showing');
