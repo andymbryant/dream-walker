@@ -78,7 +78,11 @@ function addUser(firstName, lastName, username, password, callback) {
   });
 }
 
-
+function replaceSignUp() {
+  $('.sign-up-title').html('Thank you for signing up!');
+  $('.sign-up-box').html('<p>Please click below to log in.</p>' +
+    '<a href="#log-in" class="login2"><p class="log-in-button2">Log in</p></a>');
+}
 
 // Test to make sure I've selected correctly
 $('.sign-up-button').on('click', function(event) {
@@ -87,6 +91,5 @@ $('.sign-up-button').on('click', function(event) {
   let lastName = $('.register').find('#lastName').val();
   let username = $('.register').find('#username').val();
   let password = $('.register').find('#password').val();
-  console.log(`${firstName} ${lastName} ${username} ${password}`);
-  addUser(firstName, lastName, username, password);
+  addUser(firstName, lastName, username, password, replaceSignUp);
 });

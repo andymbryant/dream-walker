@@ -106,6 +106,7 @@ nav ul .nav-hover:hover {
 }
 
 .modal-container {
+  text-align: center;
   position: fixed;
   background-color: #fff;
   width: 70%;
@@ -176,6 +177,7 @@ nav ul .nav-hover:hover {
 }
 
 .login-form input {
+  text-align: center;
   font-family: 'Raleway', sans-serif;
   width: 100%;
   border: 2px solid #d8d8d8;
@@ -581,6 +583,7 @@ h2 {
   margin-top: 0;
   margin-bottom: 30px;
   font-size: 30px;
+  line-height: 35px;
 }
 
 .register fieldset {
@@ -626,6 +629,28 @@ h2 {
 
 button:hover {
   background-color: #2699ff;
+}
+
+.log-in-button2 {
+  width: 100%;
+  padding:15px;
+  border:none;
+  border-radius: 3px;
+  background-color: #82c4ff;
+  font-family: 'Raleway', sans-serif;
+  color:white;
+  font-size: 20px;
+  transition-duration: 200ms;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.log-in-button2:hover {
+  background-color: #2699ff;
+}
+
+.login2 {
+  text-decoration: none;
 }
 
 footer {
