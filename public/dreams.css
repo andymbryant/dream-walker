@@ -238,7 +238,6 @@ blockquote cite:before {
 
 .edit-button {
 	text-decoration: none;
-  /*background-color: #cecece;*/
 	padding: 3px 10px;
 	border-radius: 3px;
   -webkit-transition: all .2s ease;
