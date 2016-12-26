@@ -121,16 +121,18 @@ describe('Dream Walker API resource', function() {
           // so subsequent .then blocks can access resp obj.
           res = _res;
           res.should.have.status(200);
+          res.should.be.html;
           // otherwise our db seeding didn't work
-          res.body.should.have.length.of.at.least(1);
-          return Dream.count();
+          //res.body.should.have.length.of.at.least(1);
+          //return Dream.count();
         })
-        .then(function(count) {
-          res.body.should.have.length.of(count);
-        });
+        // UNCOMMENT AFTER NEW ENDPOINT IS MADE
+        // .then(function(count) {
+        //   res.body.should.have.length.of(count);
+        // });
     });
 
-
+/* UNCOMMENT AFTER NEW ENDPOINT IS MADE
     it('should return dreams with right fields', function() {
       // Strategy: Get back all dreams, and ensure they have expected keys
 
@@ -159,7 +161,7 @@ describe('Dream Walker API resource', function() {
           resDream.type.should.equal(dream.type);
           resDream.hoursSlept.should.equal(dream.hoursSlept)
         });
-    });
+    }); */
   });
 
   describe('POST endpoint', function() {

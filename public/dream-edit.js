@@ -1,5 +1,7 @@
 /* ================================= GET DREAM TO EDIT =================================*/
+
 function getDreamEntries(callbackFn) {
+  const dreamId =
   $.ajax({
     url: "/dreams/585ec498896c0176f5203563",
     type: 'GET',
