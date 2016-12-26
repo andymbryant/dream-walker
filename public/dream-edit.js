@@ -73,3 +73,67 @@ $('.date-month').change(function(event) {
 $(function() {
   getDreamEntries(displayDream);
 });
+
+function editDream(callback) {
+  const dreamTitle = $('#dream-title').val();
+  const dreamEntry = $('.dream-entry').val();
+  const hoursSlept = $('.hours-slept-input').val();
+  const dreamTypeSelect = $('input[type=radio]:checked').val();
+  let dreamTypeChoice;
+  const dreamMonth = $('.date-month').val();
+  const dreamDay =  $('.date-day').val();
+  const dreamYear = $('.date-year').val();
+
+  console.log(dreamMonth, dreamDay, dreamYear)
+
+  if (dreamTypeSelect === '0') {
+    dreamTypeChoice = 'Normal';
+  }
+  else if (dreamTypeSelect === '1') {
+    dreamTypeChoice = 'Lucid';
+  }
+  else if (dreamTypeSelect === '2') {
+    dreamTypeChoice = 'Nightmare';
+  }
+  else if (dreamTypeSelect === '3') {
+    dreamTypeChoice = 'Recurring';
+  }
+  else if (dreamTypeSelect === '4') {
+    dreamTypeChoice = 'Double';
+  }
+
+  const fullPathName = window.location.pathname;
+  const dreamId = fullPathName.slice(8);
+
+  $.ajax({
+    url: `/dreams/${dreamId}/json`,
+    type: 'PUT',
+    dataType: 'json',
+    data: JSON.stringify(
+      {
+        title: `${dreamTitle}`,
+        entry: `${dreamEntry}`,
+        hoursSlept: `${hoursSlept}`,
+        type: `${dreamTypeChoice}`,
+        // created: {
+        //   month: `${dreamMonth}`,
+        //   day: `${dreamDay}`,
+        //   year: `${dreamYear}`
+        // }
+      }
+    ),
+
+    success: function(data) {
+      console.log('success');
+    },
+
+    error: function() {
+      console.log('something went wrong');
+    }
+  });
+}
+
+$('form').submit(function(event) {
+  event.preventDefault();
+  editDream();
+});
