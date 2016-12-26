@@ -9,7 +9,7 @@ function getDreamEntries(callbackFn) {
     success: function(data) {
       if(data) {
         var results = data;
-        console.log(results);
+      //  console.log(results);
         callbackFn(results);
       }
     },
@@ -29,13 +29,13 @@ function displayDreamEntries(data) {
   else {
     for (index in data) {
       accordion.append(
-        '<dt id="'+ data[index].id +'"><p class="dream-title">' + data[index].title + '</p>' +
+        '<dt id="'+ data[index].id +'" class="animated"><p class="dream-title">' + data[index].title + '</p>' +
         '<p class="dream-date">' + data[index].created + '</p></dt>' +
-        '<dd><blockquote>' + data[index].entry + '</blockquote>' +
+        '<dd class="animated"><blockquote>' + data[index].entry + '</blockquote>' +
         '<p class="dream-info">Hours Slept: ' + '<span class="stats">' + data[index].hoursSlept + '</span></p>' +
         '<p class="dream-info">Dream Type: ' + '<span class="stats">' + data[index].type + '</span></p>' +
-        '<p class="dream-info"><a href="/dreams/'+ data[index].id +'" class="edit-button">Edit</a></p>' +
-        '<p class="dream-info"><a href="#" class="delete-button">Delete</a></p>' +
+        '<a href="/dreams/'+ data[index].id +'"><p class="dream-info edit-button">Edit</p></a>' +
+        '<p class="dream-info delete-button">Delete</p>' +
         '</dd>'
         );
     }
@@ -45,9 +45,33 @@ function displayDreamEntries(data) {
       $(this).toggleClass('open').next('dd').slideToggle().siblings('dd:visible').slideUp().prev('dt').removeClass('open');
     });
 
-    $('.edit-icon').on('click', function(event) {
-      alert('hi');
+    $('.delete-button').on('click', function(event) {
+      const dreamId = $(this).closest('dd').prev('dt').attr('id');
+      $(this).closest('dd').prev().addClass('fadeOut');
+      $(this).closest('dd').addClass('fadeOut');
+
+      console.log(dreamId);
+
+      $.ajax({
+        url: `/dreams/${dreamId}/json`,
+        type: 'DELETE',
+        dataType: 'json',
+
+        success: function(data) {
+            console.log('successfully deleted');
+        },
+
+        error: function() {
+          console.log('something went wrong');
+        }
+      });
+
+      setTimeout(function(){
+        location.reload(true);
+      }, 700);
+
     });
+
   }
 }
 

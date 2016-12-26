@@ -96,7 +96,7 @@ router.put('/:id', (req, res) => {
     .catch(err => res.status(500).json({message: 'Something went wrong'}));
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id/json', (req, res) => {
   Dream
     .findByIdAndRemove(req.params.id)
     .exec()

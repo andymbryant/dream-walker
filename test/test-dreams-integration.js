@@ -271,7 +271,7 @@ describe('Dream Walker API resource', function() {
     //  2. make a DELETE request for that dream's id
     //  3. assert that response has right status code
     //  4. prove that dream with the id doesn't exist in db anymore
-    it('delete a dream by id', function() {
+    it('should delete a dream by id', function() {
 
       let dream;
 
@@ -280,7 +280,7 @@ describe('Dream Walker API resource', function() {
         .exec()
         .then(function(_dream) {
           dream = _dream;
-          return chai.request(app).delete(`/dreams/${dream.id}`);
+          return chai.request(app).delete(`/dreams/${dream.id}/json`);
         })
         .then(function(res) {
           res.should.have.status(204);
