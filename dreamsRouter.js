@@ -7,17 +7,7 @@ const jsonParser = bodyParser.json();
 const {Dream} = require('./models');
 
 router.get('/', (req, res) => {
-  Dream
-    .find()
-    .sort({created: -1})
-    .exec()
-    .then(dreams => {
-      res.json(dreams.map(dream => dream.apiRepr()));
-    })
-    .catch(err => {
-      console.error(err);
-      res.status(500).json({error: 'something went terribly wrong'});
-    });
+  res.sendFile(__dirname + '/public/dreams.html');
 });
 
 router.get('/demo', (req, res) => {
@@ -32,6 +22,10 @@ router.get('/demo', (req, res) => {
       console.error(err);
       res.status(500).json({error: 'something went terribly wrong'});
     });
+});
+
+router.get('/new', (req, res) => {
+  res.sendFile(__dirname + '/public/new-dream.html');
 });
 
 router.get('/:id', (req, res) => {
