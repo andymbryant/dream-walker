@@ -3,12 +3,24 @@
   font-family: 'Raleway', sans-serif;
 }
 
+section {
+  line-height: 1.5em;
+  margin: 0 auto;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+/* ================================= STAR BACKGROUND =================================*/
+
 html {
   height: 100%;
   background: radial-gradient(ellipse at bottom, #002249 0%, #000 100%);
 }
 
-/* ========================== Navigation Styling For Index ============================== */
+/* ===================================== NAVIGATION =================================== */
+
 nav {
   position: fixed;
   top:0;
@@ -48,7 +60,8 @@ nav ul .nav-hover:hover {
   color:#0098ff;
 }
 
-/* nav bar after scroll */
+/* ================================== NAVIGATION AFTER SCROLL ================================ */
+
 .nav-ul-scroll {
   background-color: rgba(255,255,255,.95);
   color:#303030;
@@ -80,6 +93,8 @@ nav ul .nav-hover:hover {
   left: 90px;
 }
 
+/* =============================== RESPONSIVE NAVIGATION =========================== */
+
 .handle {
   width: 100%;
   background: #001426;
@@ -104,6 +119,8 @@ nav ul .nav-hover:hover {
   float:right;
   color: white;
 }
+
+/* ================================== LOGIN MODAL ================================== */
 
 .modal-container {
   text-align: center;
@@ -140,7 +157,6 @@ nav ul .nav-hover:hover {
   left: 0;
   height: 100%;
   width: 100%;
-
   z-index: 20;
 }
 
@@ -170,6 +186,8 @@ nav ul .nav-hover:hover {
   -o-transition: -o-transform 200ms ease-out;
   transition: transform 200ms ease-out;
 }
+
+/* ================================== LOGIN FORM ================================== */
 
 .login-form fieldset {
   border: none;
@@ -223,7 +241,8 @@ nav ul .nav-hover:hover {
   color:black;
 }
 
-/* ===================== MEDIA QUERIES====================== */
+/* ================================== MEDIA QUERY: DEMO BUTTON ================================== */
+
 @media screen and (min-width: 945px) {
   #demo-button {
     font-family: 'Raleway', sans-serif;
@@ -240,6 +259,8 @@ nav ul .nav-hover:hover {
     background-color: #2699ff;
   }
 }
+
+/* ================================== MEDIA QUERY: MENU ================================== */
 
 @media screen and (max-width: 945px) {
   nav ul {
@@ -288,12 +309,14 @@ nav ul .nav-hover:hover {
     transform: translate(300%, 0);
   }
 }
-/* ========================================================== */
 
+/* ================================== HOME DIV ================================== */
 
-section {
-  line-height: 1.5em;
-  margin: 0 auto;
+#home {
+  padding-bottom: 270px;
+  width: 100%;
+  background: radial-gradient(ellipse at bottom, #002249 0%, #000 100%);
+  text-align: center;
 }
 
 #title {
@@ -309,22 +332,13 @@ section {
   -webkit-text-fill-color: transparent;
 }
 
-h2 {
-  font-weight: normal;
-}
-
-#home {
-  padding-bottom: 270px;
-  width: 100%;
-  background: radial-gradient(ellipse at bottom, #002249 0%, #000 100%);
-  text-align: center;
-}
-
 #home p {
   color: #FFF;
   text-align: center;
   font-size: 23px;
 }
+
+/* ================================== ABOUT DIV ================================== */
 
 #about {
   padding-top: 35px;
@@ -369,6 +383,8 @@ h2 {
   width: 100%;
 }
 
+/* ================================== JOURNAL DIV ================================== */
+
 #journal {
   padding-top: 70px;
   padding-bottom: 110px;
@@ -412,6 +428,8 @@ h2 {
   width: 100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+/* ================================== ANALYZE DIV ================================== */
 
 #analyze {
   padding-top: 35px;
@@ -467,6 +485,8 @@ h2 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+/* ================================== SIGN UP DIV ================================== */
+
 #sign-up {
   width: 100%;
   height: 600px;
@@ -477,6 +497,8 @@ h2 {
   overflow: hidden;
   z-index: 1;
 }
+
+/* ================================== MEDIA QUERY: IMAGE REARRANGEMENT ================================== */
 
 @media only screen and (max-width: 768px) {
   #about {
@@ -568,7 +590,7 @@ h2 {
 
 }
 
-/* ======================== Sign Up Box ======================== */
+/* ================================== SIGN UP FORM ================================== */
 
 .sign-up-box {
   width:400px;
@@ -611,7 +633,6 @@ h2 {
     border-bottom-color: #82c4ff;
 }
 
-
 .sign-up-button {
   width: 320px;
   height: 55px;
@@ -630,6 +651,18 @@ h2 {
 button:hover {
   background-color: #2699ff;
 }
+
+/* ================================== MEDIA QUERY: SIGN UP FORM ================================== */
+
+@media screen and (max-width: 470px) {
+  .sign-up-box, .register fieldset, .register input, .sign-up-button {
+    width: 100%;
+    height: auto;
+    font-size: 100%;
+  }
+}
+
+/* ================================== LOG IN BUTTON AFTER SIGN UP ================================== */
 
 .log-in-button2 {
   width: 100%;
@@ -652,6 +685,8 @@ button:hover {
 .login2 {
   text-decoration: none;
 }
+
+/* ================================== FOOTER ================================== */
 
 footer {
   height: 50px;
@@ -676,14 +711,6 @@ footer p {
 
 .fa-github:hover {
   color: #ff7aa4;
-}
-
-@media screen and (max-width: 470px) {
-  .sign-up-box, .register fieldset, .register input, .sign-up-button {
-    width: 100%;
-    height: auto;
-    font-size: 100%;
-  }
 }
 
 /*
