@@ -73,6 +73,3 @@ $('.date-month').change(function(event) {
 $(function() {
   getDreamEntries(displayDream);
 });
-// const fullPathName = window.location.pathname;
-// const dreamId = fullPathName.slice(8)
-// console.log(dreamId)

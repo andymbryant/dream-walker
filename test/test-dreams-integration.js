@@ -105,7 +105,7 @@ describe('Dream Walker API resource', function() {
   // on proving something small
   describe('GET endpoint', function() {
 
-    it('should return all existing dreams', function() {
+    it('should return all existing dreams in HTML for current user', function() {
       // strategy:
       //    1. get back all dreams returned by by GET request to `/dreams`
       //    2. prove res has right status, data type
