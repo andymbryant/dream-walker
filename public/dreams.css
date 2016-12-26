@@ -74,6 +74,8 @@ nav ul li:hover {
   color: white;
 }
 
+/* ================================= MEDIA QUERY: NAVIGATION =================================*/
+
 @media only screen and (max-width: 540px) {
   nav ul {
     max-height: 0;
@@ -93,18 +95,22 @@ nav ul li:hover {
   }
 }
 
-/*=============================== NAV BAR ============================= */
+/* ================================= NO RESULT TEXT =================================*/
 
 .no-results {
   text-align: center;
   font-weight: normal;
 }
 
+/* ================================= PAGE TITLE =================================*/
+
 .page-title {
   margin-top: 90px;
   text-align: center;
   font-weight: normal;
 }
+
+/* ================================= MAIN CONTAINER HOLDING ALL DREAMS =================================*/
 
 .main-container {
 	width: 100%;
@@ -163,7 +169,6 @@ nav ul li:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-
 .dream-title {
 	display: inline-block;
 	width: 84%;
@@ -174,7 +179,6 @@ nav ul li:hover {
 	display: inline-block;
 }
 
-
 blockquote {
     font-family: 'Raleway', sans-serif;
     color: #333333;
@@ -182,6 +186,7 @@ blockquote {
     margin: 0.5em;
     padding: 0.5em 2em 0.5em 3em;
 }
+
 /* Thanks: http://callmenick.com/post/styling-blockquotes-with-css-pseudo-classes */
 blockquote:before {
     font-family: Georgia, serif;
@@ -195,7 +200,6 @@ blockquote:before {
 blockquote:after {
     font-family: Georgia, serif;
     position: absolute;
-   /* display: block; don't use this, it raised the quote too high from the bottom - defeated line-height? */
     float:right;
     font-size:6em;
     line-height: 1;
@@ -210,6 +214,8 @@ blockquote footer {
 blockquote cite:before {
     content: "\2013";
 }
+
+/* ================================= INFO AT BOTTOM OF EACH ENTRY =================================*/
 
 .dream-info {
 	display: inline-block;
@@ -251,6 +257,8 @@ blockquote cite:before {
 .stats {
 	color: #2699ff;
 }
+
+/* ================================= MEDIA QUERIES =================================*/
 
 @media only screen and (max-width: 965px) {
   .dream-date {

@@ -1,3 +1,5 @@
+/* ================================= GET DREAMS =================================*/
+
 function getDreamEntries(callbackFn) {
   $.ajax({
     url: "/dreams/demo",
@@ -18,8 +20,6 @@ function getDreamEntries(callbackFn) {
   });
 }
 
-// this function stays the same when we connect
-// to real API later
 function displayDreamEntries(data) {
   const accordion = $('.accordion');
 
@@ -51,17 +51,18 @@ function displayDreamEntries(data) {
   }
 }
 
-// this function can stay the same even when we
-// are connecting to real API
 function getAndDisplayDreamEntries() {
   getDreamEntries(displayDreamEntries);
 }
 
+/* ================================= IIFE =================================*/
 
 $(function() {
   getAndDisplayDreamEntries();
   //  getDreamEntries();
 });
+
+/* ================================= RESPONSIVE NAVIGATION =================================*/
 
 $('.handle').on('click', function(event) {
   $('nav ul').toggleClass('showing');
