@@ -86,7 +86,6 @@ function replaceSignUp() {
 
 // Test to make sure I've selected correctly
 $('.sign-up-button').on('click', function(event) {
-  event.preventDefault();
   let firstName = $('.register').find('#firstName').val();
   let lastName = $('.register').find('#lastName').val();
   let username = $('.register').find('#username').val();
