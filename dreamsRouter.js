@@ -29,6 +29,18 @@ router.get('/new', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
+  res.sendFile(__dirname + '/public/dream-edit.html');
+  // Dream
+  //   .findById(req.params.id)
+  //   .exec()
+  //   .then(dream => res.json(dream.apiRepr()))
+  //   .catch(err => {
+  //     console.error(err);
+  //     res.status(500).json({error: 'something went horribly awry'});
+  //   });
+});
+
+router.get('/:id/json', (req, res) => {
   Dream
     .findById(req.params.id)
     .exec()

@@ -1,15 +1,17 @@
 /* ================================= GET DREAM TO EDIT =================================*/
 
 function getDreamEntries(callbackFn) {
-  const dreamId =
+  const fullPathName = window.location.pathname;
+  const dreamId = fullPathName.slice(8);
+
   $.ajax({
-    url: "/dreams/585ec498896c0176f5203563",
+    url: `/dreams/${dreamId}/json`,
     type: 'GET',
     dataType: 'json',
 
     success: function(data) {
       if(data) {
-    //    console.log(data);
+      //  console.log(data);
         callbackFn(data);
       }
     },
@@ -23,7 +25,6 @@ function getDreamEntries(callbackFn) {
 /* ================================= FILL FORM WITH DATE =================================*/
 
 function displayDream(data) {
-  console.log(data);
   let dreamType;
   if (data.type === "Normal") {
     dreamType = '0';
@@ -72,3 +73,6 @@ $('.date-month').change(function(event) {
 $(function() {
   getDreamEntries(displayDream);
 });
+// const fullPathName = window.location.pathname;
+// const dreamId = fullPathName.slice(8)
+// console.log(dreamId)
