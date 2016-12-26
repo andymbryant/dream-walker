@@ -1,3 +1,4 @@
+/* ================================= GET DREAM TO EDIT =================================*/
 function getDreamEntries(callbackFn) {
   $.ajax({
     url: "/dreams/585ec498896c0176f5203563",
@@ -16,6 +17,8 @@ function getDreamEntries(callbackFn) {
     }
   });
 }
+
+/* ================================= FILL FORM WITH DATE =================================*/
 
 function displayDream(data) {
   console.log(data);
@@ -48,6 +51,7 @@ function displayDream(data) {
   $('.date-year').val(data.created.split('.')[2]);
 }
 
+/* ================================= CONTROL USER INPUT FOR DATES =================================*/
 
 $('.date-day').change(function(event) {
   if(parseInt(this.value) < 10) {
@@ -61,6 +65,7 @@ $('.date-month').change(function(event) {
   };
 });
 
+/* ================================= IIFE =================================*/
 
 $(function() {
   getDreamEntries(displayDream);

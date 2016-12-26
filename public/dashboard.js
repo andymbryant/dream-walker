@@ -4,6 +4,7 @@ const DOUGHNUT_CHART = $("#doughnutChart");
 Chart.defaults.global.animation.duration = 2500;
 
 /* =========================== GET REQUEST FOR DREAMS + GRAPH DISPLAY ===========================*/
+
 function getDreamEntries(callbackFn) {
   $.ajax({
     url: "/dreams/demo",

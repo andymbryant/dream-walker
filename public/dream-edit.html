@@ -21,69 +21,58 @@
     </ul>
   </nav>
 
-<div class="row">
-  <div class="col-12">
-    <div class="main-container">
-      <form class="new-dream-form animated fadeIn" action="/dreams/new" method="post">
-
-        <h1 class="title">Add New Dream</h1>
-
-        <fieldset name="new-dream-input">
-
-          <label for="dream-title"></label>
+  <div class="row">
+    <div class="col-12">
+      <div class="main-container">
+        <form class="new-dream-form animated fadeIn" action="/dreams/new" method="post">
+          <h1 class="title">Add New Dream</h1>
+          <fieldset name="new-dream-input">
             <input placeholder="Dream Title" type="text" name="dream-title" id="dream-title" autocomplete="off" required />
-
-          <label for="dream-entry"></label>
             <textarea rows="15" class="dream-entry"></textarea>
+          </fieldset>
 
-        </fieldset>
-
-        <section class="dream-attributes">
-
-          <div class="hours-slept-box">
+          <section class="dream-attributes">
+            <div class="hours-slept-box">
               <p>Hours Slept: </p>
               <input type="number" name="hours-slept" class="hours-slept-input" title="Please enter a number" placeholder="8" autocomplete="off" min="0" max="12" required />
-          </div>
+            </div>
 
-          <div class="dream-type-box">
-            <p class="dream-type-header">Select Dream Type</p>
-            <input type="radio" name="type-of-dream" id="normal-dream" value="0">
-            <label for="normal-dream" class="dream-type-select"><div class="normal-tooltip">Normal<span class="normal-tooltiptext">These are standard dreams where you have no idea you're dreaming until you wake up. You accept your dream reality as it is.</span></div></label><br />
+            <div class="dream-type-box">
+              <p class="dream-type-header">Select Dream Type</p>
+              <input type="radio" name="type-of-dream" id="normal-dream" value="0">
+              <label for="normal-dream" class="dream-type-select"><div class="normal-tooltip">Normal<span class="normal-tooltiptext">These are standard dreams where you have no idea you're dreaming until you wake up. You accept your dream reality as it is.</span></div></label><br />
 
-            <input type="radio" name="type-of-dream" id="lucid-dream" value="1">
-            <label for="lucid-dream" class="dream-type-select"><div class="lucid-tooltip">Lucid<span class="lucid-tooltiptext">A dream during which the dreamer is aware of dreaming. The dreamer may be able to exert some degree of control over the dream characters, narrative, and environment.</span></div></label><br />
+              <input type="radio" name="type-of-dream" id="lucid-dream" value="1">
+              <label for="lucid-dream" class="dream-type-select"><div class="lucid-tooltip">Lucid<span class="lucid-tooltiptext">A dream during which the dreamer is aware of dreaming. The dreamer may be able to exert some degree of control over the dream characters, narrative, and environment.</span></div></label><br />
 
-            <input type="radio" name="type-of-dream" id="nightmare" value="2">
-            <label for="nightmare" class="dream-type-select"><div class="nightmare-tooltip">Nightmare<span class="nightmare-tooltiptext">An unpleasant dream that can cause a strong emotional response from the mind, typically fear but also despair, anxiety and great sadness.</span></div></label><br />
+              <input type="radio" name="type-of-dream" id="nightmare" value="2">
+              <label for="nightmare" class="dream-type-select"><div class="nightmare-tooltip">Nightmare<span class="nightmare-tooltiptext">An unpleasant dream that can cause a strong emotional response from the mind, typically fear but also despair, anxiety and great sadness.</span></div></label><br />
 
-            <input type="radio" name="type-of-dream" id="recurring-dream" value="3">
-            <label for="recurring-dream" class="dream-type-select"><div class="recurring-tooltip">Recurring<span class="recurring-tooltiptext">A dream which is experienced repeatedly over a long period.</span></div></label><br />
+              <input type="radio" name="type-of-dream" id="recurring-dream" value="3">
+              <label for="recurring-dream" class="dream-type-select"><div class="recurring-tooltip">Recurring<span class="recurring-tooltiptext">A dream which is experienced repeatedly over a long period.</span></div></label><br />
 
-            <input type="radio" name="type-of-dream" id="false-awakening" value="4">
-            <label for="false-awakening" class="dream-type-select"><div class="double-tooltip">Double<span class="double-tooltiptext">Also known as a false awakening, a double dream is a vivid and convincing dream about awakening from sleep, while the dreamer in reality continues to sleep.</span></div></label>
-          </div>
+              <input type="radio" name="type-of-dream" id="false-awakening" value="4">
+              <label for="false-awakening" class="dream-type-select"><div class="double-tooltip">Double<span class="double-tooltiptext">Also known as a false awakening, a double dream is a vivid and convincing dream about awakening from sleep, while the dreamer in reality continues to sleep.</span></div></label>
+            </div>
 
-          <div class="dream-date-box">
-            <p class="dream-date-header">Date of Dream</p>
-            <input type="number" name="date-month" class='date-month' title="Please select a month" autocomplete="off" placeholder="01" min="1" max="12" required> .
+            <div class="dream-date-box">
+              <p class="dream-date-header">Date of Dream</p>
+              <input type="number" name="date-month" class='date-month' title="Please select a month" autocomplete="off" placeholder="01" min="1" max="12" required> .
 
-            <input type="number" name="date-day" class="date-day" title="Please enter a day number" autocomplete="off" placeholder="01" min="1" max="31" required /> .
+              <input type="number" name="date-day" class="date-day" title="Please enter a day number" autocomplete="off" placeholder="01" min="1" max="31" required /> .
 
-            <input type="number" name="date-year" class="date-year" title="Please enter a year" autocomplete="off" placeholder="2017" min="1999" max="2030" required />
-          </div>
+              <input type="number" name="date-year" class="date-year" title="Please enter a year" autocomplete="off" placeholder="2017" min="1999" max="2030" required />
+            </div>
 
-          <div class="submit-reset">
-            <button type="submit" class="publish">Publish</button>
-            <button type="reset" class="reset">Reset</button>
-          </div>
-
-
-        </section>
-
-      </form>
+            <div class="submit-reset">
+              <button type="submit" class="publish">Publish</button>
+              <button type="reset" class="reset">Reset</button>
+            </div>
+          </section>
+        </form>
+      </div>
     </div>
   </div>
-</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <!-- <script type="text/javascript" src="dream-edit.js"></script> -->
