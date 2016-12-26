@@ -7,6 +7,8 @@ body {
   background-color:#f2f2f2;
 }
 
+/* ================================= NAVIGATION ================================= */
+
 nav {
   position: fixed;
   top:0;
@@ -72,6 +74,8 @@ nav ul li:hover {
   color: white;
 }
 
+/* ================================= MEDIA QUERY: NAVIGATION ================================= */
+
 @media only screen and (max-width: 540px) {
   nav ul {
     max-height: 0;
@@ -97,6 +101,8 @@ nav ul li:hover {
   margin-bottom: 25px;
   font-weight: normal;
 }
+
+/* ================================= FORM ================================= */
 
 fieldset {
   width: 60%;
@@ -247,6 +253,8 @@ textarea {
   color: red;
 }
 
+/* ================================= DREAM TOOLTIPS ================================= */
+
 .normal-tooltip {
   position: relative;
   display: inline-block;
@@ -366,7 +374,6 @@ textarea {
   border-color: transparent black transparent transparent;
 }
 
-
 .nightmare-tooltip:hover .nightmare-tooltiptext {
   visibility: visible;
   opacity: 1;
@@ -407,7 +414,6 @@ textarea {
   border-style: solid;
   border-color: transparent black transparent transparent;
 }
-
 
 .recurring-tooltip:hover .recurring-tooltiptext {
   visibility: visible;
@@ -455,6 +461,8 @@ textarea {
   visibility: visible;
   opacity: 1;
 }
+
+/* ================================= MEDIA QUERY: FORM ================================= */
 
 @media only screen and (max-width: 850px) {
   fieldset {
