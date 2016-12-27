@@ -1,8 +1,8 @@
 /* ================================= GET DREAM TO EDIT =================================*/
 
 function getDreamEntries(callbackFn) {
-  const fullPathName = window.location.pathname;
-  const dreamId = fullPathName.slice(8);
+  let fullPathName = window.location.pathname;
+  let dreamId = fullPathName.slice(8);
 
   $.ajax({
     url: `/dreams/${dreamId}/json`,
@@ -74,9 +74,11 @@ $(function() {
   getDreamEntries(displayDream);
 });
 
-function editDetails(title, entry, type, hoursSlept) {
-  const fullPathName = window.location.pathname;
-  const dreamId = fullPathName.slice(8);
+/* ================================= PUT REQUEST AJAX ====================================== */
+
+function editDetails(id, title, entry, type, hoursSlept, month, day, year) {
+  let fullPathName = window.location.pathname;
+  let dreamId = fullPathName.slice(8);
 
   $.ajax({
     url: `/dreams/${dreamId}/json`,
@@ -85,14 +87,25 @@ function editDetails(title, entry, type, hoursSlept) {
     dataType: 'json',
     data: JSON.stringify(
       {
-      title: title,
-      entry: entry,
-      type: type,
-      hoursSlept: hoursSlept
+        id: id,
+        title: title,
+        entry: entry,
+        type: type,
+        hoursSlept: hoursSlept,
+        created: {
+          month: month,
+          day: day,
+          year: year
+        }
       }
     ),
     success: function(data) {
       console.log('SUCCESS');
+      $('form').addClass('fadeOut');
+      setTimeout(function(){
+        window.location.replace("/dreams");
+      }, 900);
+
     },
     error: function() {
       console.log("SOMETHING WENT WRONG!!!");
@@ -100,9 +113,14 @@ function editDetails(title, entry, type, hoursSlept) {
   });
 }
 
+/* ================================ GET DATA FOR PUT REQUEST ============================== */
+
 function editDream(callback) {
-  const dreamTitle = $('#dream-title').val();
-  const dreamEntry = $('.dream-entry').val();
+  let fullPathName = window.location.pathname;
+
+  const dreamId = fullPathName.slice(8);
+  const dreamTitle = $('#dream-title').val().trim();
+  const dreamEntry = $('.dream-entry').val().trim();
   const hoursSlept = $('.hours-slept-input').val();
   const dreamTypeSelect = $('input[type=radio]:checked').val();
   let dreamTypeChoice;
@@ -126,10 +144,10 @@ function editDream(callback) {
     dreamTypeChoice = 'Double';
   }
 
-  editDetails(dreamTitle, dreamEntry, dreamTypeChoice, hoursSlept);
-
-
+  editDetails(dreamId, dreamTitle, dreamEntry, dreamTypeChoice, hoursSlept, dreamMonth, dreamDay, dreamYear);
 }
+
+/* ================================ FORM SUBMIT ============================== */
 
 $('form').submit(function(event) {
   event.preventDefault();
