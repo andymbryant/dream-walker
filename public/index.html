@@ -17,7 +17,7 @@
 			<a href="#journal"><li class="nav-left nav-hover">Journal</li></a>
 			<a href="#analyze"><li class="nav-left nav-hover">Analyze</li></a>
 			<a href="#sign-up"><li class="nav-left nav-hover">Sign Up</li></a>
-			<a href="#log-in"><li class="nav-right nav-hover log-in">Log In</li></a>
+			<a href="#log-in"><li class="nav-right nav-hover log-in">Sign In</li></a>
 			<a href="/dashboard"><li class="nav-right nav-hover" id="demo-button">View Demo</li></a>
 		</ul>
 		<div class="handle"><span class="handle-menu">DREAM WALKER</span><i class="fa fa-bars fa-2x" aria-hidden="true"></i></div>
@@ -26,13 +26,16 @@
 			<div class="modal-container">
 				<div class="log-in-box">
 					<form class="login-form" action="/some-server-endpoint" method="post" autocomplete="off">
+						<h2>Sign in to Dream Walker</h2>
 						<fieldset name="login-info">
 							<input type="text" name="username" id="username" placeholder="Username" required/>
 							<input type="password" name="password" id="password" placeholder="Password" required/>
 						</fieldset>
-						<button type='submit' class="log-in-button">Log In</button>
+						<button type='submit' class="log-in-button">Sign In</button>
+						<p>or<br><br><a href="#sign-up"><span class="sign-up-link">Create a new account</span></a></p>
 					</form>
-				</div>
+					<!-- <p class="modal-close close-login">(Close)</p>
+ -->				</div>
 				<i class="fa fa-times fa-lg modal-close" aria-hidden="true"></i>
 			</div>
 		</div>

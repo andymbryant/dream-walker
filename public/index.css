@@ -129,7 +129,6 @@ nav ul .nav-hover:hover {
   position: fixed;
   background-color: #fff;
   width: 70%;
-  height: 225px;
   max-width:400px;
   left: 50%;
   padding: 20px;
@@ -148,6 +147,18 @@ nav ul .nav-hover:hover {
   transition: transform 200ms ease-out;
 
   z-index: 25;
+}
+
+.modal-container h2 {
+  margin-top: 0;
+  font-weight: normal;
+  color: #333333;
+}
+
+.modal-container p {
+  margin-bottom: 0;
+  font-weight: normal;
+  color: #333333;
 }
 
 .modal:before {
@@ -197,7 +208,7 @@ nav ul .nav-hover:hover {
 }
 
 .login-form input {
-  text-align: center;
+  text-align: left;
   font-family: 'Raleway', sans-serif;
   width: 100%;
   border: 2px solid #d8d8d8;
@@ -231,9 +242,18 @@ nav ul .nav-hover:hover {
   cursor: pointer;
 }
 
+/*.close-login {
+  position: fixed;
+  text-decoration: underline;
+  margin-right: 190px;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+*/
 .fa-times {
   position: relative;
-  bottom: 185px;
+  bottom: 300px;
+  right: 3px;
   float:right;
   cursor: pointer;
   color: #a8a8a8;
@@ -241,6 +261,14 @@ nav ul .nav-hover:hover {
 
 .fa-times:hover {
   color:black;
+}
+
+.sign-up-link {
+  text-decoration: underline;
+}
+
+.sign-up-link:hover {
+  color: #82c4ff;
 }
 
 /* ================================== MEDIA QUERY: DEMO BUTTON ================================== */
