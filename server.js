@@ -2,6 +2,9 @@ const bodyParser = require('body-parser');
 const express = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
+const passport = require('passport');
+const flash = require('connect-flash');
+const session = require('express-session');
 
 const dreamsRouter = require('./dreamsRouter');
 const {router: usersRouter} = require('./users');
@@ -14,6 +17,10 @@ const app = express();
 app.use(morgan('common'));
 app.use(bodyParser.json());
 app.use(express.static('public'));
+app.use(session({ secret: 'dreamwalker' }));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash());
 
 mongoose.Promise = global.Promise;
 
