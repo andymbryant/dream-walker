@@ -76,8 +76,11 @@ function addUser(firstName, lastName, username, password, callback) {
       console.log(`User ${username} successfully created`);
       callback();
     },
-    error: function() {
-      console.log("SOMETHING WENT WRONG!!!");
+    error: function(error) {
+      let errorString = error.responseText.split(':')[1];
+      let errorStringEdit = errorString.substring(1).slice(0, errorString.length -3)
+      alert(errorStringEdit);
+    //  alert(Object.keys(error)[0]);
     }
   });
 }
@@ -93,6 +96,7 @@ function replaceSignUp() {
 /* ================================== NEW USER SIGN UP ================================== */
 
 $('.register').submit(function(event) {
+
   let firstName = $('.register').find('#firstName').val();
   let lastName = $('.register').find('#lastName').val();
   let username = $('.register').find('#username').val();
