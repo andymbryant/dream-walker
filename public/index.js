@@ -87,7 +87,7 @@ function addUser(firstName, lastName, username, password, callback) {
 function replaceSignUp() {
   $('.sign-up-title').html('Thank you for signing up!');
   $('.sign-up-box').html('<p>Please click below to log in.</p>' +
-    '<a href="#log-in" class="login2"><p class="log-in-button2">Log in</p></a>');
+    '<a href="#log-in" class="login2"><p class="log-in-button2 log-in">Log in</p></a>');
 }
 
 /* ================================== NEW USER SIGN UP ================================== */

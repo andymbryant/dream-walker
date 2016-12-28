@@ -136,9 +136,14 @@ const basicStrategy = new BasicStrategy(function(username, password, callback) {
 passport.use(basicStrategy);
 router.use(passport.initialize());
 
-router.get('/me',
+router.get('/login',
   passport.authenticate('basic', {session: false}),
-  (req, res) => res.json({user: req.user.apiRepr()})
+  (req, res) => {
+    // console.log("req", req);
+    // console.log("res", res);
+    res.json({user: req.user.apiRepr()});
+    // res.redirect('/dashboard');
+  }
 );
 
 
