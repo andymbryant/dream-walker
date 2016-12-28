@@ -2,7 +2,7 @@
 
 function getDreamEntries(callbackFn) {
   $.ajax({
-    url: "/dreams/demo",
+    url: "/dreams/json",
     type: 'GET',
     dataType: 'json',
 

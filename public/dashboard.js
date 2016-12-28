@@ -7,7 +7,7 @@ Chart.defaults.global.animation.duration = 2500;
 
 function getDreamEntries(callbackFn) {
   $.ajax({
-    url: "/dreams/demo",
+    url: "/dreams/json",
     async: true,
     type: 'GET',
     dataType: 'json',

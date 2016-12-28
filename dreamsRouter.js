@@ -11,8 +11,13 @@ router.get('/', (req, res) => {
 });
 
 router.get('/demo', (req, res) => {
+  console.log(req.headers);
+});
+
+router.get('/json', (req, res) => {
   let user = req.user;
-  let userid = user._id
+  let userid = user._id;
+
   Dream
     .find({user_id: userid})
     .sort({created: -1})
