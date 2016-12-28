@@ -33,7 +33,12 @@ function addDreamRequest(title, entry, hoursSlept, type, month, day, year) {
     ),
 
     success: function(data) {
-      console.log(data)
+      console.log(data);
+      $('form').addClass('fadeOut');
+      setTimeout(function(){
+        window.location.replace("/dreams");
+      }, 900);
+
     },
 
     error: function(err) {

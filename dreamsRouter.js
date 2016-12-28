@@ -69,8 +69,8 @@ router.post('/new', (req, res) => {
         month: req.body.created.month,
         day: req.body.created.day,
         year: req.body.created.year
-      },
-      user_id: req.user.id
+      }
+      // user_id: req.user.id
     })
     .then(dreamEntry => res.status(201).json(dreamEntry.apiRepr()))
     .catch(err => {
