@@ -52,7 +52,7 @@ router.get('/:id/json', (req, res) => {
 });
 
 router.post('/new', (req, res) => {
-  const requiredFields = ['title', 'entry', 'type', 'hoursSlept'];
+  const requiredFields = ['title', 'entry', 'type', 'hoursSlept', 'created'];
   requiredFields.forEach(field => {
     if (!(field in req.body)) {
       res.status(400).json(
@@ -64,7 +64,13 @@ router.post('/new', (req, res) => {
       title: req.body.title,
       entry: req.body.entry,
       type: req.body.type,
-      hoursSlept: req.body.hoursSlept
+      hoursSlept: req.body.hoursSlept,
+      created: {
+        month: req.body.created.month,
+        day: req.body.created.day,
+        year: req.body.created.year
+      },
+      user_id: req.user.id
     })
     .then(dreamEntry => res.status(201).json(dreamEntry.apiRepr()))
     .catch(err => {

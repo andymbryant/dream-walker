@@ -9,17 +9,25 @@ const dreamSchema = mongoose.Schema({
     month: Number,
     day: Number,
     year: Number
-  }
+  },
+  user_id: String
 });
 
 dreamSchema.virtual('dateFormat').get(function() {
-  if (`${this.created.day}` < 10) {
+  if ((`${this.created.day}` < 10) && (`${this.created.month}` < 10)) {
+    return `0${this.created.month}.0${this.created.day}.${this.created.year}`.trim();
+  }
+  else if ((`${this.created.day}` < 10) && (`${this.created.month}` > 10)) {
     return `${this.created.month}.0${this.created.day}.${this.created.year}`.trim();
+  }
+  else if ((`${this.created.month}` < 10) && (`${this.created.day}` > 10)) {
+    return `0${this.created.month}.${this.created.day}.${this.created.year}`.trim();
   }
   else {
     return `${this.created.month}.${this.created.day}.${this.created.year}`.trim();
   }
 });
+
 
 dreamSchema.methods.apiRepr = function() {
   return {
@@ -28,7 +36,8 @@ dreamSchema.methods.apiRepr = function() {
     entry: this.entry,
     type: this.type,
     hoursSlept: this.hoursSlept,
-    created: this.dateFormat
+    created: this.dateFormat,
+    user_id: this.user_id
   };
 }
 

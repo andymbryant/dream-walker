@@ -31,7 +31,6 @@ const strategy = new BasicStrategy(
 
 passport.use(strategy);
 
-
 router.post('/', (req, res) => {
   if (!req.body) {
     return res.status(400).json({message: 'No request body'});
@@ -134,16 +133,25 @@ const basicStrategy = new BasicStrategy(function(username, password, callback) {
 
 
 passport.use(basicStrategy);
+
+passport.serializeUser(function(user, done) {
+  done(null, user);
+});
+
+passport.deserializeUser(function(user, done) {
+  done(null, user);
+});
+
 router.use(passport.initialize());
 
 router.post('/login',
-  passport.authenticate('basic', {session: false}),
+  passport.authenticate('basic', {session: true}),
   (req, res) => {
     // console.log("req", req);
     // console.log("res", res);
     // res.json({user: req.user.apiRepr()});
-    // res.redirect('/dashboard');
-    res.status(200).json({user: req.user.apiRepr()})
+    res.redirect('/dashboard');
+    // res.status(200).json({user: req.user.apiRepr()})
   }
 );
 
