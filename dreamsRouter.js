@@ -11,8 +11,10 @@ router.get('/', (req, res) => {
 });
 
 router.get('/demo', (req, res) => {
+  let user = req.user;
+  let userid = user._id
   Dream
-    .find()
+    .find({user_id: userid})
     .sort({created: -1})
     .exec()
     .then(dreams => {
@@ -26,7 +28,8 @@ router.get('/demo', (req, res) => {
 
 router.get('/new', (req, res) => {
   let user = req.user;
-  console.log("GIVE ME THE USER ID", user._id);
+  let userid = user._id
+  console.log("GIVE ME THE USER ID", userid);
   res.sendFile(__dirname + '/public/new-dream.html');
 });
 
