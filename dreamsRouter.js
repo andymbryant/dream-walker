@@ -25,6 +25,8 @@ router.get('/demo', (req, res) => {
 });
 
 router.get('/new', (req, res) => {
+  let user = req.user;
+  console.log("GIVE ME THE USER ID", user._id);
   res.sendFile(__dirname + '/public/new-dream.html');
 });
 
@@ -52,6 +54,9 @@ router.get('/:id/json', (req, res) => {
 });
 
 router.post('/new', (req, res) => {
+  let user = req.user;
+  console.log("GIVE ME THE USER ID", user._id);
+
   const requiredFields = ['title', 'entry', 'type', 'hoursSlept', 'created'];
   requiredFields.forEach(field => {
     if (!(field in req.body)) {
@@ -69,15 +74,14 @@ router.post('/new', (req, res) => {
         month: req.body.created.month,
         day: req.body.created.day,
         year: req.body.created.year
-      }
-      // user_id: req.user.id
+      },
+      user_id: user._id
     })
     .then(dreamEntry => res.status(201).json(dreamEntry.apiRepr()))
     .catch(err => {
         console.error(err);
         res.status(500).json({error: 'Something went wrong'});
     });
-
 });
 
 router.put('/:id/json', (req, res) => {
