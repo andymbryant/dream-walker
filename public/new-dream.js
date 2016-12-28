@@ -33,7 +33,7 @@ function addDreamRequest(title, entry, hoursSlept, type, month, day, year) {
     ),
 
     success: function(data) {
-      console.log('success')
+      console.log(data)
     },
 
     error: function(err) {
@@ -69,7 +69,6 @@ function addNewDream() {
   const dreamDay =  $('.date-day').val();
   const dreamYear = $('.date-year').val();
 
-   console.log(dreamTitle, dreamEntry, hoursSlept, dreamTypeChoice, dreamMonth, dreamDay, dreamYear)
   addDreamRequest(dreamTitle, dreamEntry, hoursSlept, dreamTypeChoice, dreamMonth, dreamDay, dreamYear);
 
 }
