@@ -242,73 +242,17 @@ nav ul .nav-hover:hover {
 
 .fa-times {
   position: relative;
-  bottom: 315px;
+  bottom: 375px;
   right: 3px;
   float:right;
   cursor: pointer;
   color: #a8a8a8;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 415px) {
   .fa-times {
     position: relative;
-    bottom: 337px;
-    right: 3px;
-    float:right;
-    cursor: pointer;
-    color: #a8a8a8;
-  }
-}
-
-@media only screen and (max-width: 464px) {
-  .fa-times {
-    position: relative;
-    bottom: 352px;
-    right: 3px;
-    float:right;
-    cursor: pointer;
-    color: #a8a8a8;
-  }
-}
-
-@media only screen and (max-width: 454px) {
-  .fa-times {
-    position: relative;
-    bottom: 370px;
-    right: 3px;
-    float:right;
-    cursor: pointer;
-    color: #a8a8a8;
-  }
-}
-
-
-@media only screen and (max-width: 441px) {
-  .fa-times {
-    position: relative;
-    bottom: 385px;
-    right: 3px;
-    float:right;
-    cursor: pointer;
-    color: #a8a8a8;
-  }
-}
-
-@media only screen and (max-width: 391px) {
-  .fa-times {
-    position: relative;
-    bottom: 400px;
-    right: 3px;
-    float:right;
-    cursor: pointer;
-    color: #a8a8a8;
-  }
-}
-
-@media only screen and (max-width: 376px) {
-  .fa-times {
-    position: relative;
-    bottom: 385px;
+    bottom: 450px;
     right: 3px;
     float:right;
     cursor: pointer;
@@ -319,59 +263,25 @@ nav ul .nav-hover:hover {
 @media only screen and (max-width: 361px) {
   .fa-times {
     position: relative;
-    bottom: 405px;
+    bottom: 465px;
     right: 3px;
     float:right;
     cursor: pointer;
     color: #a8a8a8;
   }
 }
+
 
 @media only screen and (max-width: 321px) {
   .fa-times {
     position: relative;
-    bottom: 405px;
+    bottom: 465px;
     right: 3px;
     float:right;
     cursor: pointer;
     color: #a8a8a8;
   }
 }
-
-
-@media only screen and (max-width: 315px) {
-  .fa-times {
-    position: relative;
-    bottom: 440px;
-    right: 3px;
-    float:right;
-    cursor: pointer;
-    color: #a8a8a8;
-  }
-}
-
-@media only screen and (max-width: 305px) {
-  .fa-times {
-    position: relative;
-    bottom: 460px;
-    right: 3px;
-    float:right;
-    cursor: pointer;
-    color: #a8a8a8;
-  }
-}
-
-@media only screen and (max-width: 286px) {
-  .fa-times {
-    position: relative;
-    bottom: 480px;
-    right: 3px;
-    float:right;
-    cursor: pointer;
-    color: #a8a8a8;
-  }
-}
-
 
 .demo-account {
   padding: 5px 3px;
