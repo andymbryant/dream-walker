@@ -24,6 +24,12 @@ app.use(flash());
 
 mongoose.Promise = global.Promise;
 
+app.get('/logout', function (req, res){
+  req.session.destroy(function (err) {
+    res.redirect('/');
+  });
+});
+
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });
