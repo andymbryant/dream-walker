@@ -242,21 +242,22 @@ nav ul .nav-hover:hover {
   cursor: pointer;
 }
 
-/*.close-login {
-  position: fixed;
-  text-decoration: underline;
-  margin-right: 190px;
-  margin-top: 30px;
-  margin-bottom: 0;
-}
-*/
 .fa-times {
   position: relative;
-  bottom: 235px;
+  bottom: 315px;
   right: 3px;
   float:right;
   cursor: pointer;
   color: #a8a8a8;
+}
+
+.demo-account {
+  padding: 5px 3px;
+  border: 1px solid black;
+}
+
+.sorry {
+  font-size: 15px;
 }
 
 .fa-times:hover {
