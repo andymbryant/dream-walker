@@ -104,8 +104,7 @@ describe('Dream Walker API resource', function() {
   // this allows us to make clearer, more discrete tests that focus
   // on proving something small
   describe('GET endpoint', function() {
-
-    it('should return all existing dreams in HTML for current user', function() {
+    it('should return all existing dreams', function() {
       // strategy:
       //    1. get back all dreams returned by GET request to `/dreams/json`
       //    2. prove res has right status, data type
@@ -116,35 +115,31 @@ describe('Dream Walker API resource', function() {
       // `.then()` calls below, so declare it here so can modify in place
       let res;
       return chai.request(app)
-        .get('/dreams/all/json')
+        .get('/dreams/json/test')
         .then(function(_res) {
           // so subsequent .then blocks can access resp obj.
           res = _res;
           res.should.have.status(200);
-      //    res.should.be.html;
+          res.should.be.json;
           // otherwise our db seeding didn't work
-          //res.body.should.have.length.of.at.least(1);
-          //return Dream.count();
+          res.body.should.have.length.of.at.least(1);
+          return Dream.count();
         })
-        // UNCOMMENT AFTER NEW ENDPOINT IS MADE
-        // .then(function(count) {
-        //   res.body.should.have.length.of(count);
-        // });
+        .then(function(count) {
+          res.body.should.have.length.of(count);
+        });
     });
 
-/* UNCOMMENT AFTER NEW ENDPOINT IS MADE
     it('should return dreams with right fields', function() {
       // Strategy: Get back all dreams, and ensure they have expected keys
-
       let resDream;
       return chai.request(app)
-        .get('/dreams')
+        .get('/dreams/json/test')
         .then(function(res) {
           res.should.have.status(200);
           res.should.be.json;
           res.body.should.be.a('array');
           res.body.should.have.length.of.at.least(1);
-
           res.body.forEach(function(dream) {
             dream.should.be.a('object');
             dream.should.include.keys(
@@ -154,79 +149,76 @@ describe('Dream Walker API resource', function() {
           return Dream.findById(resDream.id);
         })
         .then(function(dream) {
-
           resDream.id.should.equal(dream.id);
           resDream.title.should.equal(dream.title);
           resDream.entry.should.equal(dream.entry);
           resDream.type.should.equal(dream.type);
           resDream.hoursSlept.should.equal(dream.hoursSlept)
         });
-    }); */
+    });
   });
 
-  // describe('POST endpoint', function() {
-  //   // strategy: make a POST request with data,
-  //   // then prove that the dream we get back has
-  //   // right keys, and that `id` is there (which means
-  //   // the data was inserted into db)
-  //   it('should add a new dream entry', function() {
+  describe('POST endpoint', function() {
+    // strategy: make a POST request with data,
+    // then prove that the dream we get back has
+    // right keys, and that `id` is there (which means
+    // the data was inserted into db)
+    it('should add a new dream entry', function() {
 
-  //     const newDream = generateDreamData();
+      const newDream = generateDreamData();
 
-  //     return chai.request(app)
-  //       .post('/dreams/new')
-  //       .send(newDream)
-  //       .then(function(res) {
-  //         res.should.have.status(201);
-  //         res.should.be.json;
-  //         res.body.should.be.a('object');
-  //         res.body.should.include.keys('id', 'title', 'entry', 'type', 'hoursSlept');
-  //         // cause Mongo should have created id on insertion
-  //         res.body.id.should.not.be.null;
-  //         res.body.title.should.equal(newDream.title);
-  //         res.body.entry.should.equal(newDream.entry);
-  //         res.body.type.should.equal(newDream.type);
-  //         res.body.hoursSlept.should.equal(newDream.hoursSlept);
-  //         res.body.created.should.not.be.null;
+      return chai.request(app)
+        .post('/dreams/new/test')
+        .send(newDream)
+        .then(function(res) {
+          res.should.have.status(201);
+          res.should.be.json;
+          res.body.should.be.a('object');
+          res.body.should.include.keys('id', 'title', 'entry', 'type', 'hoursSlept');
+          // cause Mongo should have created id on insertion
+          res.body.id.should.not.be.null;
+          res.body.title.should.equal(newDream.title);
+          res.body.entry.should.equal(newDream.entry);
+          res.body.type.should.equal(newDream.type);
+          res.body.hoursSlept.should.equal(newDream.hoursSlept);
 
-  //         return Dream.findById(res.body.id);
-  //       })
-  //       .then(function(dream) {
-  //         dream.title.should.equal(newDream.title);
-  //         dream.entry.should.equal(newDream.entry);
-  //         dream.type.should.equal(newDream.type);
-  //         dream.hoursSlept.should.equal(newDream.hoursSlept);
-  //       });
-  //   });
+          return Dream.findById(res.body.id);
+        })
+        .then(function(dream) {
+          dream.title.should.equal(newDream.title);
+          dream.entry.should.equal(newDream.entry);
+          dream.type.should.equal(newDream.type);
+          dream.hoursSlept.should.equal(newDream.hoursSlept);
+        });
+    });
 
-  //   it('should add a new user', function() {
+    it('should add a new user', function() {
+      const newUser = generateUser();
 
-  //     const newUser = generateUser();
+      return chai.request(app)
+        .post('/users')
+        .send(newUser)
+        .then(function(res) {
+          res.should.have.status(201);
+          res.should.be.json;
+          res.body.should.be.a('object');
+          res.body.should.include.keys('firstName', 'lastName', 'username');
+          // cause Mongo should have created id on insertion
+          res.body.id.should.not.be.null;
+          res.body.firstName.should.equal(newUser.firstName);
+          res.body.lastName.should.equal(newUser.lastName);
+          res.body.username.should.equal(newUser.username);
 
-  //     return chai.request(app)
-  //       .post('/users')
-  //       .send(newUser)
-  //       .then(function(res) {
-  //         res.should.have.status(201);
-  //         res.should.be.json;
-  //         res.body.should.be.a('object');
-  //         res.body.should.include.keys('firstName', 'lastName', 'username');
-  //         // cause Mongo should have created id on insertion
-  //         res.body.id.should.not.be.null;
-  //         res.body.firstName.should.equal(newUser.firstName);
-  //         res.body.lastName.should.equal(newUser.lastName);
-  //         res.body.username.should.equal(newUser.username);
+          return User.findById(res.body.id);
+        })
+        .then(function(user) {
+          user.firstName.should.equal(newUser.firstName);
+          user.lastName.should.equal(newUser.lastName);
+          user.username.should.equal(newUser.username);
+        });
+    });
 
-  //         return User.findById(res.body.id);
-  //       })
-  //       .then(function(user) {
-  //         user.firstName.should.equal(newUser.firstName);
-  //         user.lastName.should.equal(newUser.lastName);
-  //         user.username.should.equal(newUser.username);
-  //       });
-  //   });
-
-  // });
+  });
 
   describe('PUT endpoint', function() {
 

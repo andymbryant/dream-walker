@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
 //   console.log(req.headers);
 // });
 /* ===================== FOR TEST =================== */
-router.get('/all/json', (req, res) => {
+router.get('/json/test', (req, res) => {
   Dream
     .find()
     .sort({created: -1})
@@ -77,6 +77,29 @@ router.get('/:id/json', (req, res) => {
     .catch(err => {
       console.error(err);
       res.status(500).json({error: 'something went horribly awry'});
+    });
+});
+
+router.post('/new/test', (req, res) => {
+
+  const requiredFields = ['title', 'entry', 'type', 'hoursSlept'];
+  requiredFields.forEach(field => {
+    if (!(field in req.body)) {
+      res.status(400).json(
+        {error: `Missing "${field}" in request body`});
+    }});
+
+  Dream
+    .create({
+      title: req.body.title,
+      entry: req.body.entry,
+      type: req.body.type,
+      hoursSlept: req.body.hoursSlept
+    })
+    .then(dreamEntry => res.status(201).json(dreamEntry.apiRepr()))
+    .catch(err => {
+        console.error(err);
+        res.status(500).json({error: 'Something went wrong'});
     });
 });
 
