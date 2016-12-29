@@ -13,6 +13,20 @@ router.get('/', (req, res) => {
 // router.get('/demo', (req, res) => {
 //   console.log(req.headers);
 // });
+/* ===================== FOR TEST =================== */
+router.get('/all/json', (req, res) => {
+  Dream
+    .find()
+    .sort({created: -1})
+    .exec()
+    .then(dreams => {
+      res.json(dreams.map(dream => dream.apiRepr()));
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({error: 'something went terribly wrong'});
+    });
+});
 
 router.get('/json', (req, res) => {
   let user = req.user;

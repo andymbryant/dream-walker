@@ -107,7 +107,7 @@ describe('Dream Walker API resource', function() {
 
     it('should return all existing dreams in HTML for current user', function() {
       // strategy:
-      //    1. get back all dreams returned by by GET request to `/dreams`
+      //    1. get back all dreams returned by GET request to `/dreams/json`
       //    2. prove res has right status, data type
       //    3. prove the number of dreams we got back is equal to number
       //       in db.
@@ -116,12 +116,12 @@ describe('Dream Walker API resource', function() {
       // `.then()` calls below, so declare it here so can modify in place
       let res;
       return chai.request(app)
-        .get('/dreams')
+        .get('/dreams/all/json')
         .then(function(_res) {
           // so subsequent .then blocks can access resp obj.
           res = _res;
           res.should.have.status(200);
-          res.should.be.html;
+      //    res.should.be.html;
           // otherwise our db seeding didn't work
           //res.body.should.have.length.of.at.least(1);
           //return Dream.count();
