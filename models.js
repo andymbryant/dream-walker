@@ -14,13 +14,13 @@ const dreamSchema = mongoose.Schema({
 });
 
 dreamSchema.virtual('dateFormat').get(function() {
-  if ((`${this.created.day}` < 10) && (`${this.created.month}` < 10)) {
+  if ((`${this.created.day}` <= 9) && (`${this.created.month}` <= 9)) {
     return `0${this.created.month}.0${this.created.day}.${this.created.year}`.trim();
   }
-  else if ((`${this.created.day}` < 10) && (`${this.created.month}` > 10)) {
+  else if ((`${this.created.day}` <= 9) && (`${this.created.month}` > 9)) {
     return `${this.created.month}.0${this.created.day}.${this.created.year}`.trim();
   }
-  else if ((`${this.created.month}` < 10) && (`${this.created.day}` > 10)) {
+  else if ((`${this.created.month}` <= 9) && (`${this.created.day}` > 9)) {
     return `0${this.created.month}.${this.created.day}.${this.created.year}`.trim();
   }
   else {
