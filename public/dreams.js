@@ -50,13 +50,7 @@ function displayDreamEntries(data) {
         type: 'DELETE',
         dataType: 'json',
 
-        success: function(data) {
-            console.log('successfully deleted');
-        },
-
-        error: function() {
-          console.log('something went wrong');
-        }
+        success: function(data) {}
       });
 
       setTimeout(function(){

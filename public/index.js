@@ -73,14 +73,12 @@ function addUser(firstName, lastName, username, password, callback) {
       }
     ),
     success: function(data) {
-      console.log(`User ${username} successfully created`);
       callback();
     },
     error: function(error) {
       let errorString = error.responseText.split(':')[1];
       let errorStringEdit = errorString.substring(1).slice(0, errorString.length -3)
       alert(errorStringEdit);
-    //  alert(Object.keys(error)[0]);
     }
   });
 }
