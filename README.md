@@ -1,1 +1,3 @@
-Dream Walker is a tool to help users become lucid dreamers. Users can document their dreams and view statistics on their progress.
+<h1>Dream Walker</h1>
+<p>Dream Walker is a responsive full-stack app that allows users to document their dreams and keep track of their sleeping patterns.</p>
+<img src="images/dreamwalker-snapshots.png">
