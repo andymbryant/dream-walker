@@ -96,7 +96,6 @@ function replaceSignUp() {
 /* ================================== NEW USER SIGN UP ================================== */
 
 $('.register').submit(function(event) {
-
   let firstName = $('.register').find('#firstName').val();
   let lastName = $('.register').find('#lastName').val();
   let username = $('.register').find('#username').val();
