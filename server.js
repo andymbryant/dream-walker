@@ -28,15 +28,34 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });
 
-app.get('/dashboard', (req, res) => {
-  res.sendFile(__dirname + '/public/dashboard.html');
+// app.get('/dashboard', (req, res) => {
+//   res.sendFile(__dirname + '/public/dashboard.html');
+//   if (req.query.demo) {
+//     console.log("==========HI==========");
+//   }
+// });
 
-  if (req.query.demo) {
-
-    console.log("==========HI==========");
+app.get('/dashboard',
+  require('connect-ensure-login').ensureLoggedIn(),
+  function(req, res){
+    res.sendFile(__dirname + '/public/dashboard.html');
   }
+);
 
-});
+app.get('/dreams',
+  require('connect-ensure-login').ensureLoggedIn(),
+  function(req, res){
+    res.sendFile(__dirname + '/public/dreams.html');
+  }
+);
+
+app.get('/dreams/new',
+  require('connect-ensure-login').ensureLoggedIn(),
+  function(req, res){
+    res.sendFile(__dirname + '/public/new-dream.html');
+  }
+);
+
 
 app.use('/users/', usersRouter);
 
