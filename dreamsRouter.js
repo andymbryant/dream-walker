@@ -10,13 +10,18 @@ router.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/dreams.html');
 });
 
-router.get('/demo', (req, res) => {
-  console.log(req.headers);
-});
+// router.get('/demo', (req, res) => {
+//   console.log(req.headers);
+// });
 
 router.get('/json', (req, res) => {
   let user = req.user;
   let userid = user._id;
+  // console.log(req.query.demo);
+  // console.log('=============HI===========');
+  // if (req.query.demo) {
+  //   console.log("==========DON'T GIVE UP==========");
+  // }
 
   Dream
     .find({user_id: userid})

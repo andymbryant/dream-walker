@@ -30,6 +30,12 @@ app.get('/', (req, res) => {
 
 app.get('/dashboard', (req, res) => {
   res.sendFile(__dirname + '/public/dashboard.html');
+
+  if (req.query.demo) {
+
+    console.log("==========HI==========");
+  }
+
 });
 
 app.use('/users/', usersRouter);
