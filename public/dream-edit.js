@@ -11,13 +11,8 @@ function getDreamEntries(callbackFn) {
 
     success: function(data) {
       if(data) {
-      //  console.log(data);
         callbackFn(data);
       }
-    },
-
-    error: function() {
-      console.log('something went wrong');
     }
   });
 }
@@ -100,15 +95,11 @@ function editDetails(id, title, entry, type, hoursSlept, month, day, year) {
       }
     ),
     success: function(data) {
-      console.log('SUCCESS');
       $('form').addClass('fadeOut');
       setTimeout(function(){
         window.location.replace("/dreams");
       }, 900);
 
-    },
-    error: function() {
-      console.log("SOMETHING WENT WRONG!!!");
     }
   });
 }

@@ -13,7 +13,6 @@ function getDreamEntries(callbackFn) {
     dataType: 'json',
 
     success: function(data) {
-      console.log(data);
       dateArray = [];
       hoursArray = [];
       dreamTypeArray = [];
@@ -182,11 +181,7 @@ function getDreamEntries(callbackFn) {
         callbackFn(data)
 
       } // if statement close
-    }, // success function close
-
-    error: function() {
-      console.log('something went wrong');
-    }
+    } // success function close
   });
 }
 

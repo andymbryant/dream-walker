@@ -9,13 +9,8 @@ function getDreamEntries(callbackFn) {
     success: function(data) {
       if(data) {
         var results = data;
-      //  console.log(results);
         callbackFn(results);
       }
-    },
-
-    error: function() {
-      console.log('something went wrong');
     }
   });
 }
@@ -49,8 +44,6 @@ function displayDreamEntries(data) {
       const dreamId = $(this).closest('dd').prev('dt').attr('id');
       $(this).closest('dd').prev().addClass('fadeOut');
       $(this).closest('dd').addClass('fadeOut');
-
-      console.log(dreamId);
 
       $.ajax({
         url: `/dreams/${dreamId}/json`,
