@@ -87,7 +87,7 @@ nav ul li:hover {
 
 /* ================================= MEDIA QUERY: NAVIGATION =================================*/
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 660px) {
   nav ul {
     max-height: 0;
   }
