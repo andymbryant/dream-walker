@@ -79,7 +79,6 @@ function tearDownDb() {
 }
 
 describe('Dream Walker API resource', function() {
-
   // we need each of these hook functions to return a promise
   // otherwise we'd need to call a `done` callback. `runServer`,
   // `seedRestaurantData` and `tearDownDb` each return a promise,
@@ -164,7 +163,6 @@ describe('Dream Walker API resource', function() {
     // right keys, and that `id` is there (which means
     // the data was inserted into db)
     it('should add a new dream entry', function() {
-
       const newDream = generateDreamData();
 
       return chai.request(app)
@@ -194,7 +192,6 @@ describe('Dream Walker API resource', function() {
 
     it('should add a new user', function() {
       const newUser = generateUser();
-
       return chai.request(app)
         .post('/users')
         .send(newUser)
@@ -217,11 +214,9 @@ describe('Dream Walker API resource', function() {
           user.username.should.equal(newUser.username);
         });
     });
-
   });
 
   describe('PUT endpoint', function() {
-
     // strategy:
     //  1. Get an existing dream from db
     //  2. Make a PUT request to update that dreamt
