@@ -1,5 +1,5 @@
 <h1>Dream Walker</h1>
-<p>Dream Walker is a responsive full-stack app that allows users to document their dreams and keep track of their sleeping patterns.</p>
+<p><a href="https://dream-walker.herokuapp.com/">Dream Walker</a> is a responsive full-stack app that allows users to document their dreams and keep track of their sleeping patterns.</p>
 <img src="public/images/dreamwalker-snapshots.png">
 
 <h2>Introduction</h2>
@@ -31,3 +31,10 @@
   <li><a href="https://mochajs.org/">Mocha</a> + <a href="http://chaijs.com/">Chai</a> (testing)</li>
 </ul>
 
+<h2>Code Attributions</h2>
+<h3>Vertical Scrollbar Detection</h3>
+<ul>
+  <li><a href="http://stackoverflow.com/questions/2146874/detect-if-a-page-has-a-vertical-scrollbar"></a>http://stackoverflow.com/questions/2146874/detect-if-a-page-has-a-vertical-scrollbar</li>
+  <li><a href="http://stackoverflow.com/users/259764/thiago-belem">Thiago Belem</a></li>
+  <li><a href="https://creativecommons.org/licenses/by-sa/3.0/">https://creativecommons.org/licenses/by-sa/3.0/</a></li>
+</ul>
