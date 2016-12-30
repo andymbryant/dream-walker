@@ -30,6 +30,15 @@
   <li>MongoDB (database)</li>
   <li><a href="https://mochajs.org/">Mocha</a> + <a href="http://chaijs.com/">Chai</a> (testing)</li>
 </ul>
+<h3>Responsive</h3>
+<ul>
+  <li>The app is fully responsive and quickly adapts to all mobile, tablet and desktop viewports.</li>
+</ul>
+<h3>Security</h3>
+<ul>
+  <li>User passwords are encrypted using <a href="https://github.com/dcodeIO/bcrypt.js">bcrypt.js</a></li>
+  <li><a href="http://passportjs.org/">Passport</a> is used to control endpoints from unauthorized users.</li>
+</ul>
 
 <h2>Code Attributions</h2>
 <h3>Vertical Scrollbar Detection</h3>
@@ -48,7 +57,7 @@
 <ul>
   <li><a href="http://callmenick.com/post/styling-blockquotes-with-css-pseudo-classes">http://callmenick.com/post/styling-blockquotes-with-css-pseudo-classes</a></li>
 </ul>
-<h3>PURE CSS PARALLAX PIXEL STARS</h3>
+<h3>Pure CSS Parallax Pixel Stars</h3>
 <ul>
   <li><a href="http://codepen.io/Glucio/">Glucio</a></li>
   <li><a href="http://codepen.io/Glucio/pen/BoLWPo"></a>http://codepen.io/Glucio/pen/BoLWPo</li>
