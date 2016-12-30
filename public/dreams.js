@@ -70,7 +70,6 @@ function getAndDisplayDreamEntries() {
 
 $(function() {
   getAndDisplayDreamEntries();
-  //  getDreamEntries();
 });
 
 /* ================================= RESPONSIVE NAVIGATION =================================*/
