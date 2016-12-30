@@ -14,7 +14,6 @@
 <h2>Wireframes</h2>
 <p>Initial wireframes were created for each page. Mockups of all key processes were designed with user flow in mind.</p>
 <img src="public/images/dreamwalker-wireframes.png">
-<p>To keep distraction and confusion to a minimum, a simple and clean UI was implemented with smooth scrolling and fading transitions.</p>
 
 <h2>Technology</h2>
 <h3>Front End</h3>
