@@ -32,11 +32,11 @@
 </ul>
 <h3>Responsive</h3>
 <ul>
-  <li>The app is fully responsive and quickly adapts to all mobile, tablet and desktop viewports.</li>
+  <li>The app is fully responsive and quickly adapts to all mobile, tablet, and desktop viewports.</li>
 </ul>
 <h3>Security</h3>
 <ul>
-  <li>User passwords are encrypted using <a href="https://github.com/dcodeIO/bcrypt.js">bcrypt.js</a></li>
+  <li>User passwords are encrypted using <a href="https://github.com/dcodeIO/bcrypt.js">bcrypt.js</a>.</li>
   <li><a href="http://passportjs.org/">Passport</a> is used to control endpoints from unauthorized users.</li>
 </ul>
 
@@ -62,4 +62,24 @@
   <li><a href="http://codepen.io/Glucio/">Glucio</a></li>
   <li><a href="http://codepen.io/Glucio/pen/BoLWPo"></a>http://codepen.io/Glucio/pen/BoLWPo</li>
   <li><em>Removed third set of stars, reduced sizes of stars, and fixed error in code that made certain stars giant rectangles</em></li>
+</ul>
+
+<h2>Graphic Attributions</h2>
+<h3>"Sleeping"</h3>
+<ul>
+  <li><a href="https://thenounproject.com/newhaircut/">New Haircut</a></li>
+  <li><a href="https://thenounproject.com/term/sleeping/97573/"></a>https://thenounproject.com/term/sleeping/97573/</li>
+  <li><a href="https://creativecommons.org/publicdomain/zero/1.0/">https://creativecommons.org/publicdomain/zero/1.0/</a></li>
+</ul>
+<h3>"Hero"</h3>
+<ul>
+  <li><a href="https://thenounproject.com/newhaircut/">New Haircut</a></li>
+  <li><a href="https://thenounproject.com/term/hero/97577/">https://thenounproject.com/term/hero/97577/</a></li>
+  <li><a href="https://creativecommons.org/publicdomain/zero/1.0/">https://creativecommons.org/publicdomain/zero/1.0/</a></li>
+</ul>
+<h3>"Space Ship"</h3>
+<ul>
+  <li><a href="https://thenounproject.com/newhaircut/">New Haircut</a></li>
+  <li><a href="https://thenounproject.com/term/space-ship/97578/">https://thenounproject.com/term/space-ship/97578/</a></li>
+  <li><a href="https://creativecommons.org/publicdomain/zero/1.0/">https://creativecommons.org/publicdomain/zero/1.0/</a></li>
 </ul>
