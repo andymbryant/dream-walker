@@ -17,6 +17,15 @@
 <p>To keep distraction and confusion to a minimum, a simple and clean UI was implemented with smooth scrolling and fading transitions.</p>
 
 <h2>Technology</h2>
+<h3>Front End</h3>
 <ul>
-  <li>This full-stack app was built using HTML5, </li>
+  <li>HTML5</li>
+  <li>CSS3</li>
+  <li>JavaScript</li>
+  <li>jQuery</li>
+</ul>
+<h3>Back End</h3>
+<ul>
+  <li>Node.js</li>
+  <li>Express.js</li>
 </ul>
