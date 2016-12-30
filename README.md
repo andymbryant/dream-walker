@@ -38,3 +38,19 @@
   <li><a href="http://stackoverflow.com/users/259764/thiago-belem">Thiago Belem</a></li>
   <li><a href="https://creativecommons.org/licenses/by-sa/3.0/">https://creativecommons.org/licenses/by-sa/3.0/</a></li>
 </ul>
+<h3>Call Function on Scroll Only Once</h3>
+<ul>
+  <li><a href="http://stackoverflow.com/questions/32134451/call-function-on-scroll-only-once">http://stackoverflow.com/questions/32134451/call-function-on-scroll-only-once</a></li>
+  <li><a href="http://stackoverflow.com/users/462627/praveen-kumar">Praveen Kumar</a></li>
+  <li><a href="https://creativecommons.org/licenses/by-sa/3.0/">https://creativecommons.org/licenses/by-sa/3.0/</a></li>
+</ul>
+<h3>Styling Blockquotes</h3>
+<ul>
+  <li><a href="http://callmenick.com/post/styling-blockquotes-with-css-pseudo-classes">http://callmenick.com/post/styling-blockquotes-with-css-pseudo-classes</a></li>
+</ul>
+<h3>PURE CSS PARALLAX PIXEL STARS</h3>
+<ul>
+  <li><a href="http://codepen.io/Glucio/">Glucio</a></li>
+  <li><a href="http://codepen.io/Glucio/pen/BoLWPo"></a>http://codepen.io/Glucio/pen/BoLWPo</li>
+  <li><em>Removed third set of stars, reduced sizes of stars, and fixed error in code that made certain stars giant rectangles</em></li>
+</ul>
