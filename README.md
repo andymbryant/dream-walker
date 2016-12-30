@@ -26,6 +26,8 @@
 </ul>
 <h3>Back End</h3>
 <ul>
-  <li>Node.js / Express.js (web server)</li>
-  <li>MongodDB (database)</li>
+  <li>Node.js + Express.js (web server)</li>
+  <li>MongoDB (database)</li>
+  <li><a href="https://mochajs.org/">Mocha</a> + <a href="http://chaijs.com/">Chai</a> (testing)</li>
 </ul>
+
