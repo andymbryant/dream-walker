@@ -26,6 +26,6 @@
 </ul>
 <h3>Back End</h3>
 <ul>
-  <li>Node.js</li>
-  <li>Express.js</li>
+  <li>Node.js / Express.js (web server)</li>
+  <li>MongodDB (database)</li>
 </ul>
