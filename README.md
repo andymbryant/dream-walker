@@ -40,23 +40,23 @@
 </ul>
 
 <h2>Code Attributions</h2>
-<h3>Vertical Scrollbar Detection</h3>
+<h4>Vertical Scrollbar Detection</h4>
 <ul>
   <li><a href="http://stackoverflow.com/questions/2146874/detect-if-a-page-has-a-vertical-scrollbar"></a>http://stackoverflow.com/questions/2146874/detect-if-a-page-has-a-vertical-scrollbar</li>
   <li><a href="http://stackoverflow.com/users/259764/thiago-belem">Thiago Belem</a></li>
   <li><a href="https://creativecommons.org/licenses/by-sa/3.0/">https://creativecommons.org/licenses/by-sa/3.0/</a></li>
 </ul>
-<h3>Call Function on Scroll Only Once</h3>
+<h4>Call Function on Scroll Only Once</h4>
 <ul>
   <li><a href="http://stackoverflow.com/questions/32134451/call-function-on-scroll-only-once">http://stackoverflow.com/questions/32134451/call-function-on-scroll-only-once</a></li>
   <li><a href="http://stackoverflow.com/users/462627/praveen-kumar">Praveen Kumar</a></li>
   <li><a href="https://creativecommons.org/licenses/by-sa/3.0/">https://creativecommons.org/licenses/by-sa/3.0/</a></li>
 </ul>
-<h3>Styling Blockquotes</h3>
+<h4>Styling Blockquotes</h4>
 <ul>
   <li><a href="http://callmenick.com/post/styling-blockquotes-with-css-pseudo-classes">http://callmenick.com/post/styling-blockquotes-with-css-pseudo-classes</a></li>
 </ul>
-<h3>Pure CSS Parallax Pixel Stars</h3>
+<h4>Pure CSS Parallax Pixel Stars</h4>
 <ul>
   <li><a href="http://codepen.io/Glucio/">Glucio</a></li>
   <li><a href="http://codepen.io/Glucio/pen/BoLWPo"></a>http://codepen.io/Glucio/pen/BoLWPo</li>
@@ -64,19 +64,19 @@
 </ul>
 
 <h2>Graphic Attributions</h2>
-<h3>"Sleeping"</h3>
+<h4>"Sleeping"</h4>
 <ul>
   <li><a href="https://thenounproject.com/newhaircut/">New Haircut</a></li>
   <li><a href="https://thenounproject.com/term/sleeping/97573/"></a>https://thenounproject.com/term/sleeping/97573/</li>
   <li><a href="https://creativecommons.org/publicdomain/zero/1.0/">https://creativecommons.org/publicdomain/zero/1.0/</a></li>
 </ul>
-<h3>"Hero"</h3>
+<h4>"Hero"</h4>
 <ul>
   <li><a href="https://thenounproject.com/newhaircut/">New Haircut</a></li>
   <li><a href="https://thenounproject.com/term/hero/97577/">https://thenounproject.com/term/hero/97577/</a></li>
   <li><a href="https://creativecommons.org/publicdomain/zero/1.0/">https://creativecommons.org/publicdomain/zero/1.0/</a></li>
 </ul>
-<h3>"Space Ship"</h3>
+<h4>"Space Ship"</h4>
 <ul>
   <li><a href="https://thenounproject.com/newhaircut/">New Haircut</a></li>
   <li><a href="https://thenounproject.com/term/space-ship/97578/">https://thenounproject.com/term/space-ship/97578/</a></li>
