@@ -45,7 +45,6 @@ router.get('/json', (req, res) => {
 router.get('/new', (req, res) => {
   let user = req.user;
   let userid = user._id
-  console.log("GIVE ME THE USER ID", userid);
   res.sendFile(__dirname + '/public/new-dream.html');
 });
 
@@ -89,8 +88,6 @@ router.post('/new/test', (req, res) => {
 
 router.post('/new', (req, res) => {
   let user = req.user;
-  console.log("GIVE ME THE USER ID", user._id);
-
   const requiredFields = ['title', 'entry', 'type', 'hoursSlept', 'created'];
   requiredFields.forEach(field => {
     if (!(field in req.body)) {
