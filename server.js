@@ -35,13 +35,6 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });
 
-// app.get('/dashboard', (req, res) => {
-//   res.sendFile(__dirname + '/public/dashboard.html');
-//   if (req.query.demo) {
-//     console.log("==========HI==========");
-//   }
-// });
-
 app.get('/dashboard',
   require('connect-ensure-login').ensureLoggedIn(),
   function(req, res){
