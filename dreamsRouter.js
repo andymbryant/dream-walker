@@ -10,9 +10,6 @@ router.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/dreams.html');
 });
 
-// router.get('/demo', (req, res) => {
-//   console.log(req.headers);
-// });
 /* ===================== FOR TEST =================== */
 router.get('/json/test', (req, res) => {
   Dream
@@ -31,11 +28,6 @@ router.get('/json/test', (req, res) => {
 router.get('/json', (req, res) => {
   let user = req.user;
   let userid = user._id;
-  // console.log(req.query.demo);
-  // console.log('=============HI===========');
-  // if (req.query.demo) {
-  //   console.log("==========DON'T GIVE UP==========");
-  // }
 
   Dream
     .find({user_id: userid})
@@ -59,14 +51,6 @@ router.get('/new', (req, res) => {
 
 router.get('/:id', (req, res) => {
   res.sendFile(__dirname + '/public/dream-edit.html');
-  // Dream
-  //   .findById(req.params.id)
-  //   .exec()
-  //   .then(dream => res.json(dream.apiRepr()))
-  //   .catch(err => {
-  //     console.error(err);
-  //     res.status(500).json({error: 'something went horribly awry'});
-  //   });
 });
 
 router.get('/:id/json', (req, res) => {
