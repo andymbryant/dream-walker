@@ -28,6 +28,7 @@
   <li>Node.js + Express.js (web server)</li>
   <li>MongoDB (database)</li>
   <li><a href="https://mochajs.org/">Mocha</a> + <a href="http://chaijs.com/">Chai</a> (testing)</li>
+  <li>Continuous integration and deployment with <a href="https://travis-ci.org/">Travis CI</a></li>
 </ul>
 <h3>Responsive</h3>
 <ul>
