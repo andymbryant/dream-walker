@@ -5,6 +5,23 @@
 <h2>Introduction</h2>
 <p>The main focus of Dream Walker is to help users become lucid dreamers. A lucid dream is a dream during which the dreamer is aware of dreaming. During this event, the dreamer may be able to exert some degree of control over the characters, narrative, and environment.</p>
 
+## Getting started
+### Installing
+```
+>   git clone https://github.com/NOUX-NOVA/dream-walker.git
+>   cd dream-walker
+>   npm install
+```
+### Launching
+```
+>   npm start
+```
+Then open [`localhost:8000`](http://localhost:8000) in a browser.
+### Testing
+```
+>   npm run test
+```
+
 <h2>How it Works</h2>
 <h3>Record dreams</h3>
 <p>The key to lucid dreaming is to consistently document one's dreams so that patterns are easily recognized while dreaming. Dream Walker provides users with a quick and simple interface that helps them keep track of what they're dreaming about.</p>
