@@ -39,6 +39,7 @@ Then open [`localhost:8000`](http://localhost:8000) in a browser.
   <li>CSS3</li>
   <li>JavaScript</li>
   <li>jQuery</li>
+  <li><a href="http://www.chartjs.org/">Chart.js</a>
 </ul>
 <h3>Back End</h3>
 <ul>
