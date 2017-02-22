@@ -25,7 +25,7 @@ app.use(flash());
 mongoose.Promise = global.Promise;
 
 app.get('/logout', function (req, res){
-  req.logOut();
+  req.logout();
   req.session.destroy(function (err) {
     res.redirect('/');
   });
