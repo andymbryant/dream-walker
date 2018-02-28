@@ -2,23 +2,6 @@
 <p><a href="https://dream-walker.herokuapp.com/">Dream Walker</a> is a responsive full-stack app that allows users to document their dreams and keep track of their sleeping patterns. Version 2 coming soon.</p>
 <img src="public/images/dreamwalker-snapshots.png">
 
-## Getting started
-### Installing
-```
->   git clone https://github.com/NOUX-NOVA/dream-walker.git
->   cd dream-walker
->   npm install
-```
-### Launching
-```
->   npm start
-```
-Then open [`localhost:8000`](http://localhost:8000) in a browser.
-### Testing
-```
->   npm run test
-```
-
 <h2>Introduction</h2>
 <p>The main focus of Dream Walker is to help users become lucid dreamers. A lucid dream is a dream during which the dreamer is aware of dreaming. During this event, the dreamer may be able to exert some degree of control over the characters, narrative, and environment.</p>
 
@@ -27,36 +10,6 @@ Then open [`localhost:8000`](http://localhost:8000) in a browser.
 <p>The key to lucid dreaming is to consistently document one's dreams so that patterns are easily recognized while dreaming. Dream Walker provides users with a quick and simple interface that helps them keep track of what they're dreaming about.</p>
 <h3>Keep track of progress</h3>
 <p>Users also have access to interactive charts and personalized statistics to help them measure their progress.</p>
-
-<h2>Wireframes</h2>
-<p>Initial wireframes were created for each page. Mockups of all key processes were designed with user flow in mind.</p>
-<img src="public/images/dreamwalker-wireframes.png">
-
-<h2>Technology</h2>
-<h3>Front End</h3>
-<ul>
-  <li>HTML5</li>
-  <li>CSS3</li>
-  <li>JavaScript</li>
-  <li>jQuery</li>
-  <li><a href="http://www.chartjs.org/">Chart.js</a>
-</ul>
-<h3>Back End</h3>
-<ul>
-  <li>Node.js + Express.js (web server)</li>
-  <li>MongoDB (database)</li>
-  <li><a href="https://mochajs.org/">Mocha</a> + <a href="http://chaijs.com/">Chai</a> (testing)</li>
-  <li>Continuous integration and deployment with <a href="https://travis-ci.org/">Travis CI</a></li>
-</ul>
-<h3>Responsive</h3>
-<ul>
-  <li>The app is fully responsive and quickly adapts to all mobile, tablet, and desktop viewports.</li>
-</ul>
-<h3>Security</h3>
-<ul>
-  <li>User passwords are encrypted using <a href="https://github.com/dcodeIO/bcrypt.js">bcrypt.js</a>.</li>
-  <li><a href="http://passportjs.org/">Passport</a> is used to control endpoints from unauthorized users.</li>
-</ul>
 
 <h2>Code Attributions</h2>
 <h4>Vertical Scrollbar Detection</h4>
