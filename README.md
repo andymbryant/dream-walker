@@ -1,6 +1,5 @@
 <h1>Dream Walker</h1>
 <p><a href="https://dream-walker.herokuapp.com/">Dream Walker</a> is a responsive full-stack app that allows users to document their dreams and keep track of their sleeping patterns. Version 2 coming soon.</p>
-<img src="public/images/dreamwalker-snapshots.png">
 
 <h2>Introduction</h2>
 <p>The main focus of Dream Walker is to help users become lucid dreamers. A lucid dream is a dream during which the dreamer is aware of dreaming. During this event, the dreamer may be able to exert some degree of control over the characters, narrative, and environment.</p>
