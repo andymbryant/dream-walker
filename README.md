@@ -1,5 +1,5 @@
 <h1>Dream Walker</h1>
-<p><a href="https://dream-walker.herokuapp.com/">Dream Walker</a> is a responsive full-stack app that allows users to document their dreams and keep track of their sleeping patterns.</p>
+<p><a href="https://dream-walker.herokuapp.com/">Dream Walker</a> is a responsive full-stack app that allows users to document their dreams and keep track of their sleeping patterns. Version 2 coming soon.</p>
 <img src="public/images/dreamwalker-snapshots.png">
 
 ## Getting started
