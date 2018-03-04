@@ -10,6 +10,9 @@ const app = express();
 
 app.use(bodyParser.json());
 
+// ===============================================
+//                      POST
+// ===============================================
 app.post('/dreams', (req, res) => {
   const dream = new Dream({
     text: req.body.text
@@ -22,10 +25,25 @@ app.post('/dreams', (req, res) => {
   });
 });
 
+// ===============================================
+//                      GET
+// ===============================================
+app.get('/dreams', (req, res) => {
+  Dream.find().then((dreams) => {
+    res.send({ dreams })
+  }, (e) => {
+    res.status(400).send(e);
+  });
+});
+
 app.get('/', (req, res) => {
   res.send('herro world');
 });
 
+
+// ===============================================
+//                     LISTEN
+// ===============================================
 app.listen(port, () => {
   console.log(`The magic happens on port ${port}`);
 });
